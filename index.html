@@ -3,35 +3,745 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reborn Assistant</title>
+    <title>Reborn Assistant - Premium Browser Automation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Marcellus&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: 50px auto;
-            padding: 20px;
-            text-align: center;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
+        :root {
+            --gold: #d4af37;
+            --gold-light: #f4d03f;
+            --gold-dark: #b8941f;
+            --dark-bg: #0a0a0a;
+            --dark-panel: #1a1a0a;
+            --dark-header: #2a2410;
+            --green: #4CAF50;
+            --green-dark: #2d5016;
+            --text: #ffffff;
+            --text-dim: #cccccc;
         }
-        h1 { font-size: 48px; margin-bottom: 20px; }
-        p { font-size: 20px; line-height: 1.6; }
-        .cta {
-            background: white;
-            color: #667eea;
-            padding: 15px 30px;
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Marcellus', serif;
+            background: linear-gradient(135deg, rgba(0,0,0,0.95) 0%, rgba(20,20,20,0.98) 100%);
+            color: var(--text);
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Texture overlay */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(212, 175, 55, 0.03) 2px, rgba(212, 175, 55, 0.03) 4px);
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        /* Ornamental corners */
+        .ornament {
+            position: fixed;
+            width: 200px;
+            height: 200px;
+            border: 2px solid var(--gold);
+            opacity: 0.1;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .ornament-tl {
+            top: 0;
+            left: 0;
+            border-right: none;
+            border-bottom: none;
+        }
+
+        .ornament-tr {
+            top: 0;
+            right: 0;
+            border-left: none;
+            border-bottom: none;
+        }
+
+        .ornament-bl {
+            bottom: 0;
+            left: 0;
+            border-right: none;
+            border-top: none;
+        }
+
+        .ornament-br {
+            bottom: 0;
+            right: 0;
+            border-left: none;
+            border-top: none;
+        }
+
+        /* Golden particles */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .particle {
+            position: fixed;
+            width: 4px;
+            height: 4px;
+            background: var(--gold);
+            border-radius: 50%;
+            opacity: 0.3;
+            pointer-events: none;
+            z-index: 1;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(180deg, var(--dark-header) 0%, var(--dark-panel) 100%);
+            border-bottom: 2px solid var(--gold);
+            padding: 20px 0;
+            animation: slideDown 0.8s ease-out;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Cinzel', serif;
+            font-size: 32px;
+            font-weight: 900;
+            color: var(--dark-bg);
+            border-radius: 4px;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+            position: relative;
+        }
+
+        .logo-icon::after {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, var(--gold-light), var(--gold-dark));
+            border-radius: 4px;
+            z-index: -1;
+            opacity: 0.5;
+            filter: blur(8px);
+        }
+
+        .logo-text {
+            font-family: 'Cinzel', serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+        }
+
+        .status-badge {
+            background: rgba(212, 175, 55, 0.1);
+            border: 1px solid var(--gold);
+            padding: 8px 20px;
+            border-radius: 4px;
+            font-family: 'Cinzel', serif;
+            font-size: 12px;
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 120px 0 100px;
+            text-align: center;
+            animation: fadeIn 1s ease-out 0.2s backwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .hero-ornament {
+            font-size: 24px;
+            color: var(--gold);
+            margin-bottom: 20px;
+            opacity: 0.5;
+        }
+
+        h1 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(48px, 8vw, 84px);
+            font-weight: 900;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: var(--gold);
+            text-shadow: 
+                0 0 30px rgba(212, 175, 55, 0.4),
+                0 4px 8px rgba(0, 0, 0, 0.8);
+            letter-spacing: 1px;
+        }
+
+        .hero-subtitle {
+            font-family: 'Cinzel', serif;
+            font-size: 24px;
+            color: var(--gold-light);
+            margin-bottom: 30px;
+            font-weight: 400;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .hero-description {
+            font-size: 18px;
+            color: var(--text-dim);
+            max-width: 700px;
+            margin: 0 auto 50px;
+            line-height: 1.8;
+        }
+
+        /* Divider */
+        .divider {
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+            margin: 40px auto;
+            max-width: 400px;
+            opacity: 0.3;
+        }
+
+        /* CTA Buttons */
+        .cta-group {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 50px;
+        }
+
+        .btn {
+            padding: 18px 45px;
+            font-family: 'Cinzel', serif;
+            font-size: 16px;
+            font-weight: 600;
             text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
-            display: inline-block;
+            border-radius: 4px;
+            border: 2px solid;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--green-dark) 0%, var(--green) 100%);
+            border-color: var(--green);
+            color: var(--text);
+            box-shadow: 0 4px 20px rgba(76, 175, 80, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(76, 175, 80, 0.5);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            border-color: var(--gold);
+            color: var(--gold);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(212, 175, 55, 0.1);
+            box-shadow: 0 0 30px rgba(212, 175, 55, 0.2);
+        }
+
+        /* Features Section */
+        .features {
+            padding: 100px 0;
+            animation: fadeIn 1s ease-out 0.4s backwards;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .section-ornament {
+            font-size: 20px;
+            color: var(--gold);
+            opacity: 0.5;
+            margin-bottom: 10px;
+        }
+
+        .section-title {
+            font-family: 'Cinzel', serif;
+            font-size: 42px;
+            font-weight: 700;
+            color: var(--gold);
+            margin-bottom: 20px;
+            text-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+        }
+
+        .section-subtitle {
+            font-size: 16px;
+            color: var(--text-dim);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: linear-gradient(135deg, rgba(42, 36, 16, 0.4) 0%, rgba(26, 26, 10, 0.6) 100%);
+            border: 2px solid rgba(212, 175, 55, 0.3);
+            padding: 40px;
+            position: relative;
+            transition: all 0.4s ease;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .feature-card:hover {
+            border-color: var(--gold);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 40px rgba(212, 175, 55, 0.2);
+        }
+
+        .feature-card:hover::before {
+            opacity: 1;
+        }
+
+        .feature-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .feature-title {
+            font-family: 'Cinzel', serif;
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: var(--gold);
+        }
+
+        .feature-description {
+            color: var(--text-dim);
+            line-height: 1.7;
+            font-size: 15px;
+        }
+
+        /* Pricing Section */
+        .pricing {
+            padding: 100px 0;
+            background: rgba(26, 26, 10, 0.3);
+            animation: fadeIn 1s ease-out 0.6s backwards;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .price-card {
+            background: linear-gradient(135deg, rgba(42, 36, 16, 0.6) 0%, rgba(26, 26, 10, 0.8) 100%);
+            border: 2px solid rgba(212, 175, 55, 0.3);
+            padding: 50px 40px;
+            text-align: center;
+            position: relative;
+            transition: all 0.4s ease;
+        }
+
+        .price-card.featured {
+            border-color: var(--gold);
+            box-shadow: 0 0 50px rgba(212, 175, 55, 0.3);
+            transform: scale(1.05);
+        }
+
+        .price-badge {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--gold);
+            color: var(--dark-bg);
+            padding: 6px 20px;
+            font-family: 'Cinzel', serif;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.5);
+        }
+
+        .price-card:hover {
+            border-color: var(--gold);
+            box-shadow: 0 10px 50px rgba(212, 175, 55, 0.3);
+        }
+
+        .price-plan {
+            font-family: 'Cinzel', serif;
+            font-size: 14px;
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+        }
+
+        .price-amount {
+            font-family: 'Cinzel', serif;
+            font-size: 56px;
+            font-weight: 900;
+            color: var(--gold);
+            margin-bottom: 10px;
+            text-shadow: 0 0 30px rgba(212, 175, 55, 0.4);
+        }
+
+        .price-period {
+            font-size: 14px;
+            color: var(--text-dim);
+            margin-bottom: 30px;
+        }
+
+        .price-features {
+            list-style: none;
+            margin: 40px 0;
+            text-align: left;
+        }
+
+        .price-features li {
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            font-size: 15px;
+            color: var(--text-dim);
+        }
+
+        .price-features li::before {
+            content: '◆';
+            color: var(--gold);
+            margin-right: 15px;
+            font-size: 10px;
+        }
+
+        /* Footer */
+        footer {
+            padding: 80px 0 40px;
+            border-top: 2px solid rgba(212, 175, 55, 0.3);
+            animation: fadeIn 1s ease-out 0.8s backwards;
+        }
+
+        .footer-content {
+            text-align: center;
+        }
+
+        .footer-logo {
+            font-family: 'Cinzel', serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--gold);
+            margin-bottom: 30px;
+            text-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 40px;
+            justify-content: center;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: var(--text-dim);
+            text-decoration: none;
+            font-size: 14px;
+            font-family: 'Cinzel', serif;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--gold);
+        }
+
+        .copyright {
+            font-size: 13px;
+            color: var(--text-dim);
             margin-top: 30px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container, .header-content {
+                padding: 0 20px;
+            }
+
+            h1 {
+                font-size: 42px;
+            }
+
+            .hero {
+                padding: 80px 0 60px;
+            }
+
+            .features, .pricing {
+                padding: 60px 0;
+            }
+
+            .cta-group {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            .price-card.featured {
+                transform: scale(1);
+            }
         }
     </style>
 </head>
 <body>
-    <h1>🤖 Reborn Assistant</h1>
-    <p>Professional Browser Automation Extension</p>
-    <p>Automate repetitive tasks with premium features</p>
-    <a href="#" class="cta">Coming Soon</a>
+    <div class="ornament ornament-tl"></div>
+    <div class="ornament ornament-tr"></div>
+    <div class="ornament ornament-bl"></div>
+    <div class="ornament ornament-br"></div>
+
+    <header>
+        <div class="header-content">
+            <div class="logo-container">
+                <div class="logo-icon">R</div>
+                <div class="logo-text">Reborn</div>
+            </div>
+            <div class="status-badge">Premium Edition</div>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="hero">
+            <div class="hero-ornament">◆ ◆ ◆</div>
+            <h1>REBORN ASSISTANT</h1>
+            <div class="hero-subtitle">Premium Automation</div>
+            <div class="divider"></div>
+            <p class="hero-description">
+                L'extension professionnelle d'automatisation de navigateur avec fonctionnalités avancées.
+                Optimisez vos tâches répétitives et maximisez votre efficacité avec une automatisation intelligente.
+            </p>
+            <div class="cta-group">
+                <a href="#pricing" class="btn btn-primary">Commencer</a>
+                <a href="#features" class="btn btn-secondary">En savoir plus</a>
+            </div>
+        </section>
+
+        <section class="features" id="features">
+            <div class="section-header">
+                <div class="section-ornament">◆ ◆ ◆</div>
+                <h2 class="section-title">Fonctionnalités</h2>
+                <div class="divider"></div>
+                <p class="section-subtitle">
+                    Découvrez les capacités exceptionnelles de Reborn Assistant
+                </p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <span class="feature-icon">⚡</span>
+                    <h3 class="feature-title">Performance Extrême</h3>
+                    <p class="feature-description">
+                        Exécution ultra-rapide de vos automatisations avec une latence minimale. 
+                        Optimisé pour une expérience fluide et réactive.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">🛡️</span>
+                    <h3 class="feature-title">Sécurité Maximale</h3>
+                    <p class="feature-description">
+                        Vos données restent locales. Aucun tracking, aucune télémétrie. 
+                        Sécurité de niveau professionnel intégrée.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">🎯</span>
+                    <h3 class="feature-title">Contrôle Précis</h3>
+                    <p class="feature-description">
+                        Ajustez chaque aspect de l'automatisation. Intervalles personnalisables, 
+                        raccourcis clavier et macros avancées.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">📊</span>
+                    <h3 class="feature-title">Analytics Avancés</h3>
+                    <p class="feature-description">
+                        Suivez vos performances d'automatisation avec des logs détaillés et 
+                        des rapports d'activité complets.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">🎨</span>
+                    <h3 class="feature-title">Interface Personnalisable</h3>
+                    <p class="feature-description">
+                        Choisissez parmi plusieurs thèmes et skins. Adaptez l'interface 
+                        à votre flux de travail.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">🌐</span>
+                    <h3 class="feature-title">Multi-Langues</h3>
+                    <p class="feature-description">
+                        Disponible en 12+ langues. Support mondial pour les utilisateurs 
+                        avec interfaces localisées.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="pricing" id="pricing">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-ornament">◆ ◆ ◆</div>
+                    <h2 class="section-title">Plans Tarifaires</h2>
+                    <div class="divider"></div>
+                    <p class="section-subtitle">
+                        Choisissez le plan qui correspond à vos besoins
+                    </p>
+                </div>
+                <div class="pricing-grid">
+                    <div class="price-card">
+                        <div class="price-plan">Gratuit</div>
+                        <div class="price-amount">0€</div>
+                        <div class="price-period">à jamais</div>
+                        <ul class="price-features">
+                            <li>Automatisation basique</li>
+                            <li>100 actions par session</li>
+                            <li>Fonctionnalités limitées</li>
+                            <li>Support communautaire</li>
+                        </ul>
+                        <a href="#" class="btn btn-secondary" style="width: 100%;">Commencer</a>
+                    </div>
+
+                    <div class="price-card featured">
+                        <div class="price-badge">Populaire</div>
+                        <div class="price-plan">Annuel</div>
+                        <div class="price-amount">29,99€</div>
+                        <div class="price-period">par an</div>
+                        <ul class="price-features">
+                            <li>Automatisation illimitée</li>
+                            <li>Toutes les fonctionnalités premium</li>
+                            <li>Support prioritaire</li>
+                            <li>Essai gratuit de 7 jours</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary" style="width: 100%;">Essayer Gratuitement</a>
+                    </div>
+
+                    <div class="price-card">
+                        <div class="price-plan">À Vie</div>
+                        <div class="price-amount">99,99€</div>
+                        <div class="price-period">paiement unique</div>
+                        <ul class="price-features">
+                            <li>Accès à vie</li>
+                            <li>Toutes les mises à jour futures</li>
+                            <li>Support premium</li>
+                            <li>Meilleur rapport qualité-prix</li>
+                        </ul>
+                        <a href="#" class="btn btn-secondary" style="width: 100%;">Acheter</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-logo">REBORN ASSISTANT</div>
+                <div class="divider" style="margin: 30px auto;"></div>
+                <div class="footer-links">
+                    <a href="#">Documentation</a>
+                    <a href="#">Politique de Confidentialité</a>
+                    <a href="#">Conditions d'Utilisation</a>
+                    <a href="#">Support</a>
+                    <a href="#">Contact</a>
+                </div>
+                <div class="copyright">
+                    © 2026 Reborn Assistant. Tous droits réservés.<br>
+                    Développé par Seymoon
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Génération de particules dorées
+        for (let i = 0; i < 20; i++) {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            particle.style.left = Math.random() * 100 + '%';
+            particle.style.top = Math.random() * 100 + '%';
+            particle.style.animationDelay = Math.random() * 6 + 's';
+            document.body.appendChild(particle);
+        }
+    </script>
 </body>
 </html>
