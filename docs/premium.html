@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guide Premium – Reborn Assistant</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Marcellus&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #d4af37;
+            --gold-light: #f4d03f;
+            --gold-dark: #b8941f;
+            --dark-bg: #080808;
+            --dark-card: #141410;
+            --green: #4CAF50;
+            --text: #f0ead6;
+            --text-dim: #9a9278;
+            --border: rgba(212, 175, 55, 0.2);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        body::before {
+            content: '';
+            position: fixed; inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+            pointer-events: none; opacity: 0.3;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 80px 40px 100px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .back-link {
+            display: inline-flex; align-items: center; gap: 8px;
+            color: var(--text-dim); text-decoration: none; font-size: 13px;
+            margin-bottom: 40px; transition: color 0.2s;
+        }
+        .back-link:hover { color: var(--gold); }
+
+        h1 { font-family: 'Cinzel', serif; font-size: 42px; color: var(--gold); letter-spacing: 2px; margin-bottom: 16px; }
+        .subtitle { font-size: 18px; color: var(--text-dim); margin-bottom: 60px; }
+
+        h2 {
+            font-family: 'Cinzel', serif; font-size: 28px; color: var(--text);
+            margin: 60px 0 24px; padding-bottom: 16px; border-bottom: 1px solid var(--border);
+        }
+
+        h3 { font-size: 20px; color: var(--gold); margin: 40px 0 16px; }
+
+        .premium-badge {
+            background: linear-gradient(135deg, var(--gold-dark), var(--gold-light));
+            color: #000; font-size: 10px; font-weight: 700;
+            padding: 6px 14px; border-radius: 12px; letter-spacing: 1.5px;
+            display: inline-block; margin-left: 12px;
+        }
+
+        .section {
+            background: rgba(20,20,16,0.6);
+            border: 1px solid var(--gold);
+            border-radius: 12px;
+            padding: 32px; margin: 32px 0;
+        }
+
+        .param {
+            background: rgba(212,175,55,0.06);
+            border-left: 3px solid var(--gold);
+            padding: 16px 20px; margin: 16px 0; border-radius: 4px;
+        }
+
+        .param-name { font-weight: 600; color: var(--gold); margin-bottom: 6px; }
+        .param-desc { font-size: 14px; color: var(--text-dim); }
+
+        code {
+            background: rgba(20,20,16,0.9); padding: 3px 10px; border-radius: 4px;
+            font-family: 'Courier New', monospace; font-size: 13px; color: var(--gold-light);
+        }
+
+        .example {
+            background: rgba(76,175,80,0.06);
+            border-left: 3px solid var(--green);
+            padding: 20px; margin: 24px 0; border-radius: 4px;
+        }
+
+        .example-title { font-weight: 600; color: var(--green); margin-bottom: 12px; }
+
+        ul { margin: 16px 0; padding-left: 24px; }
+        li { margin: 8px 0; font-size: 15px; }
+        ol { margin: 16px 0; padding-left: 24px; }
+        ol li { margin: 8px 0; font-size: 15px; }
+        p { margin-bottom: 16px; font-size: 15px; }
+    </style>
+    <script src="../lang.js"></script>
+</head>
+<body>
+<div style="position:fixed;top:20px;right:20px;z-index:1000;">
+            <select onchange="setLanguage(this.value)" id="langSelector" style="padding:8px 12px;background:rgba(212,175,55,0.1);border:1px solid rgba(212,175,55,0.3);border-radius:6px;color:var(--gold);font-size:12px;font-weight:600;cursor:pointer;font-family:'Inter',sans-serif;">
+                <option value="fr">🇫🇷 FR</option>
+                <option value="en">🇬🇧 EN</option>
+                <option value="es">🇪🇸 ES</option>
+                <option value="de">🇩🇪 DE</option>
+                <option value="it">🇮🇹 IT</option>
+                <option value="pt">🇵🇹 PT</option>
+                <option value="ja">🇯🇵 JA</option>
+                <option value="ko">🇰🇷 KO</option>
+                <option value="zh">🇨🇳 ZH</option>
+                <option value="ru">🇷🇺 RU</option>
+                <option value="pl">🇵🇱 PL</option>
+                <option value="nl">🇳🇱 NL</option>
+                <option value="tl">🇵🇭 TL</option>
+            </select>
+        </div>
+
+    <div class="container">
+        <a href="index.html" class="back-link"><span data-i18n="docBackToHome">← Retour à l\'accueil</span></a>
+
+        <h1>💎 Guide Premium</h1>
+        <p class="subtitle">Maîtrisez toutes les fonctionnalités avancées de Reborn Assistant</p>
+
+        <div class="section">
+            <h2>🛡️ Rotation de Buffs Automatique <span class="premium-badge">PREMIUM</span></h2>
+            
+            <p>Le système de rotation de buffs maintient automatiquement tous vos buffs actifs en appuyant sur une séquence prédéfinie de touches à intervalles réguliers.</p>
+
+            <h3>Séquence de touches</h3>
+            <p>La rotation suit toujours cet ordre fixe :</p>
+            <code>F2 → 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8 → 9 → 0 → F1</code>
+
+            <h3>Configuration</h3>
+
+            <div class="param">
+                <div class="param-name">Intervalle entre cycles</div>
+                <div class="param-desc">Temps d'attente avant de recommencer toute la séquence de buffs. Par défaut : <code>5 minutes</code>. Recommandé : réglez selon la durée de vos buffs les plus courts.</div>
+            </div>
+
+            <div class="param">
+                <div class="param-name">Délai entre touches</div>
+                <div class="param-desc">Temps d'attente entre chaque touche de la séquence. Par défaut : <code>1 seconde</code>. Ajustez selon la vitesse de votre jeu (animations, cooldowns...).</div>
+            </div>
+
+            <div class="example">
+                <div class="example-title">💡 Exemple d'utilisation</div>
+                <p><strong>Scénario :</strong> Vos buffs durent 5 minutes et vous avez 8 buffs sur les touches 1-8.</p>
+                <p><strong>Configuration :</strong></p>
+                <ul>
+                    <li>Intervalle : 5 minutes</li>
+                    <li>Délai : 1 seconde</li>
+                    <li>Le bot appuiera sur F2, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0, F1 toutes les 5 minutes</li>
+                    <li>Total de 13 touches avec 1 seconde entre chaque = ~13 secondes par cycle</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>⚙️ Macros Personnalisables <span class="premium-badge">PREMIUM</span></h2>
+            
+            <p>Créez jusqu'à 3 macros indépendantes avec vos propres séquences de touches. Parfait pour l'automatisation de farming, combos récurrents ou rotations de compétences.</p>
+
+            <h3>Fonctionnement</h3>
+            <p>Chaque macro peut exécuter une séquence de touches à intervalle régulier, complètement indépendante des autres systèmes.</p>
+
+            <h3>Configuration</h3>
+
+            <div class="param">
+                <div class="param-name">Séquence de touches</div>
+                <div class="param-desc">Définissez les touches à appuyer dans l'ordre, séparées par des virgules. Exemple : <code>1,2,3,4</code> ou <code>q,w,e,r,f</code></div>
+            </div>
+
+            <div class="param">
+                <div class="param-name">Intervalle de répétition</div>
+                <div class="param-desc">Temps d'attente avant de recommencer la séquence. Configurez selon vos besoins (secondes ou minutes).</div>
+            </div>
+
+            <div class="param">
+                <div class="param-name">Délai entre touches</div>
+                <div class="param-desc">Temps d'attente entre chaque touche de la séquence (généralement 0.5 à 2 secondes).</div>
+            </div>
+
+            <div class="example">
+                <div class="example-title">💡 Exemples d'utilisation</div>
+                
+                <p><strong>Macro 1 - Farming automatique :</strong></p>
+                <ul>
+                    <li>Séquence : <code>1,2,3,space</code></li>
+                    <li>Intervalle : 10 secondes</li>
+                    <li>Utilisation : Attaque de base répétitive pour farmer des mobs</li>
+                </ul>
+
+                <p><strong>Macro 2 - Combo de compétences :</strong></p>
+                <ul>
+                    <li>Séquence : <code>q,w,e,r</code></li>
+                    <li>Intervalle : 30 secondes</li>
+                    <li>Utilisation : Rotation DPS optimale</li>
+                </ul>
+
+                <p><strong>Macro 3 - Support automatique :</strong></p>
+                <ul>
+                    <li>Séquence : <code>f,g,h</code></li>
+                    <li>Intervalle : 15 secondes</li>
+                    <li>Utilisation : Buffs de groupe ou soins périodiques</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🐉 Système de Familier <span class="premium-badge">PREMIUM</span></h2>
+            
+            <p>Le système de familier appelle et stocke automatiquement votre familier/compagnon toutes les 15 secondes. Idéal pour les jeux où le familier doit être régulièrement appelé et stocké.</p>
+
+            <h3>Fonctionnement</h3>
+            <p>Le système exécute automatiquement cette séquence toutes les 15 secondes :</p>
+            <ol>
+                <li>Appelle le familier (touche configurable, par défaut <code>§</code>)</li>
+                <li>Attend 500ms</li>
+                <li>Stocke le familier automatiquement</li>
+            </ol>
+
+            <h3>Configuration</h3>
+
+            <div class="param">
+                <div class="param-name">Touche d'appel du familier</div>
+                <div class="param-desc">La touche qui invoque votre familier dans le jeu. Par défaut : <code>§</code>. Modifiez selon votre configuration de jeu.</div>
+            </div>
+
+            <div class="param">
+                <div class="param-name">Intervalle (fixe)</div>
+                <div class="param-desc">Le système fonctionne toujours avec un intervalle fixe de <strong>15 secondes</strong>. Non configurable pour garantir une cohérence.</div>
+            </div>
+
+            <div class="example">
+                <div class="example-title">💡 Cas d'usage</div>
+                <p>Dans certains jeux, le familier doit être appelé régulièrement pour collecter des objets, fournir des buffs temporaires ou gagner de l'expérience. Ce système automatise complètement ce processus fastidieux.</p>
+            </div>
+
+            <h3>⚠️ Important</h3>
+            <ul>
+                <li>Vérifiez que la touche configurée correspond bien à votre touche d'invocation</li>
+                <li>Le familier est automatiquement stocké après chaque appel</li>
+                <li>Fonctionne en parallèle des autres systèmes (buffs, macros, soins)</li>
+            </ul>
+        </div>
+
+        <h2>Conseils d'optimisation</h2>
+
+        <h3>🎯 Combinaison des systèmes</h3>
+        <p>Toutes les fonctionnalités Premium fonctionnent simultanément. Vous pouvez :</p>
+        <ul>
+            <li>Activer les buffs automatiques + 3 macros + familier en même temps</li>
+            <li>Les soins (HP/Mana) fonctionnent toujours en parallèle</li>
+            <li>Chaque système a son propre timer indépendant</li>
+        </ul>
+
+        <h3>⚡ Performance</h3>
+        <ul>
+            <li>Plus vous activez de systèmes, plus l'extension consomme de ressources</li>
+            <li>Ajustez les intervalles pour éviter des actions trop fréquentes</li>
+            <li>Surveillez le log d'activité pour vérifier le bon fonctionnement</li>
+        </ul>
+
+        <h3>🔑 Sécurité</h3>
+        <ul>
+            <li>Votre licence Premium est vérifiée en temps réel</li>
+            <li>Si la connexion est perdue, les fonctionnalités Premium se désactivent</li>
+            <li>Reconnectez-vous pour réactiver toutes les fonctionnalités</li>
+        </ul>
+    </div>
+</body>
+</html>
