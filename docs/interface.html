@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interface & Personnalisation – Reborn Assistant</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #d4af37;
+            --dark-bg: #080808;
+            --text: #f0ead6;
+            --text-dim: #9a9278;
+            --border: rgba(212, 175, 55, 0.2);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--dark-bg); color: var(--text); line-height: 1.7; }
+        body::before {
+            content: ''; position: fixed; inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+            pointer-events: none; opacity: 0.3;
+        }
+        .container { max-width: 900px; margin: 0 auto; padding: 80px 40px 100px; position: relative; z-index: 1; }
+        .back-link { display: inline-flex; align-items: center; gap: 8px; color: var(--text-dim); text-decoration: none; font-size: 13px; margin-bottom: 40px; transition: color 0.2s; }
+        .back-link:hover { color: var(--gold); }
+        h1 { font-family: 'Cinzel', serif; font-size: 42px; color: var(--gold); letter-spacing: 2px; margin-bottom: 16px; }
+        .subtitle { font-size: 18px; color: var(--text-dim); margin-bottom: 60px; }
+        h2 { font-family: 'Cinzel', serif; font-size: 28px; color: var(--text); margin: 60px 0 24px; padding-bottom: 16px; border-bottom: 1px solid var(--border); }
+        h3 { font-size: 20px; color: var(--gold); margin: 32px 0 16px; }
+        .theme-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin: 24px 0; }
+        .theme-card { background: rgba(20,20,16,0.6); border: 1px solid var(--border); border-radius: 8px; padding: 20px; text-align: center; }
+        .theme-preview { width: 100%; height: 60px; border-radius: 6px; margin-bottom: 12px; }
+        .theme-name { font-weight: 600; color: var(--gold); font-size: 14px; }
+        .lang-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 12px; margin: 24px 0; }
+        .lang-item { background: rgba(20,20,16,0.6); border: 1px solid var(--border); border-radius: 6px; padding: 12px; text-align: center; font-size: 13px; }
+        code { background: rgba(20,20,16,0.9); padding: 3px 10px; border-radius: 4px; font-family: 'Courier New', monospace; font-size: 13px; color: #f4d03f; }
+        ul { margin: 16px 0; padding-left: 24px; }
+        li { margin: 8px 0; font-size: 15px; }
+        p { margin-bottom: 16px; font-size: 15px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-link">← Retour à l'accueil</a>
+        <h1>🎨 Interface & Personnalisation</h1>
+        <p class="subtitle">Personnalisez Reborn Assistant selon vos préférences</p>
+
+        <h2>Thèmes visuels</h2>
+        <p>Reborn Assistant propose 6 thèmes pour personnaliser l'apparence de l'interface :</p>
+
+        <div class="theme-grid">
+            <div class="theme-card">
+                <div class="theme-preview" style="background: linear-gradient(135deg, #d4af37, #f4d03f);"></div>
+                <div class="theme-name">MMO Gold</div>
+            </div>
+            <div class="theme-card">
+                <div class="theme-preview" style="background: linear-gradient(135deg, #004d66, #0099cc);"></div>
+                <div class="theme-name">Cyber Blue</div>
+            </div>
+            <div class="theme-card">
+                <div class="theme-preview" style="background: linear-gradient(135deg, #660080, #9900cc);"></div>
+                <div class="theme-name">Neon Purple</div>
+            </div>
+            <div class="theme-card">
+                <div class="theme-preview" style="background: linear-gradient(135deg, #990000, #ff0000);"></div>
+                <div class="theme-name">Fire Red</div>
+            </div>
+            <div class="theme-card">
+                <div class="theme-preview" style="background: linear-gradient(135deg, #333, #555);"></div>
+                <div class="theme-name">Dark Mode</div>
+            </div>
+            <div class="theme-card">
+                <div class="theme-preview" style="background: linear-gradient(135deg, #ddd, #f5f5f5);"></div>
+                <div class="theme-name">White Mode</div>
+            </div>
+        </div>
+
+        <h3>Changer de thème</h3>
+        <p>1. Ouvrez le panneau Reborn<br>
+        2. Cliquez sur l'onglet "⚙️ CONFIGURATION"<br>
+        3. Sélectionnez votre thème dans le menu déroulant<br>
+        4. Le changement est instantané</p>
+
+        <h2>Langues disponibles</h2>
+        <p>Interface disponible en 13 langues :</p>
+
+        <div class="lang-grid">
+            <div class="lang-item">🇫🇷 Français</div>
+            <div class="lang-item">🇬🇧 English</div>
+            <div class="lang-item">🇪🇸 Español</div>
+            <div class="lang-item">🇩🇪 Deutsch</div>
+            <div class="lang-item">🇮🇹 Italiano</div>
+            <div class="lang-item">🇵🇹 Português</div>
+            <div class="lang-item">🇳🇱 Nederlands</div>
+            <div class="lang-item">🇵🇱 Polski</div>
+            <div class="lang-item">🇷🇺 Русский</div>
+            <div class="lang-item">🇨🇳 中文</div>
+            <div class="lang-item">🇯🇵 日本語</div>
+            <div class="lang-item">🇰🇷 한국어</div>
+            <div class="lang-item">🇵🇭 Filipino</div>
+        </div>
+
+        <h3>Changer de langue</h3>
+        <p>1. Ouvrez le panneau Reborn<br>
+        2. Cliquez sur "⚙️ CONFIGURATION"<br>
+        3. Sélectionnez votre langue dans le menu déroulant<br>
+        4. Toute l'interface se traduit instantanément</p>
+
+        <h2>Raccourcis clavier</h2>
+        <p>Reborn Assistant inclut des raccourcis globaux pour un contrôle rapide :</p>
+
+        <h3>Raccourcis système</h3>
+        <ul>
+            <li><code>CTRL + A</code> : Démarrer le bot</li>
+            <li><code>CTRL + O</code> : Arrêter le bot</li>
+            
+        </ul>
+
+        <h3>Raccourcis personnalisables</h3>
+        <p>Vous pouvez configurer les touches pour :</p>
+        <ul>
+            <li>Potions HP et Mana</li>
+            <li>Macros (séquences de touches)</li>
+            <li>Familier</li>
+        </ul>
+
+        <h2>Options d'affichage</h2>
+
+        <h3>Position du panneau</h3>
+        <p>Le panneau Reborn est draggable (déplaçable) :</p>
+        <ul>
+            <li>Cliquez sur l'en-tête du panneau</li>
+            <li>Maintenez le bouton enfoncé et déplacez</li>
+            <li>Relâchez à l'endroit souhaité</li>
+            <li>La position est sauvegardée automatiquement</li>
+        </ul>
+
+        <h3>Opacité du panneau</h3>
+        <p>Ajustez la transparence pour ne pas gêner la visibilité du jeu tout en gardant un œil sur vos statistiques.</p>
+
+        <h3>Log d'activité</h3>
+        <p>Le log affiche en temps réel toutes les actions effectuées :</p>
+        <ul>
+            <li>Activation/désactivation des systèmes</li>
+            <li>Utilisation de potions</li>
+            <li>Exécution des macros et buffs</li>
+            <li>Appels du familier</li>
+            <li>Erreurs éventuelles</li>
+        </ul>
+
+        <h2>Sauvegarde des paramètres</h2>
+        <p>Toutes vos configurations sont automatiquement sauvegardées localement :</p>
+        <ul>
+            <li>Thème sélectionné</li>
+            <li>Langue de l'interface</li>
+            <li>Seuils HP/Mana</li>
+            <li>Touches assignées</li>
+            <li>Configuration des macros</li>
+            <li>Position du panneau</li>
+        </ul>
+        <p>Elles persistent entre les sessions, même après fermeture du navigateur.</p>
+    </div>
+</body>
+</html>

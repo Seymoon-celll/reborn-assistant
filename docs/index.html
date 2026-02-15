@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation Reborn Assistant</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Marcellus&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #d4af37;
+            --gold-light: #f4d03f;
+            --gold-dark: #b8941f;
+            --dark-bg: #080808;
+            --dark-card: #141410;
+            --green: #4CAF50;
+            --text: #f0ead6;
+            --text-dim: #9a9278;
+            --border: rgba(212, 175, 55, 0.2);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+        }
+
+        body::before {
+            content: '';
+            position: fixed; inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+            pointer-events: none; opacity: 0.3;
+        }
+
+        .container {
+            max-width: 1200px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .logo {
+            width: 80px; height: 80px;
+            background: linear-gradient(135deg, var(--gold-dark), var(--gold-light));
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Cinzel', serif;
+            font-size: 40px;
+            font-weight: 900;
+            color: #000;
+            border-radius: 12px;
+            box-shadow: 0 0 40px rgba(212,175,55,0.4);
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 36px;
+            color: var(--gold);
+            letter-spacing: 3px;
+            margin-bottom: 12px;
+        }
+
+        .version {
+            font-size: 14px;
+            color: var(--text-dim);
+            letter-spacing: 2px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 24px;
+        }
+
+        .card {
+            background: rgba(20,20,16,0.6);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 32px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+            display: block;
+        }
+
+        .card:hover {
+            border-color: var(--gold);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 30px rgba(212,175,55,0.2);
+        }
+
+        .card-icon {
+            font-size: 32px;
+            margin-bottom: 16px;
+        }
+
+        .card-title {
+            font-family: 'Cinzel', serif;
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--gold);
+            margin-bottom: 12px;
+            letter-spacing: 1px;
+        }
+
+        .card-desc {
+            font-size: 14px;
+            line-height: 1.6;
+            color: var(--text-dim);
+        }
+
+        .premium-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--gold-dark), var(--gold-light));
+            color: #000;
+            font-size: 10px;
+            font-weight: 600;
+            padding: 4px 10px;
+            border-radius: 12px;
+            letter-spacing: 1px;
+            margin-left: 8px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 40px;
+            border-top: 1px solid var(--border);
+            font-size: 12px;
+            color: var(--text-dim);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <a href="../index.html" style="display:inline-flex;align-items:center;gap:8px;font-family:'Inter',sans-serif;font-size:12px;font-weight:500;letter-spacing:2px;text-transform:uppercase;text-decoration:none;color:var(--text-dim);padding:9px 20px;margin-bottom:40px;border:1px solid var(--border);border-radius:6px;transition:all 0.3s ease;" onmouseover="this.style.color='var(--gold)';this.style.borderColor='rgba(212,175,55,0.5)'" onmouseout="this.style.color='var(--text-dim)';this.style.borderColor='var(--border)'">← Retour au site principal</a>
+            <div class="logo">R</div>
+            <h1>REBORN ASSISTANT</h1>
+            <div class="version">VERSION 1.1 · DOCUMENTATION COMPLÈTE</div>
+        </div>
+
+        <div class="grid">
+            <a href="quickstart.html" class="card">
+                <div class="card-icon">🚀</div>
+                <div class="card-title">Démarrage Rapide</div>
+                <div class="card-desc">Installation, configuration initiale et premiers pas avec Reborn Assistant.</div>
+            </a>
+
+            <a href="features.html" class="card">
+                <div class="card-icon">⚡</div>
+                <div class="card-title">Fonctionnalités</div>
+                <div class="card-desc">Détail complet des fonctionnalités gratuites et Premium avec tableau comparatif.</div>
+            </a>
+
+            <a href="premium.html" class="card">
+                <div class="card-icon">💎</div>
+                <div class="card-title">Guide Premium <span class="premium-badge">PREMIUM</span></div>
+                <div class="card-desc">Buffs automatiques, macros personnalisables et système de familier.</div>
+            </a>
+
+            <a href="interface.html" class="card">
+                <div class="card-icon">🎨</div>
+                <div class="card-title">Interface & Personnalisation</div>
+                <div class="card-desc">Thèmes visuels, langues et options de personnalisation.</div>
+            </a>
+
+            <a href="troubleshooting.html" class="card">
+                <div class="card-icon">🔧</div>
+                <div class="card-title">Dépannage</div>
+                <div class="card-desc">Solutions aux problèmes courants et FAQ détaillée.</div>
+            </a>
+
+            <a href="legal.html" class="card">
+                <div class="card-icon">⚖️</div>
+                <div class="card-title">Informations Légales</div>
+                <div class="card-desc">Disclaimer, mentions légales et termes de licence.</div>
+            </a>
+
+            <a href="privacy.html" class="card">
+                <div class="card-icon">🔒</div>
+                <div class="card-title">Privacy Policy</div>
+                <div class="card-desc">Politique de confidentialité et gestion des données personnelles.</div>
+            </a>
+        </div>
+
+        <footer>
+            © 2026 Reborn Assistant — Développé par Seymoon · Tous droits réservés
+        </footer>
+    </div>
+</body>
+</html>
