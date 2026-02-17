@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy – Reborn Assistant</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root { 
+            --gold: #d4af37; --dark-bg: #080808; --green: #4CAF50; 
+            --text: #f0ead6; --text-dim: #9a9278; --border: rgba(212, 175, 55, 0.2); 
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--dark-bg); color: var(--text); line-height: 1.7; }
+        body::before { content: ''; position: fixed; inset: 0; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E"); pointer-events: none; opacity: 0.3; }
+        .container { max-width: 900px; margin: 0 auto; padding: 80px 40px 100px; position: relative; z-index: 1; }
+        .back-link { display: inline-flex; align-items: center; gap: 8px; color: var(--text-dim); text-decoration: none; font-size: 13px; margin-bottom: 40px; transition: color 0.2s; }
+        .back-link:hover { color: var(--gold); }
+        h1 { font-family: 'Cinzel', serif; font-size: 42px; color: var(--gold); letter-spacing: 2px; margin-bottom: 16px; }
+        .subtitle { font-size: 18px; color: var(--text-dim); margin-bottom: 60px; }
+        h2 { font-family: 'Cinzel', serif; font-size: 28px; color: var(--text); margin: 60px 0 24px; padding-bottom: 16px; border-bottom: 1px solid var(--border); }
+        h3 { font-size: 20px; color: var(--gold); margin: 32px 0 16px; }
+        .section { background: rgba(20,20,16,0.6); border: 1px solid var(--border); border-radius: 12px; padding: 32px; margin: 24px 0; }
+        .success-box { background: rgba(76,175,80,0.08); border-left: 4px solid var(--green); padding: 24px; margin: 32px 0; border-radius: 4px; }
+        ul { margin: 16px 0 16px 20px; }
+        li { margin: 10px 0; font-size: 15px; }
+        p { margin-bottom: 16px; font-size: 15px; }
+        strong { color: var(--gold); }
+        a { color: var(--gold); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .contact-box { background: rgba(212,175,55,0.08); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin: 24px 0; text-align: center; }
+        code { background: rgba(20,20,16,0.9); padding: 3px 10px; border-radius: 4px; font-family: 'Courier New', monospace; font-size: 13px; color: #f4d03f; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-link">← Retour à l'accueil</a>
+
+        <h1>🔒 Politique de Confidentialité</h1>
+        <p class="subtitle">Privacy Policy for Reborn Assistant</p>
+
+        <div class="success-box">
+            <strong>✅ Confidentialité totale garantie</strong><br>
+            Reborn Assistant ne collecte, ne transmet ni ne stocke aucune donnée personnelle sur des serveurs externes. Votre vie privée est notre priorité absolue.
+        </div>
+
+        <h2>Collecte de données</h2>
+        <div class="section">
+            <p><strong>Reborn Assistant ne collecte AUCUNE donnée personnelle.</strong></p>
+            <p>Toutes les préférences et configurations utilisateur sont stockées <strong>localement sur votre appareil</strong> en utilisant l'API de stockage local du navigateur (<code>chrome.storage.local</code>).</p>
+            <p>Aucune transmission de données vers des serveurs externes n'est effectuée.</p>
+        </div>
+
+        <h2>Données stockées localement</h2>
+        <div class="section">
+            <p>Les informations suivantes sont sauvegardées <strong>uniquement sur votre appareil</strong> :</p>
+            <ul>
+                <li><strong>Préférences de langue</strong> : Votre choix de langue d'interface (parmi 13 langues disponibles)</li>
+                <li><strong>Sélection du thème visuel</strong> : Le thème choisi parmi les 6 disponibles (Reborn, Neon, Obsidian, etc.)</li>
+                <li><strong>Raccourcis clavier configurés</strong> : Les touches que vous avez assignées pour vos actions</li>
+                <li><strong>Seuils de déclenchement</strong> : Vos paramètres d'automatisation personnalisés</li>
+                <li><strong>Intervalles de minuteur personnalisés</strong> : Les intervalles configurés pour vos macros</li>
+                <li><strong>Position de l'interface</strong> : L'emplacement du panneau Reborn sur votre écran</li>
+            </ul>
+            <p><strong>Important :</strong> Toutes ces données restent sur votre appareil et ne sont <strong>jamais transmises</strong> à un serveur externe ou à des tiers.</p>
+        </div>
+
+        <h2>Services tiers</h2>
+        <div class="section">
+            <h3>Aucun service tiers utilisé</h3>
+            <p>Reborn Assistant <strong>n'utilise aucun</strong> service externe tel que :</p>
+            <ul>
+                <li>❌ Services d'analyse (Google Analytics, Mixpanel, etc.)</li>
+                <li>❌ Services de suivi (tracking pixels, cookies tiers)</li>
+                <li>❌ Services de publicité</li>
+                <li>❌ Services de télémétrie</li>
+                <li>❌ Services de crash reporting</li>
+            </ul>
+            <p>Votre activité dans l'extension reste <strong>100% privée</strong>.</p>
+        </div>
+
+        <h2>Authentification et licence</h2>
+        <div class="section">
+            <h3>services Google Cloud Authentication (version Premium)</h3>
+            <p>Pour les utilisateurs Premium, Reborn utilise <strong>services Google Cloud Authentication</strong> (service Google) uniquement pour :</p>
+            <ul>
+                <li>Vérifier votre licence Premium</li>
+                <li>Authentifier votre compte Google</li>
+            </ul>
+            <p><strong>Données concernées :</strong></p>
+            <ul>
+                <li>Votre adresse email Google</li>
+                <li>Votre identifiant services Google Cloud (UID)</li>
+            </ul>
+            <p><strong>Important :</strong> Ces données sont gérées par services Google Cloud et ne sont utilisées que pour la vérification de licence. Nous ne collectons ni ne stockons vos données d'activité, historique de navigation, ou toute autre information personnelle.</p>
+        </div>
+
+        <h2>Paiements Sécurisés</h2>
+        <div class="section">
+            <p>Les paiements Premium sont traités par <strong>Stripe</strong>, le même système utilisé par Amazon, Netflix et Google.</p>
+            <p><strong>Sécurité maximale :</strong></p>
+            <ul>
+                <li>Vos informations bancaires ne transitent <strong>jamais</strong> par nos serveurs</li>
+                <li>Protection par chiffrement SSL/TLS de niveau bancaire</li>
+                <li>Nous ne stockons <strong>aucune donnée</strong> de carte bancaire</li>
+                <li>Conformité PCI-DSS (norme de sécurité des paiements)</li>
+            </ul>
+            <p>Stripe gère l'intégralité du processus de paiement de manière sécurisée et indépendante.</p>
+        </div>
+
+        <h2>Contrôle utilisateur</h2>
+        <div class="section">
+            <h3>Suppression de vos données</h3>
+            <p>Vous avez un contrôle total sur vos données. Vous pouvez les supprimer à tout moment de plusieurs façons :</p>
+            
+            <p><strong>1. Désinstallation de l'extension</strong></p>
+            <p>En désinstallant Reborn Assistant de votre navigateur, toutes les données stockées localement sont automatiquement supprimées.</p>
+            
+            <p><strong>2. Réinitialisation manuelle</strong></p>
+            <p>Vous pouvez réinitialiser les paramètres depuis l'interface de Reborn à tout moment.</p>
+            
+            <p><strong>3. Suppression du compte (Premium)</strong></p>
+            <p>Si vous souhaitez supprimer votre compte Premium et toutes les données associées, contactez-nous à l'adresse indiquée ci-dessous.</p>
+        </div>
+
+        <h2>Sécurité des données</h2>
+        <div class="section">
+            <h3>Protection de vos informations</h3>
+            <ul>
+                <li><strong>Stockage local uniquement</strong> : Vos configurations ne quittent jamais votre appareil</li>
+                <li><strong>Pas de transmission réseau</strong> : Aucune donnée n'est envoyée à des serveurs tiers (sauf authentification services Google Cloud pour Premium)</li>
+                <li><strong>Pas de cookies</strong> : Reborn n'utilise pas de cookies de suivi</li>
+                <li><strong>Code exécuté localement</strong> : Toute la logique de l'extension s'exécute dans votre navigateur</li>
+            </ul>
+        </div>
+
+        <h2>Automatisation Intelligente</h2>
+        <div class="section">
+            <p>Reborn Assistant utilise une technologie d'automatisation avancée qui reproduit naturellement les actions d'un utilisateur réel.</p>
+            <p>Conçu pour s'intégrer parfaitement à votre expérience utilisateur navigateur, l'assistant fonctionne de manière fluide et discrète, vous permettant de profiter pleinement de vos sessions sans interruption.</p>
+            <p><strong>Fonctionnement :</strong></p>
+            <ul>
+                <li>Simulation de comportement humain naturel</li>
+                <li>Intégration transparente à votre utilisation</li>
+                <li>Exécution fluide et fiable des macros</li>
+                <li>Respect de votre expérience utilisateur</li>
+            </ul>
+        </div>
+
+        <h2>Mises à jour de cette politique</h2>
+        <div class="section">
+            <p>Cette politique de confidentialité peut être mise à jour occasionnellement pour refléter les changements dans nos pratiques ou pour des raisons légales. Toute modification significative sera communiquée aux utilisateurs.</p>
+            <p><strong>Dernière mise à jour :</strong> Février 2026</p>
+        </div>
+
+        <h2>Contact</h2>
+        <div class="contact-box">
+            <p>Pour toute question ou préoccupation concernant cette politique de confidentialité :</p>
+            <p style="margin-top: 16px;"><strong>📧 Email :</strong> <a href="/cdn-cgi/l/email-protection#88fbedf1e5e7e7e6a6ebede4e4c8efe5e9e1e4a6ebe7e5"><span class="__cf_email__" data-cfemail="394a5c4054565657175a5c5555795e54585055175a5654">[email&#160;protected]</span></a></p>
+        </div>
+
+        <p style="margin-top: 60px; text-align: center; color: var(--text-dim); font-size

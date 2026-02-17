@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title><span data-i18n="quick1">Guide d'utilisation – Reborn Assistant</span></title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&amp;family=Marcellus&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+        :root {
+            --gold: #d4af37;
+            --gold-light: #f4d03f;
+            --gold-dark: #b8941f;
+            --dark-bg: #080808;
+            --dark-card: #141410;
+            --green: #4CAF50;
+            --red: #ff6b6b;
+            --text: #f0ead6;
+            --text-dim: #9a9278;
+            --border: rgba(212, 175, 55, 0.2);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        body::before {
+            content: '';
+            position: fixed; inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+            pointer-events: none; opacity: 0.3;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 80px 40px 100px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-dim);
+            text-decoration: none;
+            font-size: 13px;
+            margin-bottom: 40px;
+            transition: color 0.2s;
+        }
+
+        .back-link:hover { color: var(--gold); }
+
+        h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 42px;
+            color: var(--gold);
+            letter-spacing: 2px;
+            margin-bottom: 16px;
+        }
+
+        .subtitle {
+            font-size: 18px;
+            color: var(--text-dim);
+            margin-bottom: 60px;
+        }
+
+        h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 28px;
+            color: var(--text);
+            margin: 60px 0 24px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        h3 {
+            font-size: 20px;
+            color: var(--gold);
+            margin: 40px 0 16px;
+        }
+
+        p { margin-bottom: 20px; font-size: 15px; }
+
+        .step {
+            background: rgba(20,20,16,0.6);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 32px;
+            margin-bottom: 24px;
+        }
+
+        .step-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px; height: 36px;
+            background: linear-gradient(135deg, var(--gold-dark), var(--gold-light));
+            color: #000;
+            font-weight: 700;
+            border-radius: 8px;
+            margin-bottom: 16px;
+        }
+
+        .step-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--gold);
+            margin-bottom: 12px;
+        }
+
+        .alert {
+            background: rgba(212,175,55,0.08);
+            border-left: 4px solid var(--gold);
+            padding: 20px 24px;
+            margin: 24px 0;
+            border-radius: 4px;
+        }
+
+        .alert-warning {
+            background: rgba(255,107,107,0.08);
+            border-left-color: var(--red);
+        }
+
+        .alert strong { color: var(--gold); display: block; margin-bottom: 8px; }
+
+        code {
+            background: rgba(20,20,16,0.8);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+            color: var(--gold-light);
+        }
+
+        .requirement {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 0;
+        }
+
+        .requirement-icon { font-size: 20px; }
+    </style>
+<script src="../lang.js"></script>
+</head>
+<body>
+<div style="position:fixed;top:20px;right:20px;z-index:1000;">
+<select id="langSelector" onchange="setLanguage(this.value)" style="padding:8px 12px;background:rgba(212,175,55,0.1);border:1px solid rgba(212,175,55,0.3);border-radius:6px;color:var(--gold);font-size:12px;font-weight:600;cursor:pointer;font-family:'Inter',sans-serif;">
+<option value="fr">🇫🇷 FR</option>
+<option value="en">🇬🇧 EN</option>
+<option value="es">🇪🇸 ES</option>
+<option value="de">🇩🇪 DE</option>
+<option value="it">🇮🇹 IT</option>
+<option value="pt">🇵🇹 PT</option>
+<option value="ja">🇯🇵 JA</option>
+<option value="ko">🇰🇷 KO</option>
+<option value="zh">🇨🇳 ZH</option>
+<option value="ru">🇷🇺 RU</option>
+<option value="pl">🇵🇱 PL</option>
+<option value="nl">🇳🇱 NL</option>
+<option value="tl">🇵🇭 TL</option>
+</select>
+</div>
+<div class="container">
+<a class="back-link" href="index.html"><span data-i18n="docBackToHome">← Retour à l\'accueil</span></a>
+<h1><span data-i18n="quick3">🚀 Démarrage Rapide</span></h1>
+<p class="subtitle"><span data-i18n="quick4">Installez et configurez Reborn Assistant en quelques minutes</span></p>
+<h2><span data-i18n="quick5">Prérequis</span></h2>
+<div class="requirement">
+<span class="requirement-icon">🌐</span>
+<div><strong><span data-i18n="quick6">Navigateur compatible :</span></strong><span data-i18n="quick7">Google Chrome, Microsoft Edge, Brave ou tout navigateur basé sur Chromium</span></div>
+</div>
+<div class="requirement">
+<span class="requirement-icon">🔧</span>
+<div><strong><span data-i18n="quick8">Compte Google :</span></strong><span data-i18n="quick9">Requis uniquement pour l'authentification Premium (optionnel pour version gratuite)</span></div>
+</div>
+<div class="requirement">
+<span class="requirement-icon">🎮</span>
+<div><strong><span data-i18n="quick10">Site compatible :</span></strong><span data-i18n="quick11">Compatible avec les sites web standards</span></div>
+</div>
+<h2><span data-i18n="quick12">Installation</span></h2>
+<div class="step">
+<div class="step-number">1</div>
+<div class="step-title"><span data-i18n="quick13">Télécharger l'extension</span></div>
+
+<h2><span data-i18n="quick79">Prochaines étapes</span></h2>
+<p>• <a href="features.html" style="color: var(--gold);"><span data-i18n="quick80">Découvrez toutes les fonctionnalités</span></a><br/>
+        • <a href="premium.html" style="color: var(--gold);"><span data-i18n="quick81">Guide complet Premium</span></a><br/>
+        • <a href="troubleshooting.html" style="color: var(--gold);"><span data-i18n="quick82">Solutions aux problèmes courants</span></a></p>
+</div>
+</body>
+</html>
