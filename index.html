@@ -88,7 +88,7 @@
             gap: 20px;
         }
 
-        .price-card { background: var(--dark-card); border: 1px solid var(--border); border-radius: 16px; padding: 36px 28px; position: relative; box-sizing: border-box; }
+        .price-card { background: var(--dark-card); border: 1px solid var(--border); border-radius: 16px; padding: 36px 28px; position: relative; box-sizing: border-box; display: flex; flex-direction: column; }
         .price-card.featured { border-color: var(--gold); background: linear-gradient(160deg, rgba(42,36,10,0.9) 0%, var(--dark-card) 100%); box-shadow: 0 0 60px rgba(212,175,55,0.12), inset 0 1px 0 rgba(212,175,55,0.3); padding-top: 50px; }
         .price-card.exclusive { border-color: rgba(50,200,80,0.6); background: linear-gradient(160deg, rgba(5,30,10,0.95) 0%, var(--dark-card) 100%); box-shadow: 0 0 50px rgba(50,200,80,0.12), inset 0 1px 0 rgba(50,200,80,0.2); padding-top: 56px; }
         .price-badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, var(--gold-dark), var(--gold-light)); color: #000; padding: 6px 16px; border-radius: 20px; font-family: 'Inter', sans-serif; font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; white-space: nowrap; }
@@ -96,7 +96,7 @@
         .price-amount { font-family: 'Cinzel', serif; font-size: 48px; font-weight: 900; line-height: 1; margin-bottom: 8px; background: linear-gradient(135deg, var(--gold-dark), var(--gold-light)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
         .price-period { font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 300; color: var(--text-dim); margin-bottom: 40px; }
         .price-divider { height: 1px; background: var(--border); margin-bottom: 32px; }
-        .price-features { list-style: none; margin-bottom: 40px; }
+        .price-features { list-style: none; margin-bottom: 40px; flex: 1; }
         .price-features li { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 300; padding: 13px 0; border-bottom: 1px solid rgba(212,175,55,0.08); color: var(--text-dim); display: flex; align-items: center; gap: 12px; }
         .price-features li::before { content: ''; width: 6px; height: 6px; background: var(--gold); border-radius: 50%; flex-shrink: 0; opacity: 0.7; }
         .btn-full { width: 100%; text-align: center; }
@@ -230,6 +230,7 @@
                 <option value="pl">🇵🇱 PL</option>
                 <option value="nl">🇳🇱 NL</option>
                 <option value="tl">🇵🇭 TL</option>
+                <option value="tr">🇹🇷 TR</option>
             </select>
             <a href="docs/index.html" style="font-family:'Cinzel',serif;font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;color:var(--gold);padding:6px 12px;border:1px solid rgba(212,175,55,0.4);border-radius:6px;transition:all 0.3s ease;background:rgba(212,175,55,0.05);" onmouseover="this.style.background='rgba(212,175,55,0.12)';this.style.borderColor='var(--gold)'" onmouseout="this.style.background='rgba(212,175,55,0.05)';this.style.borderColor='rgba(212,175,55,0.4)'">📚 Docs</a>
             <div class="status-badge">Premium Edition</div>
@@ -273,7 +274,7 @@
                 <div class="feature-card" data-skill="II"><div class="skill-badge skill-passive">Passif</div><span class="feature-icon">🛡️</span><h3 class="feature-title">Sécurité Maximale</h3><p class="feature-description">Vos données restent locales. Aucun tracking, aucune télémétrie.</p></div>
                 <div class="feature-card" data-skill="III"><div class="skill-badge skill-active">Actif</div><span class="feature-icon">🎯</span><h3 class="feature-title">Macros Personnalisables</h3><p class="feature-description">3 macros configurables avec déclencheurs automatiques et raccourcis clavier.</p></div>
                 <div class="feature-card" data-skill="IV"><div class="skill-badge skill-passive">Passif</div><span class="feature-icon">🎨</span><h3 class="feature-title">Interface Personnalisable</h3><p class="feature-description">Choisissez parmi 6 thèmes et adaptez l'interface à vos besoins.</p></div>
-                <div class="feature-card" data-skill="V"><div class="skill-badge skill-passive">Passif</div><span class="feature-icon">🌐</span><h3 class="feature-title">Multi-Langues</h3><p class="feature-description">Disponible en 13 langues. Support mondial avec interfaces localisées.</p></div>
+                <div class="feature-card" data-skill="V"><div class="skill-badge skill-passive">Passif</div><span class="feature-icon">🌐</span><h3 class="feature-title">Multi-Langues</h3><p class="feature-description">Disponible en 14 langues. Support mondial avec interfaces localisées.</p></div>
                 <div class="feature-card" data-skill="VI"><div class="skill-badge skill-passive">Gratuit</div><span class="feature-icon">🔄</span><h3 class="feature-title">Version Gratuite</h3><p class="feature-description">Testez gratuitement avec les fonctionnalités de base incluses.</p></div>
             </div>
         </div>
@@ -342,7 +343,7 @@
                         <ul class="price-features">
                             <li>Macro soin (soigner alliés)</li>
                             <li>6 thèmes visuels</li>
-                            <li>13 langues disponibles</li>
+                            <li>14 langues disponibles</li>
                             <li>Interface flottante</li>
                         </ul>
                         <a href="https://chromewebstore.google.com/detail/ammakeedbimichmpipeaacgajcblnnme/preview" target="_blank" class="btn btn-secondary btn-full">Commencer</a>
@@ -406,7 +407,7 @@
             <!-- Stats sous le pricing -->
             <div class="stats reveal" style="margin-top:60px;border-radius:12px;">
                 <div class="stats-grid">
-                    <div class="stat-item"><div class="stat-number">13</div><div class="stat-label">Langues disponibles</div></div>
+                    <div class="stat-item"><div class="stat-number">14</div><div class="stat-label">Langues disponibles</div></div>
                     <div class="stat-item"><div class="stat-number">6</div><div class="stat-label">Thèmes visuels</div></div>
                     <div class="stat-item"><div class="stat-number">100%</div><div class="stat-label">Données locales</div></div>
                     <div class="stat-item"><div class="stat-number">24/7</div><div class="stat-label">Extension active</div></div>
@@ -470,7 +471,7 @@
                 <div class="footer-logo">REBORN ASSISTANT</div>
                 <div class="footer-links">
                     <a href="docs/index.html">Documentation</a>
-                    <a href="docs/privacy.html">Confidentialité</a>
+                    <a href="docs/legal.html#confidentialite">Confidentialité</a>
                     <a href="docs/legal.html">Conditions d'Utilisation</a>
                     <a href="docs/troubleshooting.html">Support</a>
                     <a href="/cdn-cgi/l/email-protection#f88b9d8195979796d69b9d9494b89f95999194d69b9795">Contact</a>
