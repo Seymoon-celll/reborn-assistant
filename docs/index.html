@@ -141,6 +141,57 @@
             font-size: 12px;
             color: var(--text-dim);
         }
+
+        /* MMORPG enhancements */
+        body::after {
+            content: '';
+            position: fixed;
+            top: -20%; left: 50%; transform: translateX(-50%);
+            width: 900px; height: 600px;
+            background: radial-gradient(ellipse, rgba(212,175,55,0.05) 0%, transparent 70%);
+            pointer-events: none; z-index: 0;
+        }
+
+        .logo {
+            animation: logoGlow 3s ease-in-out infinite;
+        }
+        @keyframes logoGlow {
+            0%, 100% { box-shadow: 0 0 40px rgba(212,175,55,0.4); }
+            50% { box-shadow: 0 0 60px rgba(212,175,55,0.6), 0 0 100px rgba(212,175,55,0.2); }
+        }
+
+        .card { position: relative; overflow: hidden; }
+        .card::before {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 20%; right: 20%; height: 1px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .card:hover::before { opacity: 0.5; }
+
+        .doc-category {
+            font-family: 'Inter', sans-serif;
+            font-size: 9px;
+            font-weight: 600;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--gold);
+            opacity: 0.5;
+            text-align: center;
+            margin: 40px 0 20px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        .doc-category::before, .doc-category::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: rgba(212,175,55,0.2);
+        }
+        .grid-section { margin-bottom: 8px; }
     </style>
 </head>
 <body>
@@ -152,7 +203,8 @@
             <div class="version">VERSION 1.1 · DOCUMENTATION COMPLÈTE</div>
         </div>
 
-        <div class="grid">
+        <div class="doc-category">Guide d'utilisation</div>
+        <div class="grid grid-section">
             <a href="quickstart.html" class="card">
                 <div class="card-icon">🚀</div>
                 <div class="card-title">Démarrage Rapide</div>
@@ -176,22 +228,28 @@
                 <div class="card-title">Interface & Personnalisation</div>
                 <div class="card-desc">Thèmes visuels, langues et options de personnalisation.</div>
             </a>
+        </div>
 
+        <div class="doc-category">Support</div>
+        <div class="grid grid-section">
             <a href="troubleshooting.html" class="card">
                 <div class="card-icon">🔧</div>
                 <div class="card-title">Dépannage</div>
-                <div class="card-desc">Solutions aux problèmes courants et FAQ détaillée.</div>
+                <div class="card-desc">Solutions aux problèmes courants, FAQ et optimisation des performances.</div>
             </a>
+        </div>
 
+        <div class="doc-category">Informations légales</div>
+        <div class="grid grid-section">
             <a href="legal.html" class="card">
                 <div class="card-icon">⚖️</div>
                 <div class="card-title">Informations Légales</div>
-                <div class="card-desc">Disclaimer, mentions légales et termes de licence.</div>
+                <div class="card-desc">Disclaimer, mentions légales, termes de licence et changelog.</div>
             </a>
 
             <a href="privacy.html" class="card">
                 <div class="card-icon">🔒</div>
-                <div class="card-title">Privacy Policy</div>
+                <div class="card-title">Politique de Confidentialité</div>
                 <div class="card-desc">Politique de confidentialité et gestion des données personnelles.</div>
             </a>
         </div>

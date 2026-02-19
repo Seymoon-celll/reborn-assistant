@@ -8,7 +8,11 @@
     <style>
         :root {
             --gold: #d4af37;
+            --gold-light: #f4d03f;
+            --gold-dark: #b8941f;
             --dark-bg: #080808;
+            --dark-card: #141410;
+            --green: #4CAF50;
             --text: #f0ead6;
             --text-dim: #9a9278;
             --border: rgba(212, 175, 55, 0.2);
@@ -41,7 +45,10 @@
 </head>
 <body>
     <div class="container">
-        <a href="index.html" class="back-link">← Retour à l'accueil</a>
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:40px;flex-wrap:wrap;gap:12px;">
+            <a href="index.html" class="back-link" style="margin-bottom:0;">← Retour aux docs</a>
+            <a href="../index.html" style="font-family:'Inter',sans-serif;font-size:11px;font-weight:500;letter-spacing:2px;text-transform:uppercase;text-decoration:none;color:var(--text-dim);padding:7px 16px;border:1px solid var(--border);border-radius:6px;transition:all 0.3s ease;" onmouseover="this.style.color='var(--gold)';this.style.borderColor='rgba(212,175,55,0.5)'" onmouseout="this.style.color='var(--text-dim)';this.style.borderColor='var(--border)'">⌂ Site principal</a>
+        </div>
         <h1>🎨 Interface & Personnalisation</h1>
         <p class="subtitle">Personnalisez Reborn Assistant selon vos préférences</p>
 
