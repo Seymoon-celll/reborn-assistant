@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Informations Légales – Reborn Assistant</title>
+    <title>Informations Légales & Confidentialité – Reborn Assistant</title>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         :root { --gold: #d4af37; --dark-bg: #080808; --red: #ff6b6b; --green: #4CAF50; --text: #f0ead6; --text-dim: #9a9278; --border: rgba(212, 175, 55, 0.2); }
@@ -14,7 +14,7 @@
         .back-link { display: inline-flex; align-items: center; gap: 8px; color: var(--text-dim); text-decoration: none; font-size: 13px; margin-bottom: 40px; transition: color 0.2s; }
         .back-link:hover { color: var(--gold); }
         h1 { font-family: 'Cinzel', serif; font-size: 42px; color: var(--gold); letter-spacing: 2px; margin-bottom: 16px; }
-        .subtitle { font-size: 18px; color: var(--text-dim); margin-bottom: 60px; }
+        .subtitle { font-size: 18px; color: var(--text-dim); margin-bottom: 40px; }
         h2 { font-family: 'Cinzel', serif; font-size: 28px; color: var(--text); margin: 60px 0 24px; padding-bottom: 16px; border-bottom: 1px solid var(--border); }
         h3 { font-size: 20px; color: var(--gold); margin: 32px 0 16px; }
         .legal-block { background: rgba(20,20,16,0.6); border: 1px solid var(--border); border-radius: 12px; padding: 32px; margin: 24px 0; }
@@ -23,6 +23,18 @@
         ul { margin: 16px 0 16px 20px; }
         li { margin: 8px 0; font-size: 15px; }
         p { margin-bottom: 16px; font-size: 15px; }
+        strong { color: var(--gold); }
+        a { color: var(--gold); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        code { background: rgba(20,20,16,0.9); padding: 3px 10px; border-radius: 4px; font-family: 'Courier New', monospace; font-size: 13px; color: #f4d03f; }
+        .contact-box { background: rgba(212,175,55,0.08); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin: 24px 0; text-align: center; }
+        .section-nav { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 60px; }
+        .section-nav a { display: inline-flex; align-items: center; gap: 6px; padding: 8px 18px; border: 1px solid var(--border); border-radius: 20px; font-size: 12px; font-weight: 500; color: var(--text-dim); text-decoration: none; letter-spacing: 0.5px; transition: all 0.2s ease; }
+        .section-nav a:hover { color: var(--gold); border-color: rgba(212,175,55,0.5); background: rgba(212,175,55,0.05); text-decoration: none; }
+        .page-separator { margin: 80px 0; display: flex; align-items: center; gap: 16px; }
+        .page-separator::before, .page-separator::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, transparent, rgba(212,175,55,0.4)); }
+        .page-separator::after { background: linear-gradient(90deg, rgba(212,175,55,0.4), transparent); }
+        .page-separator span { font-family: 'Cinzel', serif; font-size: 10px; color: var(--gold); opacity: 0.5; letter-spacing: 4px; white-space: nowrap; }
     </style>
 </head>
 <body>
@@ -31,10 +43,22 @@
             <a href="index.html" class="back-link" style="margin-bottom:0;">← Retour aux docs</a>
             <a href="../index.html" style="font-family:'Inter',sans-serif;font-size:11px;font-weight:500;letter-spacing:2px;text-transform:uppercase;text-decoration:none;color:var(--text-dim);padding:7px 16px;border:1px solid var(--border);border-radius:6px;transition:all 0.3s ease;" onmouseover="this.style.color='var(--gold)';this.style.borderColor='rgba(212,175,55,0.5)'" onmouseout="this.style.color='var(--text-dim)';this.style.borderColor='var(--border)'">⌂ Site principal</a>
         </div>
-        <h1>⚖️ Informations Légales</h1>
-        <p class="subtitle">Disclaimer, mentions légales et termes de licence</p>
 
-        <h2>⚠️ Disclaimer</h2>
+        <h1>⚖️ Légal & Confidentialité</h1>
+        <p class="subtitle">Disclaimer, mentions légales, termes de licence et politique de confidentialité</p>
+
+        <nav class="section-nav">
+            <a href="#legal">⚖️ Informations Légales</a>
+            <a href="#licence">© Licence</a>
+            <a href="#confidentialite">🔒 Confidentialité</a>
+            <a href="#changelog">📋 Changelog</a>
+        </nav>
+
+        <!-- ══════════════════════════════════════════ -->
+        <!--              INFORMATIONS LÉGALES          -->
+        <!-- ══════════════════════════════════════════ -->
+
+        <h2 id="legal">⚠️ Disclaimer</h2>
         <div class="warning-box">
             <strong>⚠️ Avertissement important :</strong> Reborn Assistant est un outil d'automatisation. Son utilisation peut violer les Conditions Générales d'Utilisation de certains services en ligne. L'utilisation de cet outil est entièrement à vos risques et périls.
         </div>
@@ -87,7 +111,11 @@
             <p>Cet accord est régi par le droit applicable dans la juridiction de résidence du détenteur des droits d'auteur. En installant et utilisant ce logiciel, vous reconnaissez avoir lu, compris et accepté l'intégralité de ces conditions.</p>
         </div>
 
-        <h2>© Termes de licence</h2>
+        <!-- ══════════════════════════════════════════ -->
+        <!--              TERMES DE LICENCE             -->
+        <!-- ══════════════════════════════════════════ -->
+
+        <h2 id="licence">© Termes de licence</h2>
 
         <div class="legal-block">
             <h3>Licence d'utilisation commerciale</h3>
@@ -118,10 +146,142 @@
             <strong>✅ Politique de remboursement :</strong> Si vous n'êtes pas satisfait dans les 7 jours suivant votre achat, contactez notre support pour un remboursement intégral. Au-delà de cette période, aucun remboursement ne sera accordé sauf cas exceptionnel.
         </div>
 
-        <h2>Changelog</h2>
+        <!-- ══════════════════════════════════════════ -->
+        <!--          POLITIQUE DE CONFIDENTIALITÉ      -->
+        <!-- ══════════════════════════════════════════ -->
+
+        <div class="page-separator"><span>◆ ◆ ◆</span></div>
+
+        <h1 id="confidentialite" style="font-size:36px;margin-bottom:12px;">🔒 Politique de Confidentialité</h1>
+        <p class="subtitle">Comment nous protégeons vos données personnelles</p>
+
+        <div class="success-box">
+            <strong>✅ Confidentialité totale garantie</strong><br>
+            Reborn Assistant ne collecte, ne transmet ni ne stocke aucune donnée personnelle sur des serveurs externes. Votre vie privée est notre priorité absolue.
+        </div>
+
+        <h2>Collecte de données</h2>
+        <div class="legal-block">
+            <p><strong>Reborn Assistant ne collecte AUCUNE donnée personnelle.</strong></p>
+            <p>Toutes les préférences et configurations utilisateur sont stockées <strong>localement sur votre appareil</strong> en utilisant l'API de stockage local du navigateur (<code>chrome.storage.local</code>).</p>
+            <p>Aucune transmission de données vers des serveurs externes n'est effectuée.</p>
+        </div>
+
+        <h2>Données stockées localement</h2>
+        <div class="legal-block">
+            <p>Les informations suivantes sont sauvegardées <strong>uniquement sur votre appareil</strong> :</p>
+            <ul>
+                <li><strong>Préférences de langue</strong> : Votre choix de langue d'interface (parmi 14 langues disponibles)</li>
+                <li><strong>Sélection du thème visuel</strong> : Le thème choisi parmi les 6 disponibles (Reborn, Neon, Obsidian, etc.)</li>
+                <li><strong>Raccourcis clavier configurés</strong> : Les touches que vous avez assignées pour vos actions</li>
+                <li><strong>Seuils de déclenchement</strong> : Vos paramètres d'automatisation personnalisés</li>
+                <li><strong>Intervalles de minuteur personnalisés</strong> : Les intervalles configurés pour vos macros</li>
+                <li><strong>Position de l'interface</strong> : L'emplacement du panneau Reborn sur votre écran</li>
+            </ul>
+            <p><strong>Important :</strong> Toutes ces données restent sur votre appareil et ne sont <strong>jamais transmises</strong> à un serveur externe ou à des tiers.</p>
+        </div>
+
+        <h2>Services tiers</h2>
+        <div class="legal-block">
+            <h3>Aucun service tiers utilisé</h3>
+            <p>Reborn Assistant <strong>n'utilise aucun</strong> service externe tel que :</p>
+            <ul>
+                <li>❌ Services d'analyse (Google Analytics, Mixpanel, etc.)</li>
+                <li>❌ Services de suivi (tracking pixels, cookies tiers)</li>
+                <li>❌ Services de publicité</li>
+                <li>❌ Services de télémétrie</li>
+                <li>❌ Services de crash reporting</li>
+            </ul>
+            <p>Votre activité dans l'extension reste <strong>100% privée</strong>.</p>
+        </div>
+
+        <h2>Authentification et licence</h2>
+        <div class="legal-block">
+            <h3>Firebase Authentication (version Premium)</h3>
+            <p>Pour les utilisateurs Premium, Reborn utilise <strong>Firebase Authentication</strong> (Google Cloud) uniquement pour :</p>
+            <ul>
+                <li>Vérifier votre licence Premium</li>
+                <li>Authentifier votre compte Google</li>
+            </ul>
+            <p><strong>Données concernées :</strong></p>
+            <ul>
+                <li>Votre adresse email Google</li>
+                <li>Votre identifiant services Google Cloud (UID)</li>
+            </ul>
+            <p><strong>Important :</strong> Ces données sont gérées par Firebase (Google) et ne sont utilisées que pour la vérification de licence. Nous ne collectons ni ne stockons vos données d'activité, historique de navigation, ou toute autre information personnelle.</p>
+        </div>
+
+        <h2>Paiements Sécurisés</h2>
+        <div class="legal-block">
+            <p>Les paiements Premium sont traités par <strong>Stripe</strong>, le même système utilisé par Amazon, Netflix et Google.</p>
+            <p><strong>Sécurité maximale :</strong></p>
+            <ul>
+                <li>Vos informations bancaires ne transitent <strong>jamais</strong> par nos serveurs</li>
+                <li>Protection par chiffrement SSL/TLS de niveau bancaire</li>
+                <li>Nous ne stockons <strong>aucune donnée</strong> de carte bancaire</li>
+                <li>Conformité PCI-DSS (norme de sécurité des paiements)</li>
+            </ul>
+            <p>Stripe gère l'intégralité du processus de paiement de manière sécurisée et indépendante.</p>
+        </div>
+
+        <h2>Contrôle utilisateur</h2>
+        <div class="legal-block">
+            <h3>Suppression de vos données</h3>
+            <p>Vous avez un contrôle total sur vos données. Vous pouvez les supprimer à tout moment de plusieurs façons :</p>
+
+            <p><strong>1. Désinstallation de l'extension</strong></p>
+            <p>En désinstallant Reborn Assistant de votre navigateur, toutes les données stockées localement sont automatiquement supprimées.</p>
+
+            <p><strong>2. Réinitialisation manuelle</strong></p>
+            <p>Vous pouvez réinitialiser les paramètres depuis l'interface de Reborn à tout moment.</p>
+
+            <p><strong>3. Suppression du compte (Premium)</strong></p>
+            <p>Si vous souhaitez supprimer votre compte Premium et toutes les données associées, contactez-nous à l'adresse indiquée ci-dessous.</p>
+        </div>
+
+        <h2>Sécurité des données</h2>
+        <div class="legal-block">
+            <h3>Protection de vos informations</h3>
+            <ul>
+                <li><strong>Stockage local uniquement</strong> : Vos configurations ne quittent jamais votre appareil</li>
+                <li><strong>Pas de transmission réseau</strong> : Aucune donnée n'est envoyée à des serveurs tiers (sauf authentification Firebase pour Premium)</li>
+                <li><strong>Pas de cookies</strong> : Reborn n'utilise pas de cookies de suivi</li>
+                <li><strong>Code exécuté localement</strong> : Toute la logique de l'extension s'exécute dans votre navigateur</li>
+            </ul>
+        </div>
+
+        <h2>Mises à jour de cette politique</h2>
+        <div class="legal-block">
+            <p>Cette politique de confidentialité peut être mise à jour occasionnellement pour refléter les changements dans nos pratiques ou pour des raisons légales. Toute modification significative sera communiquée aux utilisateurs.</p>
+            <p><strong>Dernière mise à jour :</strong> Février 2026</p>
+        </div>
+
+        <h2>Contact</h2>
+        <div class="contact-box">
+            <p>Pour toute question concernant les informations légales ou la politique de confidentialité :</p>
+            <p style="margin-top:16px;"><strong>📧 Email :</strong> <a href="mailto:seymoon.cell@gmail.com">seymoon.cell@gmail.com</a></p>
+        </div>
+
+        <!-- ══════════════════════════════════════════ -->
+        <!--                  CHANGELOG                 -->
+        <!-- ══════════════════════════════════════════ -->
+
+        <div class="page-separator"><span>◆ ◆ ◆</span></div>
+
+        <h2 id="changelog">📋 Changelog</h2>
 
         <div class="legal-block">
-            <h3>Version 1.1 (Février 2026) · Actuelle</h3>
+            <h3>Version 1.2 (Février 2026) · Actuelle</h3>
+            <ul>
+                <li>Support de 14 langues (ajout Turc 🇹🇷)</li>
+                <li>Refonte visuelle MMORPG du site web</li>
+                <li>Fusion des pages légales en une seule page unifiée</li>
+                <li>Amélioration de l'alignement des cartes de prix</li>
+            </ul>
+        </div>
+
+        <div class="legal-block">
+            <h3>Version 1.1 (Février 2026)</h3>
             <ul>
                 <li>Ajout du macro périodique automatique (Pet 15s + auto-store)</li>
                 <li>Raccourcis clavier CTRL+A / CTRL+O pour démarrer/arrêter</li>
