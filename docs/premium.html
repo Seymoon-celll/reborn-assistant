@@ -104,7 +104,10 @@
 </head>
 <body>
     <div class="container">
-        <a href="index.html" class="back-link">← Retour à l'accueil</a>
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:40px;flex-wrap:wrap;gap:12px;">
+            <a href="index.html" class="back-link" style="margin-bottom:0;">← Retour aux docs</a>
+            <a href="../index.html" style="font-family:'Inter',sans-serif;font-size:11px;font-weight:500;letter-spacing:2px;text-transform:uppercase;text-decoration:none;color:var(--text-dim);padding:7px 16px;border:1px solid var(--border);border-radius:6px;transition:all 0.3s ease;" onmouseover="this.style.color='var(--gold)';this.style.borderColor='rgba(212,175,55,0.5)'" onmouseout="this.style.color='var(--text-dim)';this.style.borderColor='var(--border)'">⌂ Site principal</a>
+        </div>
 
         <h1>💎 Guide Premium</h1>
         <p class="subtitle">Maîtrisez toutes les fonctionnalités avancées de Reborn Assistant</p>
@@ -112,7 +115,7 @@
         <div class="section">
             <h2>🛡️ Rotation de séquences Automatique <span class="premium-badge">PREMIUM</span></h2>
             
-            <p>Le système de rotation de séquences maintient automatiquement tous vos séquences actives en appuyant sur une séquence prédéfinie de touches à intervalles réguliers.</p>
+            <p>Le système de rotation de séquences maintient automatiquement toutes vos séquences actives en appuyant sur une séquence prédéfinie de touches à intervalles réguliers.</p>
 
             <h3>Séquence de touches</h3>
             <p>La rotation suit toujours cet ordre fixe :</p>
@@ -122,7 +125,7 @@
 
             <div class="param">
                 <div class="param-name">Intervalle entre cycles</div>
-                <div class="param-desc">Temps d'attente avant de recommencer toute la séquence de séquences. Par défaut : <code>5 minutes</code>. Recommandé : réglez selon la durée de vos séquences les plus courts.</div>
+                <div class="param-desc">Temps d'attente avant de recommencer toute la séquence. Par défaut : <code>5 minutes</code>. Recommandé : réglez selon la durée de vos séquences les plus courtes.</div>
             </div>
 
             <div class="param">
@@ -146,7 +149,7 @@
         <div class="section">
             <h2>⚙️ Macros Personnalisables <span class="premium-badge">PREMIUM</span></h2>
             
-            <p>Créez jusqu'à 3 macros indépendantes avec vos propres séquences de touches. Parfait pour l'automatisation de automatisation répétitive, combos récurrents ou rotations de compétences.</p>
+            <p>Créez jusqu'à 3 macros indépendantes avec vos propres séquences de touches. Parfait pour l'automatisation des tâches répétitives, combos récurrents ou rotations de compétences.</p>
 
             <h3>Fonctionnement</h3>
             <p>Chaque macro peut exécuter une séquence de touches à intervalle régulier, complètement indépendante des autres systèmes.</p>
@@ -175,7 +178,7 @@
                 <ul>
                     <li>Séquence : <code>1,2,3,space</code></li>
                     <li>Intervalle : 10 secondes</li>
-                    <li>Utilisation : Attaque de base répétitive pour exécuter des actions répétitives</li>
+                    <li>Utilisation : Rotation d'attaques de base en boucle</li>
                 </ul>
 
                 <p><strong>Macro 2 - Combo de compétences :</strong></p>
@@ -204,7 +207,7 @@
             <ol>
                 <li>Appelle la macro périodique (touche configurable, par défaut <code>§</code>)</li>
                 <li>Attend 500ms</li>
-                <li>Stocke le macro périodique automatiquement</li>
+                <li>Stocke la macro périodique automatiquement</li>
             </ol>
 
             <h3>Configuration</h3>
@@ -221,7 +224,7 @@
 
             <div class="example">
                 <div class="example-title">💡 Cas d'usage</div>
-                <p>Dans certains services, la macro périodique doit être appelé régulièrement pour collecter des objets, fournir des séquences temporaires ou gagner de l'expérience. Ce système automatise complètement ce processus fastidieux.</p>
+                <p>Dans certains services, la macro périodique doit être appelée régulièrement pour collecter des objets, fournir des séquences temporaires ou gagner de l'expérience. Ce système automatise complètement ce processus fastidieux.</p>
             </div>
 
             <h3>⚠️ Important</h3>

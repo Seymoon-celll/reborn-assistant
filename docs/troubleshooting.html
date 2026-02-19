@@ -28,7 +28,10 @@
 </head>
 <body>
     <div class="container">
-        <a href="index.html" class="back-link">← Retour à l'accueil</a>
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:40px;flex-wrap:wrap;gap:12px;">
+            <a href="index.html" class="back-link" style="margin-bottom:0;">← Retour aux docs</a>
+            <a href="../index.html" style="font-family:'Inter',sans-serif;font-size:11px;font-weight:500;letter-spacing:2px;text-transform:uppercase;text-decoration:none;color:var(--text-dim);padding:7px 16px;border:1px solid var(--border);border-radius:6px;transition:all 0.3s ease;" onmouseover="this.style.color='var(--gold)';this.style.borderColor='rgba(212,175,55,0.5)'" onmouseout="this.style.color='var(--text-dim)';this.style.borderColor='var(--border)'">⌂ Site principal</a>
+        </div>
         <h1>🔧 Dépannage</h1>
         <p class="subtitle">Solutions aux problèmes courants et FAQ</p>
 
@@ -59,7 +62,7 @@
             <div class="faq-a">
                 <strong>Causes possibles :</strong><br>
                 • Mauvaise connexion internet<br>
-                • Serveurs services Google Cloud temporairement indisponibles<br>
+                • Serveurs Firebase temporairement indisponibles<br>
                 • Licence expirée ou révoquée<br><br>
                 <strong>Solutions :</strong><br>
                 1. Vérifiez votre connexion internet<br>
@@ -118,7 +121,7 @@
             <div class="faq-q">❌ Le bot s'arrête tout seul</div>
             <div class="faq-a">
                 <strong>Causes possibles :</strong><br>
-                • Perte de connexion à services Google Cloud<br>
+                • Perte de connexion à Firebase<br>
                 • Détection DevTools (sécurité Premium)<br>
                 • La page a changé de page/URL<br><br>
                 <strong>Solutions :</strong><br>

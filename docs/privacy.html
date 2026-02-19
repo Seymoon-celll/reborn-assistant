@@ -34,10 +34,13 @@
 </head>
 <body>
     <div class="container">
-        <a href="index.html" class="back-link">← Retour à l'accueil</a>
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:40px;flex-wrap:wrap;gap:12px;">
+            <a href="index.html" class="back-link" style="margin-bottom:0;">← Retour aux docs</a>
+            <a href="../index.html" style="font-family:'Inter',sans-serif;font-size:11px;font-weight:500;letter-spacing:2px;text-transform:uppercase;text-decoration:none;color:var(--text-dim);padding:7px 16px;border:1px solid var(--border);border-radius:6px;transition:all 0.3s ease;" onmouseover="this.style.color='var(--gold)';this.style.borderColor='rgba(212,175,55,0.5)'" onmouseout="this.style.color='var(--text-dim)';this.style.borderColor='var(--border)'">⌂ Site principal</a>
+        </div>
 
         <h1>🔒 Politique de Confidentialité</h1>
-        <p class="subtitle">Privacy Policy for Reborn Assistant</p>
+        <p class="subtitle">Comment nous protégeons vos données personnelles</p>
 
         <div class="success-box">
             <strong>✅ Confidentialité totale garantie</strong><br>
@@ -81,8 +84,8 @@
 
         <h2>Authentification et licence</h2>
         <div class="section">
-            <h3>services Google Cloud Authentication (version Premium)</h3>
-            <p>Pour les utilisateurs Premium, Reborn utilise <strong>services Google Cloud Authentication</strong> (service Google) uniquement pour :</p>
+            <h3>Firebase Authentication (version Premium)</h3>
+            <p>Pour les utilisateurs Premium, Reborn utilise <strong>Firebase Authentication</strong> (Google Cloud) uniquement pour :</p>
             <ul>
                 <li>Vérifier votre licence Premium</li>
                 <li>Authentifier votre compte Google</li>
@@ -92,7 +95,7 @@
                 <li>Votre adresse email Google</li>
                 <li>Votre identifiant services Google Cloud (UID)</li>
             </ul>
-            <p><strong>Important :</strong> Ces données sont gérées par services Google Cloud et ne sont utilisées que pour la vérification de licence. Nous ne collectons ni ne stockons vos données d'activité, historique de navigation, ou toute autre information personnelle.</p>
+            <p><strong>Important :</strong> Ces données sont gérées par Firebase (Google) et ne sont utilisées que pour la vérification de licence. Nous ne collectons ni ne stockons vos données d'activité, historique de navigation, ou toute autre information personnelle.</p>
         </div>
 
         <h2>Paiements Sécurisés</h2>
@@ -128,7 +131,7 @@
             <h3>Protection de vos informations</h3>
             <ul>
                 <li><strong>Stockage local uniquement</strong> : Vos configurations ne quittent jamais votre appareil</li>
-                <li><strong>Pas de transmission réseau</strong> : Aucune donnée n'est envoyée à des serveurs tiers (sauf authentification services Google Cloud pour Premium)</li>
+                <li><strong>Pas de transmission réseau</strong> : Aucune donnée n'est envoyée à des serveurs tiers (sauf authentification Firebase pour Premium)</li>
                 <li><strong>Pas de cookies</strong> : Reborn n'utilise pas de cookies de suivi</li>
                 <li><strong>Code exécuté localement</strong> : Toute la logique de l'extension s'exécute dans votre navigateur</li>
             </ul>
@@ -159,4 +162,9 @@
             <p style="margin-top: 16px;"><strong>📧 Email :</strong> <a href="mailto:seymoon.cell@gmail.com">seymoon.cell@gmail.com</a></p>
         </div>
 
-        <p style="margin-top: 60px; text-align: center; color: var(--text-dim); font-size
+        <p style="margin-top: 60px; text-align: center; color: var(--text-dim); font-size: 13px;">
+            © 2026 Reborn Assistant — Développé par Seymoon · Tous droits réservés
+        </p>
+    </div>
+</body>
+</html>

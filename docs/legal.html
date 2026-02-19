@@ -27,7 +27,10 @@
 </head>
 <body>
     <div class="container">
-        <a href="index.html" class="back-link">← Retour à l'accueil</a>
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:40px;flex-wrap:wrap;gap:12px;">
+            <a href="index.html" class="back-link" style="margin-bottom:0;">← Retour aux docs</a>
+            <a href="../index.html" style="font-family:'Inter',sans-serif;font-size:11px;font-weight:500;letter-spacing:2px;text-transform:uppercase;text-decoration:none;color:var(--text-dim);padding:7px 16px;border:1px solid var(--border);border-radius:6px;transition:all 0.3s ease;" onmouseover="this.style.color='var(--gold)';this.style.borderColor='rgba(212,175,55,0.5)'" onmouseout="this.style.color='var(--text-dim)';this.style.borderColor='var(--border)'">⌂ Site principal</a>
+        </div>
         <h1>⚖️ Informations Légales</h1>
         <p class="subtitle">Disclaimer, mentions légales et termes de licence</p>
 
@@ -75,7 +78,7 @@
 
         <div class="legal-block">
             <h3>Données personnelles</h3>
-            <p>Reborn Assistant utilise services Google Cloud (Google) pour la gestion des comptes et licences. Les données collectées se limitent à votre adresse email et identifiant de compte, uniquement à des fins d'authentification et de vérification de licence.</p>
+            <p>Reborn Assistant utilise Firebase (Google Cloud) pour la gestion des comptes et licences. Les données collectées se limitent à votre adresse email et identifiant de compte, uniquement à des fins d'authentification et de vérification de licence.</p>
             <p><strong>Aucune donnée d'activité n'est collectée ou transmise.</strong> Vos configurations restent stockées localement sur votre appareil.</p>
         </div>
 
@@ -137,8 +140,8 @@
                 <li>Rotation séquence automatique (F2 → 1-9 → 0 → F1)</li>
                 <li>3 macros personnalisables</li>
                 <li>6 thèmes visuels et 12 langues</li>
-                <li>Système de licence Premium via services Google Cloud</li>
-                <li>Connexion Google authentification</li>
+                <li>Système de licence Premium via Firebase</li>
+                <li>Authentification via Google</li>
             </ul>
         </div>
 

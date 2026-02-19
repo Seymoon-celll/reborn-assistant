@@ -152,12 +152,60 @@
             .features, .pricing, .faq { padding: 50px 0; }
             .price-card { padding: 40px 24px; }
             .hero-trust { flex-direction: column; gap: 12px; }
-            .price-grid {
-                grid-template-columns: 1fr;
-            }
+            .price-grid { grid-template-columns: 1fr; }
         }
-    
-</style>
+
+        /* ═══ MMORPG Visual Enhancements ═══ */
+
+        /* Corner bracket decorations on hero */
+        .hero-inner { position: relative; }
+        .hero-bracket { position: absolute; width: 48px; height: 48px; opacity: 0.2; pointer-events: none; }
+        .hero-bracket.tl { top: -8px; left: -8px; border-top: 2px solid var(--gold); border-left: 2px solid var(--gold); }
+        .hero-bracket.tr { top: -8px; right: -8px; border-top: 2px solid var(--gold); border-right: 2px solid var(--gold); }
+        .hero-bracket.bl { bottom: -8px; left: -8px; border-bottom: 2px solid var(--gold); border-left: 2px solid var(--gold); }
+        .hero-bracket.br { bottom: -8px; right: -8px; border-bottom: 2px solid var(--gold); border-right: 2px solid var(--gold); }
+
+        /* Skill type badges on feature cards */
+        .skill-badge { display: inline-block; font-family: 'Inter', sans-serif; font-size: 8px; font-weight: 700; padding: 3px 8px; border-radius: 3px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 14px; }
+        .skill-active { background: rgba(76,175,80,0.12); border: 1px solid rgba(76,175,80,0.35); color: var(--green); }
+        .skill-passive { background: rgba(212,175,55,0.08); border: 1px solid rgba(212,175,55,0.3); color: var(--gold); }
+
+        /* Skill number watermark on feature cards */
+        .feature-card { counter-increment: skill-count; }
+        .features-grid { counter-reset: skill-count; }
+        .feature-card::before { content: attr(data-skill); position: absolute; bottom: 20px; right: 20px; font-family: 'Cinzel', serif; font-size: 28px; font-weight: 900; color: rgba(212,175,55,0.06); line-height: 1; pointer-events: none; }
+
+        /* Rank tiers on pricing cards */
+        .price-rank { font-family: 'Inter', sans-serif; font-size: 9px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: var(--text-dim); margin-bottom: 20px; opacity: 0.7; display: flex; align-items: center; gap: 8px; }
+        .price-rank::before, .price-rank::after { content: ''; flex: 1; height: 1px; background: rgba(212,175,55,0.15); }
+        .price-card.featured .price-rank { color: var(--gold); opacity: 0.8; }
+        .price-card.featured .price-rank::before, .price-card.featured .price-rank::after { background: rgba(212,175,55,0.3); }
+        .price-card.exclusive .price-rank { color: var(--green); opacity: 0.8; }
+        .price-card.exclusive .price-rank::before, .price-card.exclusive .price-rank::after { background: rgba(76,175,80,0.25); }
+
+        /* Ornamental section dividers */
+        .section-ornament { display: flex; align-items: center; gap: 14px; margin: 0 auto 24px; max-width: 280px; }
+        .section-ornament::before, .section-ornament::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, transparent, rgba(212,175,55,0.4)); }
+        .section-ornament::after { background: linear-gradient(90deg, rgba(212,175,55,0.4), transparent); }
+        .section-ornament span { font-size: 10px; color: var(--gold); opacity: 0.6; letter-spacing: 4px; white-space: nowrap; }
+
+        /* Glowing border on featured price card */
+        .price-card.featured { animation: featuredPulse 3s ease-in-out infinite; }
+        @keyframes featuredPulse { 0%, 100% { box-shadow: 0 0 60px rgba(212,175,55,0.12), inset 0 1px 0 rgba(212,175,55,0.3); } 50% { box-shadow: 0 0 80px rgba(212,175,55,0.2), inset 0 1px 0 rgba(212,175,55,0.4); } }
+
+        /* Glow effect on stat numbers */
+        .stat-number { text-shadow: 0 0 30px rgba(212,175,55,0.3); }
+
+        /* Feature icon enhanced glow */
+        .feature-card:hover .feature-icon { filter: drop-shadow(0 0 14px rgba(212,175,55,0.6)); transform: scale(1.05); transition: all 0.3s ease; }
+        .feature-icon { transition: all 0.3s ease; }
+
+        /* Enhanced section header ornament */
+        .section-tag { position: relative; }
+
+        /* RPG bottom-border on h2 sections in docs-style pages */
+        @media (max-width: 640px) { .hero-bracket { display: none; } }
+    </style>
     <script src="lang.js"></script>
 </head>
 <body>
@@ -190,6 +238,10 @@
 
     <section class="hero">
         <div class="hero-inner">
+            <div class="hero-bracket tl"></div>
+            <div class="hero-bracket tr"></div>
+            <div class="hero-bracket bl"></div>
+            <div class="hero-bracket br"></div>
             <div class="hero-eyebrow"><span></span> Browser Automation <span></span></div>
             <h1>REBORN<br>ASSISTANT</h1>
             <div class="hero-subtitle">Premium Automation</div>
@@ -211,17 +263,18 @@
     <section class="features" id="features">
         <div class="container">
             <div class="section-header reveal">
-                <div class="section-tag">Fonctionnalités</div>
+                <div class="section-tag">Compétences & Aptitudes</div>
                 <h2 class="section-title">Tout ce dont vous <em>avez besoin</em></h2>
+                <div class="section-ornament"><span>◆ ◆ ◆</span></div>
                 <p class="section-subtitle">Découvrez les capacités exceptionnelles de Reborn Assistant.</p>
             </div>
             <div class="features-grid reveal">
-                <div class="feature-card"><span class="feature-icon">⚡</span><h3 class="feature-title">Automatisation Complète</h3><p class="feature-description">Macros de touches, séquences automatiques et actions configurable pour une automatisation complète.</p></div>
-                <div class="feature-card"><span class="feature-icon">🛡️</span><h3 class="feature-title">Sécurité Maximale</h3><p class="feature-description">Vos données restent locales. Aucun tracking, aucune télémétrie.</p></div>
-                <div class="feature-card"><span class="feature-icon">🎯</span><h3 class="feature-title">Macros Personnalisables</h3><p class="feature-description">3 macros configurables avec raccourcis clavier CTRL+A et CTRL+O.</p></div>
-                <div class="feature-card"><span class="feature-icon">🎨</span><h3 class="feature-title">Interface Personnalisable</h3><p class="feature-description">Choisissez parmi 6 thèmes et adaptez l'interface à vos besoins.</p></div>
-                <div class="feature-card"><span class="feature-icon">🌐</span><h3 class="feature-title">Multi-Langues</h3><p class="feature-description">Disponible en 13 langues. Support mondial avec interfaces localisées.</p></div>
-                <div class="feature-card"><span class="feature-icon">🔄</span><h3 class="feature-title">Version Gratuite</h3><p class="feature-description">Testez gratuitement avec les fonctionnalités de base incluses.</p></div>
+                <div class="feature-card" data-skill="I"><div class="skill-badge skill-active">Actif</div><span class="feature-icon">⚡</span><h3 class="feature-title">Automatisation Complète</h3><p class="feature-description">Macros de touches, séquences automatiques et actions configurables pour une automatisation complète.</p></div>
+                <div class="feature-card" data-skill="II"><div class="skill-badge skill-passive">Passif</div><span class="feature-icon">🛡️</span><h3 class="feature-title">Sécurité Maximale</h3><p class="feature-description">Vos données restent locales. Aucun tracking, aucune télémétrie.</p></div>
+                <div class="feature-card" data-skill="III"><div class="skill-badge skill-active">Actif</div><span class="feature-icon">🎯</span><h3 class="feature-title">Macros Personnalisables</h3><p class="feature-description">3 macros configurables avec déclencheurs automatiques et raccourcis clavier.</p></div>
+                <div class="feature-card" data-skill="IV"><div class="skill-badge skill-passive">Passif</div><span class="feature-icon">🎨</span><h3 class="feature-title">Interface Personnalisable</h3><p class="feature-description">Choisissez parmi 6 thèmes et adaptez l'interface à vos besoins.</p></div>
+                <div class="feature-card" data-skill="V"><div class="skill-badge skill-passive">Passif</div><span class="feature-icon">🌐</span><h3 class="feature-title">Multi-Langues</h3><p class="feature-description">Disponible en 13 langues. Support mondial avec interfaces localisées.</p></div>
+                <div class="feature-card" data-skill="VI"><div class="skill-badge skill-passive">Gratuit</div><span class="feature-icon">🔄</span><h3 class="feature-title">Version Gratuite</h3><p class="feature-description">Testez gratuitement avec les fonctionnalités de base incluses.</p></div>
             </div>
         </div>
     </section>
@@ -236,7 +289,7 @@
                 </div>
                 
                 <h2 style="font-family:'Cinzel',serif;font-size:clamp(28px,4vw,42px);font-weight:700;color:var(--text);margin-bottom:24px;line-height:1.2;">
-                    Niveau de sécurité professionnel <span style="background:linear-gradient(135deg,var(--gold-dark),var(--gold-light));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;"></span>
+                    Niveau de sécurité <span style="background:linear-gradient(135deg,var(--gold-dark),var(--gold-light));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">professionnel</span>
                 </h2>
                 
                 <p style="font-family:'Inter',sans-serif;font-size:17px;font-weight:300;color:var(--text-dim);line-height:1.9;margin-bottom:48px;">
@@ -261,7 +314,7 @@
                     </div>
                     <div style="padding:28px 24px;background:var(--dark-card);border:1px solid var(--border);border-radius:12px;">
                         <div style="font-size:32px;margin-bottom:12px;">🔒</div>
-                        <div style="font-family:'Cinzel',serif;font-size:14px;font-weight:600;color:var(--gold);margin-bottom:8px;">Firebase Cloud</div>
+                        <div style="font-family:'Cinzel',serif;font-size:14px;font-weight:600;color:var(--gold);margin-bottom:8px;">Firebase</div>
                         <div style="font-family:'Inter',sans-serif;font-size:13px;color:var(--text-dim);line-height:1.6;">Infrastructure Google Cloud sécurisée</div>
                     </div>
                 </div>
@@ -272,14 +325,16 @@
     <section class="pricing" id="pricing">
         <div class="container">
             <div class="section-header reveal">
-                <div class="section-tag">Tarifs</div>
-                <h2 class="section-title">Choisissez votre <em>plan</em></h2>
+                <div class="section-tag">Choisissez votre Classe</div>
+                <h2 class="section-title">Choisissez votre <em>rang</em></h2>
+                <div class="section-ornament"><span>◆ ◆ ◆</span></div>
                 <p class="section-subtitle">Choisissez la formule qui vous convient. Sans engagement.</p>
             </div>
 
             <div class="reveal">
                 <div class="price-grid">
                     <div class="price-card">
+                        <div class="price-rank">Rang I · Voyageur</div>
                         <div class="price-plan">Gratuit</div>
                         <div class="price-amount">0€</div>
                         <div class="price-period">à jamais</div>
@@ -296,6 +351,7 @@
                     </div>
 
                     <div class="price-card">
+                        <div class="price-rank">Rang II · Aventurier</div>
                         <div class="price-plan">Mensuel</div>
                         <div class="price-amount">2,99€</div>
                         <div class="price-period">par mois</div>
@@ -312,6 +368,7 @@
 
                     <div class="price-card featured">
                         <div class="price-badge">⭐ Populaire -17%</div>
+                        <div class="price-rank">Rang III · Champion</div>
                         <div class="price-plan">Annuel</div>
                         <div class="price-amount">29,99€</div>
                         <div class="price-period">par an · soit 2,50€/mois</div>
@@ -328,6 +385,7 @@
 
                     <div class="price-card exclusive">
                         <div class="price-badge" style="background:linear-gradient(135deg,#1a5c28,#2ea84a);color:#fff;border:none;">⚡ Offre Limitée</div>
+                        <div class="price-rank">Rang IV · Légende</div>
                         <div class="price-plan">À Vie</div>
                         <div class="price-amount">99,99€</div>
                         <div class="price-period">paiement unique · plus jamais rien</div>
@@ -378,6 +436,7 @@
             <div class="section-header reveal">
                 <div class="section-tag">FAQ</div>
                 <h2 class="section-title">Questions <em>fréquentes</em></h2>
+                <div class="section-ornament"><span>◆ ◆ ◆</span></div>
                 <p class="section-subtitle">Tout ce que vous devez savoir avant de commencer.</p>
             </div>
             <div class="faq-list reveal">
