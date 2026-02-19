@@ -34,27 +34,6 @@
         </div>
         <h1>🔧 Dépannage</h1>
         <p class="subtitle">Solutions aux problèmes courants et FAQ</p>
-
-        <h2>Problèmes d'installation</h2>
-
-        <div class="faq">
-            <div class="faq-q">❌ L'extension n'apparaît pas dans la barre d'outils</div>
-            <div class="faq-a">
-                <strong>Solutions :</strong><br>
-                1. Vérifiez que le mode développeur est activé dans <code>chrome://extensions/</code><br>
-                2. Rechargez l'extension (icône ↺ dans la page des extensions)<br>
-                3. Vérifiez que vous avez sélectionné le bon dossier (celui contenant <code>manifest.json</code>)<br>
-                4. Épinglez l'extension : cliquez sur l'icône puzzle 🧩 et épinglez Reborn
-            </div>
-        </div>
-
-        <div class="faq">
-            <div class="faq-q">❌ Erreur "Manifest version 2 is deprecated"</div>
-            <div class="faq-a">
-                C'est un avertissement normal, pas une erreur bloquante. Reborn fonctionne en Manifest V2 pour des raisons de compatibilité. L'extension fonctionne parfaitement malgré cet avertissement.
-            </div>
-        </div>
-
         <h2>Problèmes de connexion</h2>
 
         <div class="faq">
@@ -93,11 +72,10 @@
                     Seul le soin de base est disponible en version gratuite.
                 </div>
                 <strong>Si vous avez Premium :</strong><br>
-                1. Le bot est-il démarré ? (indicateur vert "ON" ou <code>CTRL+A</code>)<br>
-                2. Les toggles déclencheurs sont-ils activés ?<br>
+                1. Le bot est-il démarré ? <code>CTRL+A</code><br>
+                2. Les toggles déclencheurs sont-ils activés ? indicateur vert "ON"<br>
                 3. Les touches configurées sont-elles correctes ?<br>
-                4. Le seuil est-il bien réglé ? (ex: 60%)<br>
-                5. Le service détecte-t-il correctement vos valeurs surveillées ?
+                4. Le service détecte-t-il correctement vos valeurs surveillées ?
             </div>
         </div>
 
@@ -113,7 +91,6 @@
                 1. Vérifiez que votre licence Premium est active (icône 💎 dans le panneau)<br>
                 2. Les toggles correspondants sont-ils activés ?<br>
                 3. Vérifiez les intervalles et délais configurés<br>
-                4. Consultez le log d'activité pour voir si les actions s'exécutent
             </div>
         </div>
 
@@ -122,7 +99,7 @@
             <div class="faq-a">
                 <strong>Causes possibles :</strong><br>
                 • Perte de connexion à Google Cloud<br>
-                • Détection DevTools (sécurité Premium)<br>
+                • Détection DevTools<br>
                 • La page a changé de page/URL<br><br>
                 <strong>Solutions :</strong><br>
                 1. Redémarrez le bot avec <code>CTRL+A</code> (Premium) ou via le panneau<br>
@@ -149,8 +126,7 @@
             <div class="faq-q">💡 Comment optimiser les paramètres ?</div>
             <div class="faq-a">
                 <strong>Configuration recommandée :</strong><br>
-                • <strong>Seuils déclencheurs :</strong> 60-70% (équilibre sécurité/efficacité)<br>
-                • <strong>Intervalle séquences :</strong> 5-10 minutes (selon durée de vos séquences)<br>
+                • <strong>Intervalle séquences :</strong> 5-25 minutes (selon durée de vos séquences)<br>
                 • <strong>Délai entre touches :</strong> 1-2 secondes (évite les erreurs)<br>
                 • <strong>Macros :</strong> Intervalles de 10-30s selon l'usage
             </div>
@@ -161,14 +137,14 @@
         <div class="faq">
             <div class="faq-q">❓ Puis-je utiliser Reborn sur plusieurs navigateurs ?</div>
             <div class="faq-a">
-                Oui, mais vous devez installer l'extension sur chaque navigateur. Votre licence Premium fonctionne sur tous vos appareils tant que vous vous connectez avec le même compte Google.
+                Oui, mais vous devez installer l'extension sur chaque navigateur. Votre licence Premium fonctionne sur tous vos appareils tant que vous vous connectez avec le même compte Google (1 connexion en simultanée max).
             </div>
         </div>
 
         <div class="faq">
             <div class="faq-q">❓ Mes données sont-elles sauvegardées ?</div>
             <div class="faq-a">
-                Toutes vos configurations (touches, seuils, macros, thème, langue) sont sauvegardées <strong>localement</strong> dans le navigateur. Elles persistent entre les sessions. En revanche, si vous désinstallez l'extension, vous perdez ces données.
+                Toutes vos configurations (touches, macros, thème, langue) sont sauvegardées <strong>localement</strong> dans le navigateur. Elles persistent entre les sessions. En revanche, si vous désinstallez l'extension, vous perdez ces données.
             </div>
         </div>
 
@@ -189,7 +165,7 @@
         <div class="faq">
             <div class="faq-q">❓ Quid du plan À Vie si le service ferme ?</div>
             <div class="faq-a">
-                Le plan À Vie garantit l'accès tant que le service est actif. L'extension une fois installée fonctionne localement ; seule la vérification de licence nécessite une connexion internet. En cas de fermeture du service, vous conservez l'extension mais ne pourrez plus vérifier votre licence Premium.
+                Le plan À Vie garantit l'accès tant que le service est actif. L'extension une fois installée fonctionne localement ; seule la vérification de licence nécessite une connexion internet. En cas de fermeture du service, vous conservez l'extension et votre licence Premium.
             </div>
         </div>
 
