@@ -7,6 +7,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         :root { --gold: #d4af37; --dark-bg: #080808; --green: #4CAF50; --red: #ff6b6b; --text: #f0ead6; --text-dim: #9a9278; --border: rgba(212, 175, 55, 0.2); }
+        .lang-toggle { display: inline-flex; background: rgba(212,175,55,0.06); border: 1px solid rgba(212,175,55,0.25); border-radius: 20px; overflow: hidden; margin-bottom: 24px; }
+        .lang-btn { padding: 5px 14px; font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 600; color: #9a9278; cursor: pointer; border: none; background: transparent; transition: all 0.2s ease; }
+        .lang-btn.active { background: rgba(212,175,55,0.18); color: #d4af37; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Inter', sans-serif; background-color: var(--dark-bg); color: var(--text); line-height: 1.7; }
         body::before { content: ''; position: fixed; inset: 0; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E"); pointer-events: none; opacity: 0.3; }
@@ -32,8 +35,13 @@
             <a href="index.html" class="back-link" style="margin-bottom:0;">← Retour aux docs</a>
             <a href="../index.html" style="font-family:'Inter',sans-serif;font-size:11px;font-weight:500;letter-spacing:2px;text-transform:uppercase;text-decoration:none;color:var(--text-dim);padding:7px 16px;border:1px solid var(--border);border-radius:6px;transition:all 0.3s ease;" onmouseover="this.style.color='var(--gold)';this.style.borderColor='rgba(212,175,55,0.5)'" onmouseout="this.style.color='var(--text-dim)';this.style.borderColor='var(--border)'">⌂ Site principal</a>
         </div>
-        <h1>🔧 Dépannage</h1>
-        <p class="subtitle">Solutions aux problèmes courants et FAQ</p>
+        <div class="lang-toggle">
+            <button class="lang-btn active" onclick="setLang('fr')" id="btn-fr">🇫🇷 FR</button>
+            <button class="lang-btn" onclick="setLang('en')" id="btn-en">🇬🇧 EN</button>
+        </div>
+
+        <h1 data-fr="🔧 Dépannage" data-en="🔧 Troubleshooting">🔧 Dépannage</h1>
+        <p class="subtitle" data-fr="Solutions aux problèmes courants et FAQ" data-en="Solutions to common issues and FAQ">Solutions aux problèmes courants et FAQ</p>
 
         <h2>Problèmes d'installation</h2>
 
@@ -196,5 +204,19 @@
             • Votre navigateur et système d'exploitation
         </div>
     </div>
+    <script>
+        var currentLang = localStorage.getItem('site-lang') || 'fr';
+        function setLang(lang) {
+            currentLang = lang;
+            localStorage.setItem('site-lang', lang);
+            document.getElementById('btn-fr').classList.toggle('active', lang === 'fr');
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+            document.querySelectorAll('[data-fr][data-en]').forEach(function(el) {
+                var val = el.getAttribute('data-' + lang);
+                if (val !== null) { el.innerHTML = val; }
+            });
+        }
+        setLang(currentLang);
+    </script>
 </body>
 </html>
