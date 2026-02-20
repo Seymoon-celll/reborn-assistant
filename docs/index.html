@@ -201,16 +201,18 @@
     <div class="container">
         <div class="top-bar">
             <a href="../index.html" style="display:inline-flex;align-items:center;gap:8px;font-family:'Inter',sans-serif;font-size:12px;font-weight:500;letter-spacing:2px;text-transform:uppercase;text-decoration:none;color:var(--text-dim);padding:9px 20px;border:1px solid var(--border);border-radius:6px;transition:all 0.3s ease;" onmouseover="this.style.color='var(--gold)';this.style.borderColor='rgba(212,175,55,0.5)'" onmouseout="this.style.color='var(--text-dim)';this.style.borderColor='var(--border)'" data-fr="← Retour au site principal" data-en="← Back to main site">← Retour au site principal</a>
-            <div class="lang-toggle">
-                <button class="lang-btn active" onclick="setLang('fr')" id="btn-fr">🇫🇷 FR</button>
-                <button class="lang-btn" onclick="setLang('en')" id="btn-en">🇬🇧 EN</button>
+            <div class="lang-dropdown">
+                <select id="lang-select" onchange="setLang(this.value)">
+                    <option value="fr">🇫🇷 FR</option>
+                    <option value="en">🇬🇧 EN</option>
+                </select>
             </div>
         </div>
 
         <div class="header">
             <div class="logo">R</div>
             <h1>REBORN ASSISTANT</h1>
-            <div class="version" data-fr="VERSION 1.1 · DOCUMENTATION COMPLÈTE" data-en="VERSION 1.1 · COMPLETE DOCUMENTATION">VERSION 1.1 · DOCUMENTATION COMPLÈTE</div>
+            <div class="version" data-fr="VERSION 1.2 · DOCUMENTATION COMPLÈTE" data-en="VERSION 1.2 · COMPLETE DOCUMENTATION">VERSION 1.2 · DOCUMENTATION COMPLÈTE</div>
         </div>
 
         <div class="doc-category" data-fr="Guide d'utilisation" data-en="User Guide">Guide d'utilisation</div>
@@ -251,7 +253,7 @@
 
         <div class="doc-category" data-fr="Informations légales" data-en="Legal information">Informations légales</div>
         <div class="grid grid-section">
-            <a href="legal.html" class="card">
+            <a href="privacy.html" class="card">
                 <div class="card-icon">⚖️🔒</div>
                 <div class="card-title" data-fr="Légal & Confidentialité" data-en="Legal & Privacy">Légal & Confidentialité</div>
                 <div class="card-desc" data-fr="Disclaimer, mentions légales, termes de licence, politique de confidentialité et changelog." data-en="Disclaimer, legal notices, license terms, privacy policy and changelog.">Disclaimer, mentions légales, termes de licence, politique de confidentialité et changelog.</div>

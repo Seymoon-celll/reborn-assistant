@@ -32,9 +32,11 @@
             <a href="index.html" class="back-link" data-fr="← Retour aux docs" data-en="← Back to docs">← Retour aux docs</a>
             <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
                 <a href="../index.html" style="font-family:'Inter',sans-serif;font-size:11px;font-weight:500;letter-spacing:2px;text-transform:uppercase;text-decoration:none;color:var(--text-dim);padding:7px 16px;border:1px solid var(--border);border-radius:6px;transition:all 0.3s ease;" onmouseover="this.style.color='var(--gold)';this.style.borderColor='rgba(212,175,55,0.5)'" onmouseout="this.style.color='var(--text-dim)';this.style.borderColor='var(--border)'" data-fr="⌂ Site principal" data-en="⌂ Main site">⌂ Site principal</a>
-                <div class="lang-toggle">
-                    <button class="lang-btn active" onclick="setLang('fr')" id="btn-fr">🇫🇷 FR</button>
-                    <button class="lang-btn" onclick="setLang('en')" id="btn-en">🇬🇧 EN</button>
+                <div class="lang-dropdown">
+                    <select id="lang-select" onchange="setLang(this.value)">
+                        <option value="fr">🇫🇷 FR</option>
+                        <option value="en">🇬🇧 EN</option>
+                    </select>
                 </div>
             </div>
         </div>
@@ -81,8 +83,8 @@
         <div class="faq">
             <div class="faq-q" data-fr="❌ Les actions de type 1/2 ne se déclenchent pas" data-en="❌ Type 1/2 actions are not triggering">❌ Les actions de type 1/2 ne se déclenchent pas</div>
             <div class="faq-a">
-                <div class="alert" data-fr="<strong>⚠️ IMPORTANT</strong><br>Les actions de type 1 et 2 sont des fonctionnalités <strong>PREMIUM UNIQUEMENT</strong>. Seul le soin de base est disponible en version gratuite." data-en="<strong>⚠️ IMPORTANT</strong><br>Type 1 and 2 actions are <strong>PREMIUM ONLY</strong> features. Only the basic heal is available in the free version."><strong>⚠️ IMPORTANT</strong><br>
-                    Les actions de type 1 et 2 sont des fonctionnalités <strong>PREMIUM UNIQUEMENT</strong>. Seul le soin de base est disponible en version gratuite.</div>
+                <div class="alert" data-fr="<strong>⚠️ IMPORTANT</strong><br>Les actions de type 1 et 2 sont des fonctionnalités <strong>PREMIUM UNIQUEMENT</strong>. Seule l'action automatique de type 1 (HP) est disponible en version gratuite." data-en="<strong>⚠️ IMPORTANT</strong><br>Type 1 and 2 actions are <strong>PREMIUM ONLY</strong> features. Only the automatic type 1 action (HP) is available in the free version."><strong>⚠️ IMPORTANT</strong><br>
+                    Les actions de type 1 et 2 sont des fonctionnalités <strong>PREMIUM UNIQUEMENT</strong>. Seule l'action automatique de type 1 (HP) est disponible en version gratuite.</div>
                 <span data-fr="<strong>Si vous avez Premium :</strong><br>1. Le bot est-il démarré ? <code>CTRL+A</code><br>2. Les toggles déclencheurs sont-ils activés ? (indicateur vert « ON »)<br>3. Les touches configurées sont-elles correctes ?" data-en="<strong>If you have Premium:</strong><br>1. Is the bot started? <code>CTRL+A</code><br>2. Are the trigger toggles enabled? (green indicator «ON»)<br>3. Are the configured keys correct?"><strong>Si vous avez Premium :</strong><br>
                 1. Le bot est-il démarré ? <code>CTRL+A</code><br>
                 2. Les toggles déclencheurs sont-ils activés ? (indicateur vert « ON »)<br>
@@ -93,8 +95,8 @@
         <div class="faq">
             <div class="faq-q" data-fr="❌ Les séquences / macros / macro périodique / raccourcis ne fonctionnent pas" data-en="❌ Sequences / macros / periodic macro / shortcuts are not working">❌ Les séquences / macros / macro périodique / raccourcis ne fonctionnent pas</div>
             <div class="faq-a">
-                <div class="alert" data-fr="<strong>⚠️ IMPORTANT</strong><br>Les raccourcis clavier, séquences, macros et macro périodique sont des fonctionnalités <strong>PREMIUM UNIQUEMENT</strong>. En version gratuite, seul le soin de base est disponible." data-en="<strong>⚠️ IMPORTANT</strong><br>Keyboard shortcuts, sequences, macros and periodic macro are <strong>PREMIUM ONLY</strong> features. In the free version, only the basic heal is available."><strong>⚠️ IMPORTANT</strong><br>
-                    Les raccourcis clavier, séquences, macros et macro périodique sont des fonctionnalités <strong>PREMIUM UNIQUEMENT</strong>. En version gratuite, seul le soin de base est disponible.</div>
+                <div class="alert" data-fr="<strong>⚠️ IMPORTANT</strong><br>Les raccourcis clavier, séquences, macros et macro périodique sont des fonctionnalités <strong>PREMIUM UNIQUEMENT</strong>. En version gratuite, seule l'action automatique de type 1 (HP) est disponible." data-en="<strong>⚠️ IMPORTANT</strong><br>Keyboard shortcuts, sequences, macros and periodic macro are <strong>PREMIUM ONLY</strong> features. In the free version, only the automatic type 1 action (HP) is available."><strong>⚠️ IMPORTANT</strong><br>
+                    Les raccourcis clavier, séquences, macros et macro périodique sont des fonctionnalités <strong>PREMIUM UNIQUEMENT</strong>. En version gratuite, seule l'action automatique de type 1 (HP) est disponible.</div>
                 <span data-fr="<strong>Si vous avez Premium :</strong><br>1. Vérifiez que votre licence Premium est active (icône 💎 dans le panneau)<br>2. Les toggles correspondants sont-ils activés ?<br>3. Vérifiez les intervalles et délais configurés" data-en="<strong>If you have Premium:</strong><br>1. Verify that your Premium license is active (💎 icon in the panel)<br>2. Are the corresponding toggles enabled?<br>3. Check the configured intervals and delays"><strong>Si vous avez Premium :</strong><br>
                 1. Vérifiez que votre licence Premium est active (icône 💎 dans le panneau)<br>
                 2. Les toggles correspondants sont-ils activés ?<br>

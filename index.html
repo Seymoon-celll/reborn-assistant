@@ -25,11 +25,12 @@
         .logo-text { font-family: 'Cinzel', serif; font-size: 20px; font-weight: 700; color: var(--gold); letter-spacing: 3px; text-transform: uppercase; }
         .status-badge { background: rgba(212,175,55,0.08); border: 1px solid rgba(212,175,55,0.35); padding: 7px 18px; border-radius: 20px; font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 500; color: var(--gold); text-transform: uppercase; letter-spacing: 2.5px; }
 
-        /* Lang toggle */
-        .lang-toggle { display: flex; background: rgba(212,175,55,0.06); border: 1px solid rgba(212,175,55,0.25); border-radius: 20px; overflow: hidden; }
-        .lang-btn { padding: 5px 12px; font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 600; color: var(--text-dim); cursor: pointer; border: none; background: transparent; transition: all 0.2s ease; letter-spacing: 0.5px; }
-        .lang-btn.active { background: rgba(212,175,55,0.18); color: var(--gold); }
-        .lang-btn:hover:not(.active) { color: var(--text); }
+        /* Lang dropdown */
+        .lang-dropdown { position: relative; display: inline-flex; align-items: center; }
+        .lang-dropdown select { appearance: none; -webkit-appearance: none; background: rgba(212,175,55,0.06); border: 1px solid rgba(212,175,55,0.25); border-radius: 20px; padding: 5px 28px 5px 12px; font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 600; color: var(--gold); cursor: pointer; outline: none; transition: all 0.2s ease; letter-spacing: 0.5px; }
+        .lang-dropdown select:hover { border-color: rgba(212,175,55,0.5); background: rgba(212,175,55,0.1); }
+        .lang-dropdown select option { background: #141410; color: #f0ead6; }
+        .lang-dropdown::after { content: '▾'; position: absolute; right: 10px; pointer-events: none; font-size: 10px; color: var(--gold); }
 
         .hero { min-height: 85vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 100px 40px 60px; position: relative; z-index: 1; }
         .hero-inner { max-width: 900px; }
@@ -150,7 +151,7 @@
 
         @media (max-width: 640px) {
             .container { padding: 0 20px; } header { padding: 14px 20px; }
-            .logo-text { display: none; } h1 { font-size: 46px; }
+            .logo-text { display: none; } .status-badge { display: none; } h1 { font-size: 46px; }
             .features-grid { grid-template-columns: 1fr; }
             .cta-group { flex-direction: column; } .btn { width: 100%; text-align: center; }
             .features, .pricing, .faq { padding: 50px 0; }
@@ -204,9 +205,11 @@
             <div class="logo-text">Reborn</div>
         </div>
         <div style="display:flex; align-items:center; gap:10px;">
-            <div class="lang-toggle">
-                <button class="lang-btn active" onclick="setLang('fr')" id="btn-fr">🇫🇷 FR</button>
-                <button class="lang-btn" onclick="setLang('en')" id="btn-en">🇬🇧 EN</button>
+            <div class="lang-dropdown">
+                <select id="lang-select" onchange="setLang(this.value)">
+                    <option value="fr">🇫🇷 FR</option>
+                    <option value="en">🇬🇧 EN</option>
+                </select>
             </div>
             <a href="docs/index.html" style="font-family:'Cinzel',serif;font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;color:var(--gold);padding:6px 12px;border:1px solid rgba(212,175,55,0.4);border-radius:6px;transition:all 0.3s ease;background:rgba(212,175,55,0.05);" onmouseover="this.style.background='rgba(212,175,55,0.12)';this.style.borderColor='var(--gold)'" onmouseout="this.style.background='rgba(212,175,55,0.05)';this.style.borderColor='rgba(212,175,55,0.4)'">📚 Docs</a>
             <div class="status-badge">Premium Edition</div>
@@ -354,9 +357,6 @@
                         </ul>
                         <a href="https://chromewebstore.google.com/detail/ammakeedbimichmpipeaacgajcblnnme/preview" target="_blank" class="btn btn-secondary btn-full" data-fr="Commencer" data-en="Get Started">Commencer</a>
                         <div class="price-guarantee" data-fr="🔒 Gratuit pour toujours" data-en="🔒 Free forever">🔒 Gratuit pour toujours</div>
-                        <a href="https://chromewebstore.google.com/detail/ammakeedbimichmpipeaacgajcblnnme/preview" target="_blank" class="btn-download" data-fr="⬇ Télécharger l'extension" data-en="⬇ Download extension">⬇ Télécharger l'extension</a>
-                        <a href="https://chromewebstore.google.com/detail/ammakeedbimichmpipeaacgajcblnnme/preview" target="_blank" class="btn btn-secondary btn-full">Commencer</a>
-                        <div class="price-guarantee">🔒 Gratuit pour toujours</div>
                     </div>
 
                     <div class="price-card">
@@ -479,8 +479,8 @@
                 <div class="footer-logo">REBORN ASSISTANT</div>
                 <div class="footer-links">
                     <a href="docs/index.html">Documentation</a>
-                    <a href="docs/legal.html#confidentialite" data-fr="Confidentialité" data-en="Privacy">Confidentialité</a>
-                    <a href="docs/legal.html" data-fr="Conditions d'Utilisation" data-en="Terms of Use">Conditions d'Utilisation</a>
+                    <a href="docs/privacy.html#confidentialite" data-fr="Confidentialité" data-en="Privacy">Confidentialité</a>
+                    <a href="docs/privacy.html" data-fr="Conditions d'Utilisation" data-en="Terms of Use">Conditions d'Utilisation</a>
                     <a href="docs/troubleshooting.html">Support</a>
                     <a href="/cdn-cgi/l/email-protection#f88b9d8195979796d69b9d9494b89f95999194d69b9795">Contact</a>
                 </div>
@@ -496,8 +496,8 @@
         function setLang(lang) {
             currentLang = lang;
             localStorage.setItem('site-lang', lang);
-            document.getElementById('btn-fr').classList.toggle('active', lang === 'fr');
-            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+            var sel = document.getElementById('lang-select');
+            if (sel) sel.value = lang;
             document.querySelectorAll('[data-fr][data-en]').forEach(function(el) {
                 var val = el.getAttribute('data-' + lang);
                 if (val !== null) {
