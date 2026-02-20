@@ -3,311 +3,243 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Informations Légales & Confidentialité – Reborn Assistant</title>
+    <title>Légal & Confidentialité – Reborn Assistant</title>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
-        :root { --gold: #d4af37; --dark-bg: #080808; --red: #ff6b6b; --green: #4CAF50; --text: #f0ead6; --text-dim: #9a9278; --border: rgba(212, 175, 55, 0.2); }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; background-color: var(--dark-bg); color: var(--text); line-height: 1.7; }
-        body::before { content: ''; position: fixed; inset: 0; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E"); pointer-events: none; opacity: 0.3; }
-        .container { max-width: 900px; margin: 0 auto; padding: 80px 40px 100px; position: relative; z-index: 1; }
-        .back-link { display: inline-flex; align-items: center; gap: 8px; color: var(--text-dim); text-decoration: none; font-size: 13px; margin-bottom: 40px; transition: color 0.2s; }
-        .back-link:hover { color: var(--gold); }
-        h1 { font-family: 'Cinzel', serif; font-size: 42px; color: var(--gold); letter-spacing: 2px; margin-bottom: 16px; }
-        .subtitle { font-size: 18px; color: var(--text-dim); margin-bottom: 40px; }
-        h2 { font-family: 'Cinzel', serif; font-size: 28px; color: var(--text); margin: 60px 0 24px; padding-bottom: 16px; border-bottom: 1px solid var(--border); }
-        h3 { font-size: 20px; color: var(--gold); margin: 32px 0 16px; }
-        .legal-block { background: rgba(20,20,16,0.6); border: 1px solid var(--border); border-radius: 12px; padding: 32px; margin: 24px 0; }
-        .warning-box { background: rgba(255,107,107,0.08); border-left: 4px solid var(--red); padding: 24px; margin: 32px 0; border-radius: 4px; }
-        .success-box { background: rgba(76,175,80,0.08); border-left: 4px solid var(--green); padding: 24px; margin: 32px 0; border-radius: 4px; }
-        ul { margin: 16px 0 16px 20px; }
-        li { margin: 8px 0; font-size: 15px; }
-        p { margin-bottom: 16px; font-size: 15px; }
-        strong { color: var(--gold); }
-        a { color: var(--gold); text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        code { background: rgba(20,20,16,0.9); padding: 3px 10px; border-radius: 4px; font-family: 'Courier New', monospace; font-size: 13px; color: #f4d03f; }
-        .contact-box { background: rgba(212,175,55,0.08); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin: 24px 0; text-align: center; }
-        .section-nav { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 60px; }
-        .section-nav a { display: inline-flex; align-items: center; gap: 6px; padding: 8px 18px; border: 1px solid var(--border); border-radius: 20px; font-size: 12px; font-weight: 500; color: var(--text-dim); text-decoration: none; letter-spacing: 0.5px; transition: all 0.2s ease; }
-        .section-nav a:hover { color: var(--gold); border-color: rgba(212,175,55,0.5); background: rgba(212,175,55,0.05); text-decoration: none; }
-        .page-separator { margin: 80px 0; display: flex; align-items: center; gap: 16px; }
-        .page-separator::before, .page-separator::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, transparent, rgba(212,175,55,0.4)); }
-        .page-separator::after { background: linear-gradient(90deg, rgba(212,175,55,0.4), transparent); }
-        .page-separator span { font-family: 'Cinzel', serif; font-size: 10px; color: var(--gold); opacity: 0.5; letter-spacing: 4px; white-space: nowrap; }
+        :root { --gold:#d4af37;--dark-bg:#080808;--red:#ff6b6b;--green:#4CAF50;--text:#f0ead6;--text-dim:#9a9278;--border:rgba(212,175,55,0.2); }
+        * { margin:0;padding:0;box-sizing:border-box; }
+        body { font-family:'Inter',sans-serif;background-color:var(--dark-bg);color:var(--text);line-height:1.7; }
+        body::before { content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;opacity:0.3; }
+        .container { max-width:900px;margin:0 auto;padding:80px 40px 100px;position:relative;z-index:1; }
+        .back-link { display:inline-flex;align-items:center;gap:8px;color:var(--text-dim);text-decoration:none;font-size:13px;transition:color 0.2s; }
+        .back-link:hover { color:var(--gold); }
+        h1 { font-family:'Cinzel',serif;font-size:42px;color:var(--gold);letter-spacing:2px;margin-bottom:16px; }
+        .subtitle { font-size:18px;color:var(--text-dim);margin-bottom:40px; }
+        h2 { font-family:'Cinzel',serif;font-size:28px;color:var(--text);margin:60px 0 24px;padding-bottom:16px;border-bottom:1px solid var(--border); }
+        h3 { font-size:20px;color:var(--gold);margin:32px 0 16px; }
+        .legal-block { background:rgba(20,20,16,0.6);border:1px solid var(--border);border-radius:12px;padding:32px;margin:24px 0; }
+        .warning-box { background:rgba(255,107,107,0.08);border-left:4px solid var(--red);padding:24px;margin:32px 0;border-radius:4px; }
+        .success-box { background:rgba(76,175,80,0.08);border-left:4px solid var(--green);padding:24px;margin:32px 0;border-radius:4px; }
+        ul { margin:16px 0 16px 20px; }
+        li { margin:8px 0;font-size:15px; }
+        p { margin-bottom:16px;font-size:15px; }
+        strong { color:var(--gold); }
+        a { color:var(--gold);text-decoration:none; }
+        a:hover { text-decoration:underline; }
+        code { background:rgba(20,20,16,0.9);padding:3px 10px;border-radius:4px;font-family:'Courier New',monospace;font-size:13px;color:#f4d03f; }
+        .contact-box { background:rgba(212,175,55,0.08);border:1px solid var(--border);border-radius:8px;padding:20px;margin:24px 0;text-align:center; }
+        .section-nav { display:flex;gap:12px;flex-wrap:wrap;margin-bottom:60px; }
+        .section-nav a { display:inline-flex;align-items:center;gap:6px;padding:8px 18px;border:1px solid var(--border);border-radius:20px;font-size:12px;font-weight:500;color:var(--text-dim);text-decoration:none;letter-spacing:0.5px;transition:all 0.2s ease; }
+        .section-nav a:hover { color:var(--gold);border-color:rgba(212,175,55,0.5);background:rgba(212,175,55,0.05);text-decoration:none; }
+        .page-separator { margin:80px 0;display:flex;align-items:center;gap:16px; }
+        .page-separator::before,.page-separator::after { content:'';flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(212,175,55,0.4)); }
+        .page-separator::after { background:linear-gradient(90deg,rgba(212,175,55,0.4),transparent); }
+        .page-separator span { font-family:'Cinzel',serif;font-size:10px;color:var(--gold);opacity:0.5;letter-spacing:4px;white-space:nowrap; }
     </style>
 </head>
 <body>
     <div class="container">
         <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:40px;flex-wrap:wrap;gap:12px;">
-            <a href="index.html" class="back-link" style="margin-bottom:0;">← Retour aux docs</a>
-            <a href="../index.html" style="font-family:'Inter',sans-serif;font-size:11px;font-weight:500;letter-spacing:2px;text-transform:uppercase;text-decoration:none;color:var(--text-dim);padding:7px 16px;border:1px solid var(--border);border-radius:6px;transition:all 0.3s ease;" onmouseover="this.style.color='var(--gold)';this.style.borderColor='rgba(212,175,55,0.5)'" onmouseout="this.style.color='var(--text-dim)';this.style.borderColor='var(--border)'">⌂ Site principal</a>
+            <a href="index.html" class="back-link" data-fr="← Retour aux docs" data-en="← Back to docs">← Retour aux docs</a>
+            <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+                <a href="../index.html" style="font-family:'Inter',sans-serif;font-size:11px;font-weight:500;letter-spacing:2px;text-transform:uppercase;text-decoration:none;color:var(--text-dim);padding:7px 16px;border:1px solid var(--border);border-radius:6px;transition:all 0.3s ease;" onmouseover="this.style.color='var(--gold)';this.style.borderColor='rgba(212,175,55,0.5)'" onmouseout="this.style.color='var(--text-dim)';this.style.borderColor='var(--border)'" data-fr="⌂ Site principal" data-en="⌂ Main site">⌂ Site principal</a>
+                <div class="lang-toggle">
+                    <button class="lang-btn active" onclick="setLang('fr')" id="btn-fr">🇫🇷 FR</button>
+                    <button class="lang-btn" onclick="setLang('en')" id="btn-en">🇬🇧 EN</button>
+                </div>
+            </div>
         </div>
 
-        <h1>⚖️ Légal & Confidentialité</h1>
-        <p class="subtitle">Disclaimer, mentions légales, termes de licence et politique de confidentialité</p>
+        <h1 data-fr="⚖️ Légal & Confidentialité" data-en="⚖️ Legal & Privacy">⚖️ Légal & Confidentialité</h1>
+        <p class="subtitle" data-fr="Disclaimer, mentions légales, termes de licence et politique de confidentialité" data-en="Disclaimer, legal notices, license terms and privacy policy">Disclaimer, mentions légales, termes de licence et politique de confidentialité</p>
 
         <nav class="section-nav">
-            <a href="#legal">⚖️ Informations Légales</a>
-            <a href="#licence">© Licence</a>
-            <a href="#confidentialite">🔒 Confidentialité</a>
+            <a href="#legal" data-fr="⚖️ Informations Légales" data-en="⚖️ Legal Information">⚖️ Informations Légales</a>
+            <a href="#licence" data-fr="© Licence" data-en="© License">© Licence</a>
+            <a href="#confidentialite" data-fr="🔒 Confidentialité" data-en="🔒 Privacy">🔒 Confidentialité</a>
             <a href="#changelog">📋 Changelog</a>
         </nav>
 
-        <!-- ══════════════════════════════════════════ -->
-        <!--              INFORMATIONS LÉGALES          -->
-        <!-- ══════════════════════════════════════════ -->
-
-        <h2 id="legal">⚠️ Disclaimer</h2>
-        <div class="warning-box">
-            <strong>⚠️ Avertissement important :</strong> Reborn Assistant est un outil d'automatisation. Son utilisation peut violer les Conditions Générales d'Utilisation de certains services en ligne. L'utilisation de cet outil est entièrement à vos risques et périls.
-        </div>
+        <!-- LEGAL -->
+        <h2 id="legal" data-fr="⚠️ Disclaimer" data-en="⚠️ Disclaimer">⚠️ Disclaimer</h2>
+        <div class="warning-box" data-fr="<strong>⚠️ Avertissement important :</strong> Reborn Assistant est un outil d'automatisation. Son utilisation peut violer les Conditions Générales d'Utilisation de certains services en ligne. L'utilisation de cet outil est entièrement à vos risques et périls." data-en="<strong>⚠️ Important warning:</strong> Reborn Assistant is an automation tool. Its use may violate the Terms of Service of certain online services. Use of this tool is entirely at your own risk."><strong>⚠️ Avertissement important :</strong> Reborn Assistant est un outil d'automatisation. Son utilisation peut violer les Conditions Générales d'Utilisation de certains services en ligne. L'utilisation de cet outil est entièrement à vos risques et périls.</div>
 
         <div class="legal-block">
-            <h3>Responsabilité de l'utilisateur</h3>
-            <p>En utilisant Reborn Assistant, vous reconnaissez et acceptez que :</p>
+            <h3 data-fr="Responsabilité de l'utilisateur" data-en="User responsibility">Responsabilité de l'utilisateur</h3>
+            <p data-fr="En utilisant Reborn Assistant, vous reconnaissez et acceptez que :" data-en="By using Reborn Assistant, you acknowledge and agree that:">En utilisant Reborn Assistant, vous reconnaissez et acceptez que :</p>
             <ul>
-                <li>Vous êtes seul responsable de votre utilisation de ce logiciel</li>
-                <li>Vous vérifierez les conditions d'utilisation de chaque service avant d'utiliser cet outil</li>
-                <li>L'auteur ne peut être tenu responsable de tout bannissement, restriction de compte, ou action légale résultant de l'utilisation de Reborn</li>
-                <li>Vous utilisez ce logiciel en connaissance de cause et à vos propres risques</li>
-                <li>Cet outil ne doit pas être utilisé de manière à nuire à l'expérience d'autres utilisateurs</li>
+                <li data-fr="Vous êtes seul responsable de votre utilisation de ce logiciel" data-en="You are solely responsible for your use of this software">Vous êtes seul responsable de votre utilisation de ce logiciel</li>
+                <li data-fr="Vous vérifierez les conditions d'utilisation de chaque service avant d'utiliser cet outil" data-en="You will check the terms of service of each platform before using this tool">Vous vérifierez les conditions d'utilisation de chaque service avant d'utiliser cet outil</li>
+                <li data-fr="L'auteur ne peut être tenu responsable de tout bannissement, restriction de compte, ou action légale résultant de l'utilisation de Reborn" data-en="The author cannot be held responsible for any ban, account restriction, or legal action resulting from the use of Reborn">L'auteur ne peut être tenu responsable de tout bannissement, restriction de compte, ou action légale résultant de l'utilisation de Reborn</li>
+                <li data-fr="Vous utilisez ce logiciel en connaissance de cause et à vos propres risques" data-en="You use this software knowingly and at your own risk">Vous utilisez ce logiciel en connaissance de cause et à vos propres risques</li>
+                <li data-fr="Cet outil ne doit pas être utilisé de manière à nuire à l'expérience d'autres utilisateurs" data-en="This tool must not be used in a way that harms the experience of other users">Cet outil ne doit pas être utilisé de manière à nuire à l'expérience d'autres utilisateurs</li>
             </ul>
         </div>
 
         <div class="legal-block">
-            <h3>Absence de garantie</h3>
-            <p>Le logiciel est fourni "TEL QUEL" sans garantie d'aucune sorte, expresse ou implicite. L'auteur ne garantit pas que le logiciel fonctionnera de manière ininterrompue ou sans erreur, ni qu'il sera compatible avec tous les services ou navigateurs.</p>
+            <h3 data-fr="Absence de garantie" data-en="No warranty">Absence de garantie</h3>
+            <p data-fr='Le logiciel est fourni "TEL QUEL" sans garantie d\'aucune sorte. L\'auteur ne garantit pas que le logiciel fonctionnera de manière ininterrompue ou sans erreur, ni qu\'il sera compatible avec tous les services ou navigateurs.' data-en='The software is provided "AS IS" without warranty of any kind. The author does not guarantee that the software will operate uninterrupted or error-free, nor that it will be compatible with all services or browsers.'>Le logiciel est fourni "TEL QUEL" sans garantie d'aucune sorte. L'auteur ne garantit pas que le logiciel fonctionnera de manière ininterrompue ou sans erreur, ni qu'il sera compatible avec tous les services ou navigateurs.</p>
         </div>
 
-        <h2>📄 Mentions légales</h2>
+        <h2 data-fr="📄 Mentions légales" data-en="📄 Legal notices">📄 Mentions légales</h2>
 
         <div class="legal-block">
-            <h3>Droits d'auteur & Propriété intellectuelle</h3>
-            <p><strong>© 2026 Reborn Assistant – Tous droits réservés</strong><br>
-            Développé par <strong>Seymoon</strong></p>
-            <p>Ce logiciel et tous les matériaux associés (code source, interface, documentation, assets visuels) sont la propriété intellectuelle exclusive de leur auteur. Toute reproduction, modification, distribution ou rétro-ingénierie sans autorisation écrite explicite est strictement interdite.</p>
+            <h3 data-fr="Droits d'auteur & Propriété intellectuelle" data-en="Copyright & Intellectual property">Droits d'auteur & Propriété intellectuelle</h3>
+            <p data-fr="<strong>© 2026 Reborn Assistant – Tous droits réservés</strong><br>Développé par <strong>Seymoon</strong>" data-en="<strong>© 2026 Reborn Assistant – All rights reserved</strong><br>Developed by <strong>Seymoon</strong>"><strong>© 2026 Reborn Assistant – Tous droits réservés</strong><br>Développé par <strong>Seymoon</strong></p>
+            <p data-fr="Ce logiciel et tous les matériaux associés sont la propriété intellectuelle exclusive de leur auteur. Toute reproduction, modification, distribution ou rétro-ingénierie sans autorisation écrite est strictement interdite." data-en="This software and all associated materials are the exclusive intellectual property of their author. Any reproduction, modification, distribution or reverse engineering without written permission is strictly prohibited.">Ce logiciel et tous les matériaux associés sont la propriété intellectuelle exclusive de leur auteur. Toute reproduction, modification, distribution ou rétro-ingénierie sans autorisation écrite est strictement interdite.</p>
         </div>
 
         <div class="legal-block">
-            <h3>Limitation de responsabilité</h3>
-            <p>En aucun cas l'auteur ne sera responsable de toute réclamation, dommage direct, indirect, accessoire ou consécutif découlant de l'utilisation ou de l'impossibilité d'utiliser ce logiciel, incluant mais sans s'y limiter :</p>
+            <h3 data-fr="Limitation de responsabilité" data-en="Limitation of liability">Limitation de responsabilité</h3>
+            <p data-fr="En aucun cas l'auteur ne sera responsable de toute réclamation ou dommage découlant de l'utilisation ou de l'impossibilité d'utiliser ce logiciel, incluant mais sans s'y limiter :" data-en="In no event shall the author be liable for any claim or damage arising from the use or inability to use this software, including but not limited to:">En aucun cas l'auteur ne sera responsable de toute réclamation ou dommage découlant de l'utilisation ou de l'impossibilité d'utiliser ce logiciel, incluant mais sans s'y limiter :</p>
             <ul>
-                <li>Perte de données ou de compte utilisateur</li>
-                <li>Bannissements ou restrictions imposés par des éditeurs de services en ligne</li>
-                <li>Dommages aux systèmes informatiques</li>
-                <li>Toute conséquence juridique découlant d'une utilisation non conforme aux CGU des services</li>
+                <li data-fr="Perte de données ou de compte utilisateur" data-en="Loss of data or user account">Perte de données ou de compte utilisateur</li>
+                <li data-fr="Bannissements ou restrictions imposés par des éditeurs de services" data-en="Bans or restrictions imposed by service publishers">Bannissements ou restrictions imposés par des éditeurs de services</li>
+                <li data-fr="Dommages aux systèmes informatiques" data-en="Damage to computer systems">Dommages aux systèmes informatiques</li>
+                <li data-fr="Toute conséquence juridique découlant d'une utilisation non conforme aux CGU des services" data-en="Any legal consequences arising from use that violates the terms of service of platforms">Toute conséquence juridique découlant d'une utilisation non conforme aux CGU des services</li>
             </ul>
         </div>
 
         <div class="legal-block">
-            <h3>Données personnelles</h3>
-            <p>Reborn Assistant utilise Firebase (Google Cloud) pour la gestion des comptes et licences. Les données collectées se limitent à votre adresse email et identifiant de compte, uniquement à des fins d'authentification et de vérification de licence.</p>
-            <p><strong>Aucune donnée d'activité n'est collectée ou transmise.</strong> Vos configurations restent stockées localement sur votre appareil.</p>
+            <h3 data-fr="Données personnelles" data-en="Personal data">Données personnelles</h3>
+            <p data-fr="Reborn Assistant utilise Firebase (Google Cloud) pour la gestion des comptes et licences. Les données collectées se limitent à votre adresse email et identifiant de compte, uniquement à des fins d'authentification et de vérification de licence." data-en="Reborn Assistant uses Firebase (Google Cloud) for account and license management. The data collected is limited to your email address and account identifier, solely for authentication and license verification purposes.">Reborn Assistant utilise Firebase (Google Cloud) pour la gestion des comptes et licences. Les données collectées se limitent à votre adresse email et identifiant de compte, uniquement à des fins d'authentification et de vérification de licence.</p>
+            <p data-fr="<strong>Aucune donnée d'activité n'est collectée ou transmise.</strong> Vos configurations restent stockées localement sur votre appareil." data-en="<strong>No activity data is collected or transmitted.</strong> Your configurations remain stored locally on your device."><strong>Aucune donnée d'activité n'est collectée ou transmise.</strong> Vos configurations restent stockées localement sur votre appareil.</p>
         </div>
 
         <div class="legal-block">
-            <h3>Juridiction</h3>
-            <p>Cet accord est régi par le droit applicable dans la juridiction de résidence du détenteur des droits d'auteur. En installant et utilisant ce logiciel, vous reconnaissez avoir lu, compris et accepté l'intégralité de ces conditions.</p>
+            <h3 data-fr="Juridiction" data-en="Jurisdiction">Juridiction</h3>
+            <p data-fr="Cet accord est régi par le droit applicable dans la juridiction de résidence du détenteur des droits d'auteur. En installant et utilisant ce logiciel, vous reconnaissez avoir lu, compris et accepté l'intégralité de ces conditions." data-en="This agreement is governed by the law applicable in the jurisdiction of the copyright holder's residence. By installing and using this software, you acknowledge that you have read, understood and accepted all of these terms.">Cet accord est régi par le droit applicable dans la juridiction de résidence du détenteur des droits d'auteur. En installant et utilisant ce logiciel, vous reconnaissez avoir lu, compris et accepté l'intégralité de ces conditions.</p>
         </div>
 
-        <!-- ══════════════════════════════════════════ -->
-        <!--              TERMES DE LICENCE             -->
-        <!-- ══════════════════════════════════════════ -->
-
-        <h2 id="licence">© Termes de licence</h2>
+        <!-- LICENCE -->
+        <h2 id="licence" data-fr="© Termes de licence" data-en="© License terms">© Termes de licence</h2>
 
         <div class="legal-block">
-            <h3>Licence d'utilisation commerciale</h3>
-            <p>L'achat d'un plan Reborn Assistant vous accorde une licence personnelle, non exclusive et non transférable d'utilisation du logiciel.</p>
-
-            <p><strong>Cette licence vous autorise à :</strong></p>
+            <h3 data-fr="Licence d'utilisation" data-en="Usage license">Licence d'utilisation</h3>
+            <p data-fr="L'achat d'un plan Reborn Assistant vous accorde une licence personnelle, non exclusive et non transférable d'utilisation du logiciel." data-en="Purchasing a Reborn Assistant plan grants you a personal, non-exclusive and non-transferable license to use the software.">L'achat d'un plan Reborn Assistant vous accorde une licence personnelle, non exclusive et non transférable d'utilisation du logiciel.</p>
+            <p data-fr="<strong>Cette licence vous autorise à :</strong>" data-en="<strong>This license allows you to:</strong>"><strong>Cette licence vous autorise à :</strong></p>
             <ul>
-                <li>Utiliser le logiciel à des fins personnelles sur vos propres appareils</li>
-                <li>Bénéficier des mises à jour incluses dans votre plan</li>
+                <li data-fr="Utiliser le logiciel à des fins personnelles sur vos propres appareils" data-en="Use the software for personal purposes on your own devices">Utiliser le logiciel à des fins personnelles sur vos propres appareils</li>
+                <li data-fr="Bénéficier des mises à jour incluses dans votre plan" data-en="Benefit from updates included in your plan">Bénéficier des mises à jour incluses dans votre plan</li>
             </ul>
-
-            <p><strong>Cette licence ne vous autorise pas à :</strong></p>
+            <p data-fr="<strong>Cette licence ne vous autorise pas à :</strong>" data-en="<strong>This license does not allow you to:</strong>"><strong>Cette licence ne vous autorise pas à :</strong></p>
             <ul>
-                <li>Redistribuer, revendre ou partager votre accès</li>
-                <li>Modifier, décompiler ou procéder à une rétro-ingénierie du logiciel</li>
-                <li>Utiliser le logiciel à des fins commerciales sans accord écrit préalable</li>
-                <li>Transférer votre licence à un tiers</li>
+                <li data-fr="Redistribuer, revendre ou partager votre accès" data-en="Redistribute, resell or share your access">Redistribuer, revendre ou partager votre accès</li>
+                <li data-fr="Modifier, décompiler ou procéder à une rétro-ingénierie du logiciel" data-en="Modify, decompile or reverse engineer the software">Modifier, décompiler ou procéder à une rétro-ingénierie du logiciel</li>
+                <li data-fr="Utiliser le logiciel à des fins commerciales sans accord écrit préalable" data-en="Use the software for commercial purposes without prior written agreement">Utiliser le logiciel à des fins commerciales sans accord écrit préalable</li>
+                <li data-fr="Transférer votre licence à un tiers" data-en="Transfer your license to a third party">Transférer votre licence à un tiers</li>
             </ul>
         </div>
 
         <div class="legal-block">
-            <h3>Résiliation</h3>
-            <p>La licence peut être résiliée immédiatement et sans préavis en cas de violation de ces termes. En cas de résiliation, vous devrez cesser toute utilisation du logiciel et supprimer toutes les copies en votre possession.</p>
-            <p>Pour les plans avec abonnement, vous pouvez résilier à tout moment depuis votre portail Stripe. La résiliation prendra effet à la fin de la période en cours.</p>
+            <h3 data-fr="Résiliation" data-en="Termination">Résiliation</h3>
+            <p data-fr="La licence peut être résiliée immédiatement en cas de violation de ces termes. Pour les plans avec abonnement, vous pouvez résilier à tout moment depuis votre portail Stripe." data-en="The license may be terminated immediately in case of violation of these terms. For subscription plans, you can cancel at any time from your Stripe portal.">La licence peut être résiliée immédiatement en cas de violation de ces termes. Pour les plans avec abonnement, vous pouvez résilier à tout moment depuis votre portail Stripe.</p>
         </div>
 
-        <div class="success-box">
-            <strong>✅ Politique de remboursement :</strong> Si vous n'êtes pas satisfait dans les 7 jours suivant votre achat, contactez notre support pour un remboursement intégral. Au-delà de cette période, aucun remboursement ne sera accordé sauf cas exceptionnel.
-        </div>
+        <div class="success-box" data-fr="<strong>✅ Politique de remboursement :</strong> Si vous n'êtes pas satisfait dans les 7 jours suivant votre achat, contactez notre support pour un remboursement intégral. Au-delà de cette période, aucun remboursement ne sera accordé sauf cas exceptionnel." data-en="<strong>✅ Refund policy:</strong> If you are not satisfied within 7 days of your purchase, contact our support for a full refund. Beyond this period, no refund will be granted except in exceptional cases."><strong>✅ Politique de remboursement :</strong> Si vous n'êtes pas satisfait dans les 7 jours suivant votre achat, contactez notre support pour un remboursement intégral. Au-delà de cette période, aucun remboursement ne sera accordé sauf cas exceptionnel.</div>
 
-        <!-- ══════════════════════════════════════════ -->
-        <!--          POLITIQUE DE CONFIDENTIALITÉ      -->
-        <!-- ══════════════════════════════════════════ -->
-
+        <!-- CONFIDENTIALITE -->
         <div class="page-separator"><span>◆ ◆ ◆</span></div>
 
-        <h1 id="confidentialite" style="font-size:36px;margin-bottom:12px;">🔒 Politique de Confidentialité</h1>
-        <p class="subtitle">Comment nous protégeons vos données personnelles</p>
+        <h1 id="confidentialite" style="font-size:36px;margin-bottom:12px;" data-fr="🔒 Politique de Confidentialité" data-en="🔒 Privacy Policy">🔒 Politique de Confidentialité</h1>
+        <p class="subtitle" data-fr="Comment nous protégeons vos données personnelles" data-en="How we protect your personal data">Comment nous protégeons vos données personnelles</p>
 
-        <div class="success-box">
-            <strong>✅ Confidentialité totale garantie</strong><br>
-            Reborn Assistant ne collecte, ne transmet ni ne stocke aucune donnée personnelle sur des serveurs externes. Votre vie privée est notre priorité absolue.
-        </div>
+        <div class="success-box" data-fr="<strong>✅ Confidentialité totale garantie</strong><br>Reborn Assistant ne collecte, ne transmet ni ne stocke aucune donnée personnelle sur des serveurs externes. Votre vie privée est notre priorité absolue." data-en="<strong>✅ Total privacy guaranteed</strong><br>Reborn Assistant does not collect, transmit or store any personal data on external servers. Your privacy is our absolute priority."><strong>✅ Confidentialité totale garantie</strong><br>Reborn Assistant ne collecte, ne transmet ni ne stocke aucune donnée personnelle sur des serveurs externes. Votre vie privée est notre priorité absolue.</div>
 
-        <h2>Collecte de données</h2>
+        <h2 data-fr="Collecte de données" data-en="Data collection">Collecte de données</h2>
         <div class="legal-block">
-            <p><strong>Reborn Assistant ne collecte AUCUNE donnée personnelle.</strong></p>
-            <p>Toutes les préférences et configurations utilisateur sont stockées <strong>localement sur votre appareil</strong> en utilisant l'API de stockage local du navigateur (<code>chrome.storage.local</code>).</p>
-            <p>Aucune transmission de données vers des serveurs externes n'est effectuée.</p>
-        </div>
+            <p data-fr="<strong>Reborn Assistant ne collecte AUCUNE donnée personnelle.</strong>" data-en="<strong>Reborn Assistant collects NO personal data.</strong>"><strong>Reborn Assistant ne collecte AUCUNE donnée personnelle.</strong></p>
+            <p data-fr="Toutes les préférences et configurations sont stockées <strong>localement sur votre appareil</strong> via l'API de stockage local du navigateur (<code>chrome.storage.local</code>). Aucune transmission vers des serveurs externes." data-en="All preferences and configurations are stored <strong>locally on your device</strong> via the browser's local storage API (<code>chrome.storage.local</code>). No transmission to external servers.">Toutes les préférences et configurations sont stockées <strong>localement sur votre appareil</strong> via l'API de stockage local du navigateur (<code>chrome.storage.local</code>). Aucune transmission vers des serveurs externes.</div>
 
-        <h2>Données stockées localement</h2>
+        <h2 data-fr="Données stockées localement" data-en="Locally stored data">Données stockées localement</h2>
         <div class="legal-block">
-            <p>Les informations suivantes sont sauvegardées <strong>uniquement sur votre appareil</strong> :</p>
+            <p data-fr="Les informations suivantes sont sauvegardées <strong>uniquement sur votre appareil</strong> :" data-en="The following information is saved <strong>only on your device</strong>:">Les informations suivantes sont sauvegardées <strong>uniquement sur votre appareil</strong> :</p>
             <ul>
-                <li><strong>Préférences de langue</strong> : Votre choix de langue d'interface (parmi 14 langues disponibles)</li>
-                <li><strong>Sélection du thème visuel</strong> : Le thème choisi parmi les 6 disponibles (Reborn, Neon, Obsidian, etc.)</li>
-                <li><strong>Raccourcis clavier configurés</strong> : Les touches que vous avez assignées pour vos actions</li>
-                <li><strong>Seuils de déclenchement</strong> : Vos paramètres d'automatisation personnalisés</li>
-                <li><strong>Intervalles de minuteur personnalisés</strong> : Les intervalles configurés pour vos macros</li>
-                <li><strong>Position de l'interface</strong> : L'emplacement du panneau Reborn sur votre écran</li>
-            </ul>
-            <p><strong>Important :</strong> Toutes ces données restent sur votre appareil et ne sont <strong>jamais transmises</strong> à un serveur externe ou à des tiers.</p>
-        </div>
-
-        <h2>Services tiers</h2>
-        <div class="legal-block">
-            <h3>Aucun service tiers utilisé</h3>
-            <p>Reborn Assistant <strong>n'utilise aucun</strong> service externe tel que :</p>
-            <ul>
-                <li>❌ Services d'analyse (Google Analytics, Mixpanel, etc.)</li>
-                <li>❌ Services de suivi (tracking pixels, cookies tiers)</li>
-                <li>❌ Services de publicité</li>
-                <li>❌ Services de télémétrie</li>
-                <li>❌ Services de crash reporting</li>
-            </ul>
-            <p>Votre activité dans l'extension reste <strong>100% privée</strong>.</p>
-        </div>
-
-        <h2>Authentification et licence</h2>
-        <div class="legal-block">
-            <h3>Firebase Authentication (version Premium)</h3>
-            <p>Pour les utilisateurs Premium, Reborn utilise <strong>Firebase Authentication</strong> (Google Cloud) uniquement pour :</p>
-            <ul>
-                <li>Vérifier votre licence Premium</li>
-                <li>Authentifier votre compte Google</li>
-            </ul>
-            <p><strong>Données concernées :</strong></p>
-            <ul>
-                <li>Votre adresse email Google</li>
-                <li>Votre identifiant services Google Cloud (UID)</li>
-            </ul>
-            <p><strong>Important :</strong> Ces données sont gérées par Firebase (Google) et ne sont utilisées que pour la vérification de licence. Nous ne collectons ni ne stockons vos données d'activité, historique de navigation, ou toute autre information personnelle.</p>
-        </div>
-
-        <h2>Paiements Sécurisés</h2>
-        <div class="legal-block">
-            <p>Les paiements Premium sont traités par <strong>Stripe</strong>, le même système utilisé par Amazon, Netflix et Google.</p>
-            <p><strong>Sécurité maximale :</strong></p>
-            <ul>
-                <li>Vos informations bancaires ne transitent <strong>jamais</strong> par nos serveurs</li>
-                <li>Protection par chiffrement SSL/TLS de niveau bancaire</li>
-                <li>Nous ne stockons <strong>aucune donnée</strong> de carte bancaire</li>
-                <li>Conformité PCI-DSS (norme de sécurité des paiements)</li>
-            </ul>
-            <p>Stripe gère l'intégralité du processus de paiement de manière sécurisée et indépendante.</p>
-        </div>
-
-        <h2>Contrôle utilisateur</h2>
-        <div class="legal-block">
-            <h3>Suppression de vos données</h3>
-            <p>Vous avez un contrôle total sur vos données. Vous pouvez les supprimer à tout moment de plusieurs façons :</p>
-
-            <p><strong>1. Désinstallation de l'extension</strong></p>
-            <p>En désinstallant Reborn Assistant de votre navigateur, toutes les données stockées localement sont automatiquement supprimées.</p>
-
-            <p><strong>2. Réinitialisation manuelle</strong></p>
-            <p>Vous pouvez réinitialiser les paramètres depuis l'interface de Reborn à tout moment.</p>
-
-            <p><strong>3. Suppression du compte (Premium)</strong></p>
-            <p>Si vous souhaitez supprimer votre compte Premium et toutes les données associées, contactez-nous à l'adresse indiquée ci-dessous.</p>
-        </div>
-
-        <h2>Sécurité des données</h2>
-        <div class="legal-block">
-            <h3>Protection de vos informations</h3>
-            <ul>
-                <li><strong>Stockage local uniquement</strong> : Vos configurations ne quittent jamais votre appareil</li>
-                <li><strong>Pas de transmission réseau</strong> : Aucune donnée n'est envoyée à des serveurs tiers (sauf authentification Firebase pour Premium)</li>
-                <li><strong>Pas de cookies</strong> : Reborn n'utilise pas de cookies de suivi</li>
-                <li><strong>Code exécuté localement</strong> : Toute la logique de l'extension s'exécute dans votre navigateur</li>
+                <li data-fr="<strong>Préférences de langue</strong> : Votre choix de langue d'interface" data-en="<strong>Language preferences</strong>: Your interface language choice"><strong>Préférences de langue</strong> : Votre choix de langue d'interface</li>
+                <li data-fr="<strong>Sélection du thème visuel</strong> : Le thème choisi parmi les 6 disponibles" data-en="<strong>Visual theme selection</strong>: The chosen theme from the 6 available"><strong>Sélection du thème visuel</strong> : Le thème choisi parmi les 6 disponibles</li>
+                <li data-fr="<strong>Raccourcis clavier configurés</strong> : Les touches assignées pour vos actions" data-en="<strong>Configured keyboard shortcuts</strong>: The keys assigned to your actions"><strong>Raccourcis clavier configurés</strong> : Les touches assignées pour vos actions</li>
+                <li data-fr="<strong>Intervalles de timer personnalisés</strong> : Les timers configurés pour vos macros" data-en="<strong>Custom timer intervals</strong>: The timers configured for your macros"><strong>Intervalles de timer personnalisés</strong> : Les timers configurés pour vos macros</li>
+                <li data-fr="<strong>Position de l'interface</strong> : L'emplacement du panneau Reborn sur votre écran" data-en="<strong>Interface position</strong>: The location of the Reborn panel on your screen"><strong>Position de l'interface</strong> : L'emplacement du panneau Reborn sur votre écran</li>
             </ul>
         </div>
 
-        <h2>Mises à jour de cette politique</h2>
+        <h2 data-fr="Services tiers" data-en="Third-party services">Services tiers</h2>
         <div class="legal-block">
-            <p>Cette politique de confidentialité peut être mise à jour occasionnellement pour refléter les changements dans nos pratiques ou pour des raisons légales. Toute modification significative sera communiquée aux utilisateurs.</p>
-            <p><strong>Dernière mise à jour :</strong> Février 2026</p>
+            <h3 data-fr="Aucun service de tracking utilisé" data-en="No tracking services used">Aucun service de tracking utilisé</h3>
+            <p data-fr="Reborn Assistant <strong>n'utilise aucun</strong> service externe tel que :" data-en="Reborn Assistant <strong>uses no</strong> external services such as:">Reborn Assistant <strong>n'utilise aucun</strong> service externe tel que :</p>
+            <ul>
+                <li data-fr="❌ Services d'analyse (Google Analytics, Mixpanel...)" data-en="❌ Analytics services (Google Analytics, Mixpanel...)">❌ Services d'analyse (Google Analytics, Mixpanel...)</li>
+                <li data-fr="❌ Services de suivi (tracking pixels, cookies tiers)" data-en="❌ Tracking services (tracking pixels, third-party cookies)">❌ Services de suivi (tracking pixels, cookies tiers)</li>
+                <li data-fr="❌ Services de publicité" data-en="❌ Advertising services">❌ Services de publicité</li>
+                <li data-fr="❌ Services de télémétrie" data-en="❌ Telemetry services">❌ Services de télémétrie</li>
+            </ul>
         </div>
 
-        <h2>Contact</h2>
+        <h2 data-fr="Authentification et licence" data-en="Authentication and license">Authentification et licence</h2>
+        <div class="legal-block">
+            <h3 data-fr="Firebase Authentication (version Premium)" data-en="Firebase Authentication (Premium version)">Firebase Authentication (version Premium)</h3>
+            <p data-fr="Pour les utilisateurs Premium, Reborn utilise <strong>Firebase Authentication</strong> (Google Cloud) uniquement pour vérifier votre licence et authentifier votre compte Google." data-en="For Premium users, Reborn uses <strong>Firebase Authentication</strong> (Google Cloud) solely to verify your license and authenticate your Google account.">Pour les utilisateurs Premium, Reborn utilise <strong>Firebase Authentication</strong> (Google Cloud) uniquement pour vérifier votre licence et authentifier votre compte Google.</p>
+            <p data-fr="<strong>Données concernées :</strong> votre adresse email Google et votre identifiant Google Cloud (UID). Ces données ne sont utilisées que pour la vérification de licence." data-en="<strong>Data involved:</strong> your Google email address and your Google Cloud identifier (UID). This data is only used for license verification."><strong>Données concernées :</strong> votre adresse email Google et votre identifiant Google Cloud (UID). Ces données ne sont utilisées que pour la vérification de licence.</p>
+        </div>
+
+        <h2 data-fr="Paiements Sécurisés" data-en="Secure Payments">Paiements Sécurisés</h2>
+        <div class="legal-block">
+            <p data-fr="Les paiements Premium sont traités par <strong>Stripe</strong>. Vos informations bancaires ne transitent <strong>jamais</strong> par nos serveurs. Nous ne stockons <strong>aucune donnée</strong> de carte bancaire." data-en="Premium payments are processed by <strong>Stripe</strong>. Your banking information <strong>never</strong> passes through our servers. We store <strong>no</strong> card data.">Les paiements Premium sont traités par <strong>Stripe</strong>. Vos informations bancaires ne transitent <strong>jamais</strong> par nos serveurs. Nous ne stockons <strong>aucune donnée</strong> de carte bancaire.</p>
+        </div>
+
+        <h2 data-fr="Suppression de vos données" data-en="Deleting your data">Suppression de vos données</h2>
+        <div class="legal-block">
+            <p data-fr="<strong>1. Désinstallation de l'extension</strong><br>En désinstallant Reborn Assistant, toutes les données locales sont automatiquement supprimées." data-en="<strong>1. Uninstall the extension</strong><br>By uninstalling Reborn Assistant, all local data is automatically deleted."><strong>1. Désinstallation de l'extension</strong><br>En désinstallant Reborn Assistant, toutes les données locales sont automatiquement supprimées.</p>
+            <p data-fr="<strong>2. Réinitialisation manuelle</strong><br>Vous pouvez réinitialiser les paramètres depuis l'interface de Reborn à tout moment." data-en="<strong>2. Manual reset</strong><br>You can reset settings from the Reborn interface at any time."><strong>2. Réinitialisation manuelle</strong><br>Vous pouvez réinitialiser les paramètres depuis l'interface de Reborn à tout moment.</p>
+            <p data-fr="<strong>3. Suppression du compte (Premium)</strong><br>Pour supprimer votre compte Premium et toutes les données associées, contactez-nous par email." data-en="<strong>3. Account deletion (Premium)</strong><br>To delete your Premium account and all associated data, contact us by email."><strong>3. Suppression du compte (Premium)</strong><br>Pour supprimer votre compte Premium et toutes les données associées, contactez-nous par email.</p>
+        </div>
+
+        <h2 data-fr="Contact" data-en="Contact">Contact</h2>
         <div class="contact-box">
-            <p>Pour toute question concernant les informations légales ou la politique de confidentialité :</p>
+            <p data-fr="Pour toute question concernant les informations légales ou la politique de confidentialité :" data-en="For any questions regarding legal information or the privacy policy:">Pour toute question concernant les informations légales ou la politique de confidentialité :</p>
             <p style="margin-top:16px;"><strong>📧 Email :</strong> <a href="mailto:seymoon.cell@gmail.com">seymoon.cell@gmail.com</a></p>
         </div>
 
-        <!-- ══════════════════════════════════════════ -->
-        <!--                  CHANGELOG                 -->
-        <!-- ══════════════════════════════════════════ -->
-
+        <!-- CHANGELOG -->
         <div class="page-separator"><span>◆ ◆ ◆</span></div>
 
         <h2 id="changelog">📋 Changelog</h2>
 
         <div class="legal-block">
-            <h3>Version 1.2 (Février 2026) · Actuelle</h3>
+            <h3 data-fr="Version 1.2 (Février 2026) · Actuelle" data-en="Version 1.2 (February 2026) · Current">Version 1.2 (Février 2026) · Actuelle</h3>
             <ul>
-                <li>Support de 14 langues (ajout Turc 🇹🇷)</li>
-                <li>Refonte visuelle MMORPG du site web</li>
-                <li>Fusion des pages légales en une seule page unifiée</li>
-                <li>Amélioration de l'alignement des cartes de prix</li>
+                <li data-fr="Support de 14 langues (ajout Turc 🇹🇷)" data-en="Support for 14 languages (added Turkish 🇹🇷)">Support de 14 langues (ajout Turc 🇹🇷)</li>
+                <li data-fr="Refonte visuelle MMORPG du site web" data-en="MMORPG visual redesign of the website">Refonte visuelle MMORPG du site web</li>
+                <li data-fr="Fusion des pages légales en une seule page unifiée" data-en="Merged legal pages into a single unified page">Fusion des pages légales en une seule page unifiée</li>
+                <li data-fr="Traduction complète FR/EN du site" data-en="Full FR/EN translation of the site">Traduction complète FR/EN du site</li>
             </ul>
         </div>
 
         <div class="legal-block">
-            <h3>Version 1.1 (Février 2026)</h3>
+            <h3 data-fr="Version 1.1 (Février 2026)" data-en="Version 1.1 (February 2026)">Version 1.1 (Février 2026)</h3>
             <ul>
-                <li>Ajout du macro périodique automatique (Pet 15s + auto-store)</li>
-                <li>Raccourcis clavier CTRL+A / CTRL+O pour démarrer/arrêter</li>
-                <li>Nouveau thème Custom Image (fond personnalisé)</li>
-                <li>Support de 13 langues (ajout Filipino)</li>
-                <li>Amélioration de la stabilité de la licence Premium</li>
-                <li>Corrections de bugs sur la rotation de séquences</li>
+                <li data-fr="Ajout de la macro périodique automatique (15s + auto-stockage)" data-en="Added automatic periodic macro (15s + auto-store)">Ajout de la macro périodique automatique (15s + auto-stockage)</li>
+                <li data-fr="Raccourcis clavier CTRL+A / CTRL+O" data-en="Keyboard shortcuts CTRL+A / CTRL+O">Raccourcis clavier CTRL+A / CTRL+O</li>
+                <li data-fr="Support de 14 langues (ajout Filipino + Turc)" data-en="Support for 14 languages (added Filipino + Turkish)">Support de 14 langues (ajout Filipino + Turc)</li>
+                <li data-fr="Amélioration de la stabilité de la licence Premium" data-en="Improved Premium license stability">Amélioration de la stabilité de la licence Premium</li>
+                <li data-fr="Corrections de bugs sur la rotation de séquences" data-en="Bug fixes on sequence rotation">Corrections de bugs sur la rotation de séquences</li>
             </ul>
         </div>
 
         <div class="legal-block">
-            <h3>Version 1.0 (2025) · Initiale</h3>
+            <h3 data-fr="Version 1.0 (2025) · Initiale" data-en="Version 1.0 (2025) · Initial">Version 1.0 (2025) · Initiale</h3>
             <ul>
-                <li>Lancement de Reborn Assistant</li>
-                <li>Actions automatiques de type 1 et 2</li>
-                <li>Rotation séquence automatique (F2 → 1-9 → 0 → F1)</li>
-                <li>3 macros personnalisables</li>
-                <li>6 thèmes visuels et 12 langues</li>
-                <li>Système de licence Premium via Firebase</li>
-                <li>Authentification via Google</li>
+                <li data-fr="Lancement de Reborn Assistant" data-en="Launch of Reborn Assistant">Lancement de Reborn Assistant</li>
+                <li data-fr="Actions automatiques de type 1 et 2" data-en="Automatic type 1 and 2 actions">Actions automatiques de type 1 et 2</li>
+                <li data-fr="Rotation séquence automatique (F2 → 1-9 → 0 → F1)" data-en="Automatic sequence rotation (F2 → 1-9 → 0 → F1)">Rotation séquence automatique (F2 → 1-9 → 0 → F1)</li>
+                <li data-fr="3 macros personnalisables" data-en="3 customizable macros">3 macros personnalisables</li>
+                <li data-fr="6 thèmes visuels et 12 langues" data-en="6 visual themes and 12 languages">6 thèmes visuels et 12 langues</li>
+                <li data-fr="Système de licence Premium via Firebase" data-en="Premium license system via Firebase">Système de licence Premium via Firebase</li>
             </ul>
         </div>
 
-        <p style="margin-top: 60px; text-align: center; color: var(--text-dim); font-size: 13px;">
-            © 2026 Reborn Assistant — Développé par Seymoon · Tous droits réservés
-        </p>
+        <p style="margin-top:60px;text-align:center;color:var(--text-dim);font-size:13px;" data-fr="© 2026 Reborn Assistant — Développé par Seymoon · Tous droits réservés" data-en="© 2026 Reborn Assistant — Developed by Seymoon · All rights reserved">© 2026 Reborn Assistant — Développé par Seymoon · Tous droits réservés</p>
     </div>
+    <script src="lang.js"></script>
 </body>
 </html>

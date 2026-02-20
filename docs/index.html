@@ -19,7 +19,7 @@
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        
+
         body {
             font-family: 'Inter', sans-serif;
             background-color: var(--dark-bg);
@@ -101,10 +101,7 @@
             box-shadow: 0 8px 30px rgba(212,175,55,0.2);
         }
 
-        .card-icon {
-            font-size: 32px;
-            margin-bottom: 16px;
-        }
+        .card-icon { font-size: 32px; margin-bottom: 16px; }
 
         .card-title {
             font-family: 'Cinzel', serif;
@@ -142,7 +139,6 @@
             color: var(--text-dim);
         }
 
-        /* MMORPG enhancements */
         body::after {
             content: '';
             position: fixed;
@@ -152,9 +148,7 @@
             pointer-events: none; z-index: 0;
         }
 
-        .logo {
-            animation: logoGlow 3s ease-in-out infinite;
-        }
+        .logo { animation: logoGlow 3s ease-in-out infinite; }
         @keyframes logoGlow {
             0%, 100% { box-shadow: 0 0 40px rgba(212,175,55,0.4); }
             50% { box-shadow: 0 0 60px rgba(212,175,55,0.6), 0 0 100px rgba(212,175,55,0.2); }
@@ -192,65 +186,82 @@
             background: rgba(212,175,55,0.2);
         }
         .grid-section { margin-bottom: 8px; }
+
+        .top-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <a href="../index.html" style="display:inline-flex;align-items:center;gap:8px;font-family:'Inter',sans-serif;font-size:12px;font-weight:500;letter-spacing:2px;text-transform:uppercase;text-decoration:none;color:var(--text-dim);padding:9px 20px;margin-bottom:40px;border:1px solid var(--border);border-radius:6px;transition:all 0.3s ease;" onmouseover="this.style.color='var(--gold)';this.style.borderColor='rgba(212,175,55,0.5)'" onmouseout="this.style.color='var(--text-dim)';this.style.borderColor='var(--border)'">← Retour au site principal</a>
-            <div class="logo">R</div>
-            <h1>REBORN ASSISTANT</h1>
-            <div class="version">VERSION 1.1 · DOCUMENTATION COMPLÈTE</div>
+        <div class="top-bar">
+            <a href="../index.html" style="display:inline-flex;align-items:center;gap:8px;font-family:'Inter',sans-serif;font-size:12px;font-weight:500;letter-spacing:2px;text-transform:uppercase;text-decoration:none;color:var(--text-dim);padding:9px 20px;border:1px solid var(--border);border-radius:6px;transition:all 0.3s ease;" onmouseover="this.style.color='var(--gold)';this.style.borderColor='rgba(212,175,55,0.5)'" onmouseout="this.style.color='var(--text-dim)';this.style.borderColor='var(--border)'" data-fr="← Retour au site principal" data-en="← Back to main site">← Retour au site principal</a>
+            <div class="lang-toggle">
+                <button class="lang-btn active" onclick="setLang('fr')" id="btn-fr">🇫🇷 FR</button>
+                <button class="lang-btn" onclick="setLang('en')" id="btn-en">🇬🇧 EN</button>
+            </div>
         </div>
 
-        <div class="doc-category">Guide d'utilisation</div>
+        <div class="header">
+            <div class="logo">R</div>
+            <h1>REBORN ASSISTANT</h1>
+            <div class="version" data-fr="VERSION 1.1 · DOCUMENTATION COMPLÈTE" data-en="VERSION 1.1 · COMPLETE DOCUMENTATION">VERSION 1.1 · DOCUMENTATION COMPLÈTE</div>
+        </div>
+
+        <div class="doc-category" data-fr="Guide d'utilisation" data-en="User Guide">Guide d'utilisation</div>
         <div class="grid grid-section">
             <a href="quickstart.html" class="card">
                 <div class="card-icon">🚀</div>
-                <div class="card-title">Démarrage Rapide</div>
-                <div class="card-desc">Installation, configuration initiale et premiers pas avec Reborn Assistant.</div>
+                <div class="card-title" data-fr="Démarrage Rapide" data-en="Quick Start">Démarrage Rapide</div>
+                <div class="card-desc" data-fr="Installation, configuration initiale et premiers pas avec Reborn Assistant." data-en="Installation, initial setup and first steps with Reborn Assistant.">Installation, configuration initiale et premiers pas avec Reborn Assistant.</div>
             </a>
 
             <a href="features.html" class="card">
                 <div class="card-icon">⚡</div>
-                <div class="card-title">Fonctionnalités</div>
-                <div class="card-desc">Détail complet des fonctionnalités gratuites et Premium avec tableau comparatif.</div>
+                <div class="card-title" data-fr="Fonctionnalités" data-en="Features">Fonctionnalités</div>
+                <div class="card-desc" data-fr="Détail complet des fonctionnalités gratuites et Premium avec tableau comparatif." data-en="Full detail of free and Premium features with comparison table.">Détail complet des fonctionnalités gratuites et Premium avec tableau comparatif.</div>
             </a>
 
             <a href="premium.html" class="card">
                 <div class="card-icon">💎</div>
-                <div class="card-title">Guide Premium <span class="premium-badge">PREMIUM</span></div>
-                <div class="card-desc">Séquences automatiques, macros personnalisables et macro périodique.</div>
+                <div class="card-title"><span data-fr="Guide Premium" data-en="Premium Guide">Guide Premium</span> <span class="premium-badge">PREMIUM</span></div>
+                <div class="card-desc" data-fr="Séquences automatiques, macros personnalisables et macro périodique." data-en="Automatic sequences, customizable macros and periodic macro.">Séquences automatiques, macros personnalisables et macro périodique.</div>
             </a>
 
             <a href="interface.html" class="card">
                 <div class="card-icon">🎨</div>
-                <div class="card-title">Interface & Personnalisation</div>
-                <div class="card-desc">Thèmes visuels, langues et options de personnalisation.</div>
+                <div class="card-title" data-fr="Interface & Personnalisation" data-en="Interface & Customization">Interface & Personnalisation</div>
+                <div class="card-desc" data-fr="Thèmes visuels, langues et options de personnalisation." data-en="Visual themes, languages and customization options.">Thèmes visuels, langues et options de personnalisation.</div>
             </a>
         </div>
 
-        <div class="doc-category">Support</div>
+        <div class="doc-category" data-fr="Support" data-en="Support">Support</div>
         <div class="grid grid-section">
             <a href="troubleshooting.html" class="card">
                 <div class="card-icon">🔧</div>
-                <div class="card-title">Dépannage</div>
-                <div class="card-desc">Solutions aux problèmes courants, FAQ et optimisation des performances.</div>
+                <div class="card-title" data-fr="Dépannage" data-en="Troubleshooting">Dépannage</div>
+                <div class="card-desc" data-fr="Solutions aux problèmes courants, FAQ et optimisation des performances." data-en="Solutions to common issues, FAQ and performance optimization.">Solutions aux problèmes courants, FAQ et optimisation des performances.</div>
             </a>
         </div>
 
-        <div class="doc-category">Informations légales</div>
+        <div class="doc-category" data-fr="Informations légales" data-en="Legal information">Informations légales</div>
         <div class="grid grid-section">
             <a href="legal.html" class="card">
                 <div class="card-icon">⚖️🔒</div>
-                <div class="card-title">Légal & Confidentialité</div>
-                <div class="card-desc">Disclaimer, mentions légales, termes de licence, politique de confidentialité et changelog.</div>
+                <div class="card-title" data-fr="Légal & Confidentialité" data-en="Legal & Privacy">Légal & Confidentialité</div>
+                <div class="card-desc" data-fr="Disclaimer, mentions légales, termes de licence, politique de confidentialité et changelog." data-en="Disclaimer, legal notices, license terms, privacy policy and changelog.">Disclaimer, mentions légales, termes de licence, politique de confidentialité et changelog.</div>
             </a>
         </div>
 
         <footer>
-            © 2026 Reborn Assistant — Développé par Seymoon · Tous droits réservés
+            <span data-fr="© 2026 Reborn Assistant — Développé par Seymoon · Tous droits réservés" data-en="© 2026 Reborn Assistant — Developed by Seymoon · All rights reserved">© 2026 Reborn Assistant — Développé par Seymoon · Tous droits réservés</span>
         </footer>
     </div>
+    <script src="lang.js"></script>
 </body>
 </html>

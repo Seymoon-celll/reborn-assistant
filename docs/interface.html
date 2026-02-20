@@ -6,90 +6,83 @@
     <title>Interface & Personnalisation – Reborn Assistant</title>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --gold: #d4af37;
-            --gold-light: #f4d03f;
-            --gold-dark: #b8941f;
-            --dark-bg: #080808;
-            --dark-card: #141410;
-            --green: #4CAF50;
-            --text: #f0ead6;
-            --text-dim: #9a9278;
-            --border: rgba(212, 175, 55, 0.2);
-        }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; background-color: var(--dark-bg); color: var(--text); line-height: 1.7; }
-        body::before {
-            content: ''; position: fixed; inset: 0;
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
-            pointer-events: none; opacity: 0.3;
-        }
-        .container { max-width: 900px; margin: 0 auto; padding: 80px 40px 100px; position: relative; z-index: 1; }
-        .back-link { display: inline-flex; align-items: center; gap: 8px; color: var(--text-dim); text-decoration: none; font-size: 13px; margin-bottom: 40px; transition: color 0.2s; }
-        .back-link:hover { color: var(--gold); }
-        h1 { font-family: 'Cinzel', serif; font-size: 42px; color: var(--gold); letter-spacing: 2px; margin-bottom: 16px; }
-        .subtitle { font-size: 18px; color: var(--text-dim); margin-bottom: 60px; }
-        h2 { font-family: 'Cinzel', serif; font-size: 28px; color: var(--text); margin: 60px 0 24px; padding-bottom: 16px; border-bottom: 1px solid var(--border); }
-        h3 { font-size: 20px; color: var(--gold); margin: 32px 0 16px; }
-        .theme-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin: 24px 0; }
-        .theme-card { background: rgba(20,20,16,0.6); border: 1px solid var(--border); border-radius: 8px; padding: 20px; text-align: center; }
-        .theme-preview { width: 100%; height: 60px; border-radius: 6px; margin-bottom: 12px; }
-        .theme-name { font-weight: 600; color: var(--gold); font-size: 14px; }
-        .lang-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 12px; margin: 24px 0; }
-        .lang-item { background: rgba(20,20,16,0.6); border: 1px solid var(--border); border-radius: 6px; padding: 12px; text-align: center; font-size: 13px; }
-        code { background: rgba(20,20,16,0.9); padding: 3px 10px; border-radius: 4px; font-family: 'Courier New', monospace; font-size: 13px; color: #f4d03f; }
-        ul { margin: 16px 0; padding-left: 24px; }
-        li { margin: 8px 0; font-size: 15px; }
-        p { margin-bottom: 16px; font-size: 15px; }
+        :root { --gold:#d4af37;--gold-light:#f4d03f;--gold-dark:#b8941f;--dark-bg:#080808;--green:#4CAF50;--text:#f0ead6;--text-dim:#9a9278;--border:rgba(212,175,55,0.2); }
+        * { margin:0;padding:0;box-sizing:border-box; }
+        body { font-family:'Inter',sans-serif;background-color:var(--dark-bg);color:var(--text);line-height:1.7; }
+        body::before { content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;opacity:0.3; }
+        .container { max-width:900px;margin:0 auto;padding:80px 40px 100px;position:relative;z-index:1; }
+        .back-link { display:inline-flex;align-items:center;gap:8px;color:var(--text-dim);text-decoration:none;font-size:13px;transition:color 0.2s; }
+        .back-link:hover { color:var(--gold); }
+        h1 { font-family:'Cinzel',serif;font-size:42px;color:var(--gold);letter-spacing:2px;margin-bottom:16px; }
+        .subtitle { font-size:18px;color:var(--text-dim);margin-bottom:60px; }
+        h2 { font-family:'Cinzel',serif;font-size:28px;color:var(--text);margin:60px 0 24px;padding-bottom:16px;border-bottom:1px solid var(--border); }
+        h3 { font-size:20px;color:var(--gold);margin:32px 0 16px; }
+        .theme-grid { display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin:24px 0; }
+        .theme-card { background:rgba(20,20,16,0.6);border:1px solid var(--border);border-radius:8px;padding:20px;text-align:center; }
+        .theme-preview { width:100%;height:60px;border-radius:6px;margin-bottom:12px; }
+        .theme-name { font-weight:600;color:var(--gold);font-size:14px; }
+        .lang-grid { display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:12px;margin:24px 0; }
+        .lang-item { background:rgba(20,20,16,0.6);border:1px solid var(--border);border-radius:6px;padding:12px;text-align:center;font-size:13px; }
+        code { background:rgba(20,20,16,0.9);padding:3px 10px;border-radius:4px;font-family:'Courier New',monospace;font-size:13px;color:#f4d03f; }
+        ul { margin:16px 0;padding-left:24px; }
+        li { margin:8px 0;font-size:15px; }
+        p { margin-bottom:16px;font-size:15px; }
     </style>
 </head>
 <body>
     <div class="container">
         <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:40px;flex-wrap:wrap;gap:12px;">
-            <a href="index.html" class="back-link" style="margin-bottom:0;">← Retour aux docs</a>
-            <a href="../index.html" style="font-family:'Inter',sans-serif;font-size:11px;font-weight:500;letter-spacing:2px;text-transform:uppercase;text-decoration:none;color:var(--text-dim);padding:7px 16px;border:1px solid var(--border);border-radius:6px;transition:all 0.3s ease;" onmouseover="this.style.color='var(--gold)';this.style.borderColor='rgba(212,175,55,0.5)'" onmouseout="this.style.color='var(--text-dim)';this.style.borderColor='var(--border)'">⌂ Site principal</a>
+            <a href="index.html" class="back-link" data-fr="← Retour aux docs" data-en="← Back to docs">← Retour aux docs</a>
+            <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+                <a href="../index.html" style="font-family:'Inter',sans-serif;font-size:11px;font-weight:500;letter-spacing:2px;text-transform:uppercase;text-decoration:none;color:var(--text-dim);padding:7px 16px;border:1px solid var(--border);border-radius:6px;transition:all 0.3s ease;" onmouseover="this.style.color='var(--gold)';this.style.borderColor='rgba(212,175,55,0.5)'" onmouseout="this.style.color='var(--text-dim)';this.style.borderColor='var(--border)'" data-fr="⌂ Site principal" data-en="⌂ Main site">⌂ Site principal</a>
+                <div class="lang-toggle">
+                    <button class="lang-btn active" onclick="setLang('fr')" id="btn-fr">🇫🇷 FR</button>
+                    <button class="lang-btn" onclick="setLang('en')" id="btn-en">🇬🇧 EN</button>
+                </div>
+            </div>
         </div>
-        <h1>🎨 Interface & Personnalisation</h1>
-        <p class="subtitle">Personnalisez Reborn Assistant selon vos préférences</p>
 
-        <h2>Thèmes visuels</h2>
-        <p>Reborn Assistant propose 6 thèmes pour personnaliser l'apparence de l'interface :</p>
+        <h1 data-fr="🎨 Interface & Personnalisation" data-en="🎨 Interface & Customization">🎨 Interface & Personnalisation</h1>
+        <p class="subtitle" data-fr="Personnalisez Reborn Assistant selon vos préférences" data-en="Customize Reborn Assistant to your preferences">Personnalisez Reborn Assistant selon vos préférences</p>
+
+        <h2 data-fr="Thèmes visuels" data-en="Visual themes">Thèmes visuels</h2>
+        <p data-fr="Reborn Assistant propose 6 thèmes pour personnaliser l'apparence de l'interface :" data-en="Reborn Assistant offers 6 themes to customize the interface appearance:">Reborn Assistant propose 6 thèmes pour personnaliser l'apparence de l'interface :</p>
 
         <div class="theme-grid">
             <div class="theme-card">
-                <div class="theme-preview" style="background: linear-gradient(135deg, #d4af37, #f4d03f);"></div>
+                <div class="theme-preview" style="background:linear-gradient(135deg,#d4af37,#f4d03f);"></div>
                 <div class="theme-name">MMO Gold</div>
             </div>
             <div class="theme-card">
-                <div class="theme-preview" style="background: linear-gradient(135deg, #004d66, #0099cc);"></div>
+                <div class="theme-preview" style="background:linear-gradient(135deg,#004d66,#0099cc);"></div>
                 <div class="theme-name">Cyber Blue</div>
             </div>
             <div class="theme-card">
-                <div class="theme-preview" style="background: linear-gradient(135deg, #660080, #9900cc);"></div>
+                <div class="theme-preview" style="background:linear-gradient(135deg,#660080,#9900cc);"></div>
                 <div class="theme-name">Neon Purple</div>
             </div>
             <div class="theme-card">
-                <div class="theme-preview" style="background: linear-gradient(135deg, #990000, #ff0000);"></div>
+                <div class="theme-preview" style="background:linear-gradient(135deg,#990000,#ff0000);"></div>
                 <div class="theme-name">Fire Red</div>
             </div>
             <div class="theme-card">
-                <div class="theme-preview" style="background: linear-gradient(135deg, #333, #555);"></div>
-                <div class="theme-name">Dark Mode</div>
+                <div class="theme-preview" style="background:linear-gradient(135deg,#333,#555);"></div>
+                <div class="theme-name" data-fr="Dark Mode" data-en="Dark Mode">Dark Mode</div>
             </div>
             <div class="theme-card">
-                <div class="theme-preview" style="background: linear-gradient(135deg, #ddd, #f5f5f5);"></div>
-                <div class="theme-name">White Mode</div>
+                <div class="theme-preview" style="background:linear-gradient(135deg,#ddd,#f5f5f5);"></div>
+                <div class="theme-name" data-fr="White Mode" data-en="White Mode">White Mode</div>
             </div>
         </div>
 
-        <h3>Changer de thème</h3>
-        <p>1. Ouvrez le panneau Reborn<br>
+        <h3 data-fr="Changer de thème" data-en="Change theme">Changer de thème</h3>
+        <p data-fr='1. Ouvrez le panneau Reborn<br>2. Cliquez sur l&#39;onglet "⚙️ CONFIGURATION"<br>3. Sélectionnez votre thème dans le menu déroulant<br>4. Le changement est instantané' data-en='1. Open the Reborn panel<br>2. Click the "⚙️ CONFIGURATION" tab<br>3. Select your theme from the dropdown<br>4. The change is instant'>1. Ouvrez le panneau Reborn<br>
         2. Cliquez sur l'onglet "⚙️ CONFIGURATION"<br>
         3. Sélectionnez votre thème dans le menu déroulant<br>
         4. Le changement est instantané</p>
 
-        <h2>Langues disponibles</h2>
-        <p>Interface disponible en 13 langues :</p>
+        <h2 data-fr="Langues disponibles" data-en="Available languages">Langues disponibles</h2>
+        <p data-fr="Interface disponible en 14 langues :" data-en="Interface available in 14 languages:">Interface disponible en 14 langues :</p>
 
         <div class="lang-grid">
             <div class="lang-item">🇫🇷 Français</div>
@@ -105,67 +98,68 @@
             <div class="lang-item">🇯🇵 日本語</div>
             <div class="lang-item">🇰🇷 한국어</div>
             <div class="lang-item">🇵🇭 Filipino</div>
+            <div class="lang-item">🇹🇷 Türkçe</div>
         </div>
 
-        <h3>Changer de langue</h3>
-        <p>1. Ouvrez le panneau Reborn<br>
+        <h3 data-fr="Changer de langue" data-en="Change language">Changer de langue</h3>
+        <p data-fr='1. Ouvrez le panneau Reborn<br>2. Cliquez sur "⚙️ CONFIGURATION"<br>3. Sélectionnez votre langue dans le menu déroulant<br>4. Toute l&#39;interface se traduit instantanément' data-en='1. Open the Reborn panel<br>2. Click "⚙️ CONFIGURATION"<br>3. Select your language from the dropdown<br>4. The entire interface translates instantly'>1. Ouvrez le panneau Reborn<br>
         2. Cliquez sur "⚙️ CONFIGURATION"<br>
         3. Sélectionnez votre langue dans le menu déroulant<br>
         4. Toute l'interface se traduit instantanément</p>
 
-        <h2>Raccourcis clavier</h2>
-        <p>Reborn Assistant inclut des raccourcis globaux pour un contrôle rapide :</p>
+        <h2 data-fr="Raccourcis clavier" data-en="Keyboard shortcuts">Raccourcis clavier</h2>
+        <p data-fr="Reborn Assistant inclut des raccourcis globaux pour un contrôle rapide :" data-en="Reborn Assistant includes global shortcuts for quick control:">Reborn Assistant inclut des raccourcis globaux pour un contrôle rapide :</p>
 
-        <h3>Raccourcis système</h3>
+        <h3 data-fr="Raccourcis système" data-en="System shortcuts">Raccourcis système</h3>
         <ul>
-            <li><code>CTRL + A</code> : Démarrer le bot</li>
-            <li><code>CTRL + O</code> : Arrêter le bot</li>
-            
+            <li data-fr="<code>CTRL + A</code> : Démarrer le bot" data-en="<code>CTRL + A</code>: Start the bot"><code>CTRL + A</code> : Démarrer le bot</li>
+            <li data-fr="<code>CTRL + O</code> : Arrêter le bot" data-en="<code>CTRL + O</code>: Stop the bot"><code>CTRL + O</code> : Arrêter le bot</li>
         </ul>
 
-        <h3>Raccourcis personnalisables</h3>
-        <p>Vous pouvez configurer les touches pour :</p>
+        <h3 data-fr="Raccourcis personnalisables" data-en="Customizable shortcuts">Raccourcis personnalisables</h3>
+        <p data-fr="Vous pouvez configurer les touches pour :" data-en="You can configure keys for:">Vous pouvez configurer les touches pour :</p>
         <ul>
-            <li>Actions de type 1 et 2</li>
-            <li>Macros (séquences de touches)</li>
-            <li>Macro périodique</li>
+            <li data-fr="Actions de type 1 et 2" data-en="Type 1 and 2 actions">Actions de type 1 et 2</li>
+            <li data-fr="Macros (séquences de touches)" data-en="Macros (key sequences)">Macros (séquences de touches)</li>
+            <li data-fr="Macro périodique" data-en="Periodic macro">Macro périodique</li>
         </ul>
 
-        <h2>Options d'affichage</h2>
+        <h2 data-fr="Options d'affichage" data-en="Display options">Options d'affichage</h2>
 
-        <h3>Position du panneau</h3>
-        <p>Le panneau Reborn est draggable (déplaçable) :</p>
+        <h3 data-fr="Position du panneau" data-en="Panel position">Position du panneau</h3>
+        <p data-fr="Le panneau Reborn est déplaçable :" data-en="The Reborn panel is draggable:">Le panneau Reborn est déplaçable :</p>
         <ul>
-            <li>Cliquez sur l'en-tête du panneau</li>
-            <li>Maintenez le bouton enfoncé et déplacez</li>
-            <li>Relâchez à l'endroit souhaité</li>
-            <li>La position est sauvegardée automatiquement</li>
+            <li data-fr="Cliquez sur l'en-tête du panneau" data-en="Click on the panel header">Cliquez sur l'en-tête du panneau</li>
+            <li data-fr="Maintenez le bouton enfoncé et déplacez" data-en="Hold the button and drag">Maintenez le bouton enfoncé et déplacez</li>
+            <li data-fr="Relâchez à l'endroit souhaité" data-en="Release at the desired location">Relâchez à l'endroit souhaité</li>
+            <li data-fr="La position est sauvegardée automatiquement" data-en="Position is saved automatically">La position est sauvegardée automatiquement</li>
         </ul>
 
-        <h3>Opacité du panneau</h3>
-        <p>Ajustez la transparence pour ne pas gêner votre navigation tout en gardant un œil sur vos statistiques.</p>
+        <h3 data-fr="Opacité du panneau" data-en="Panel opacity">Opacité du panneau</h3>
+        <p data-fr="Ajustez la transparence pour ne pas gêner votre navigation tout en gardant un œil sur vos statistiques." data-en="Adjust transparency so it doesn't interfere with your navigation while keeping an eye on your stats.">Ajustez la transparence pour ne pas gêner votre navigation tout en gardant un œil sur vos statistiques.</p>
 
-        <h3>Log d'activité</h3>
-        <p>Le log affiche en temps réel toutes les actions effectuées :</p>
+        <h3 data-fr="Log d'activité" data-en="Activity log">Log d'activité</h3>
+        <p data-fr="Le log affiche en temps réel toutes les actions effectuées :" data-en="The log displays all actions performed in real time:">Le log affiche en temps réel toutes les actions effectuées :</p>
         <ul>
-            <li>Activation/désactivation des systèmes</li>
-            <li>Utilisation de potions</li>
-            <li>Exécution des macros et séquences</li>
-            <li>Appels de la macro périodique</li>
-            <li>Erreurs éventuelles</li>
+            <li data-fr="Activation/désactivation des systèmes" data-en="System activation/deactivation">Activation/désactivation des systèmes</li>
+            <li data-fr="Utilisation de potions" data-en="Potion usage">Utilisation de potions</li>
+            <li data-fr="Exécution des macros et séquences" data-en="Macro and sequence execution">Exécution des macros et séquences</li>
+            <li data-fr="Appels de la macro périodique" data-en="Periodic macro calls">Appels de la macro périodique</li>
+            <li data-fr="Erreurs éventuelles" data-en="Any errors">Erreurs éventuelles</li>
         </ul>
 
-        <h2>Sauvegarde des paramètres</h2>
-        <p>Toutes vos configurations sont automatiquement sauvegardées localement :</p>
+        <h2 data-fr="Sauvegarde des paramètres" data-en="Settings backup">Sauvegarde des paramètres</h2>
+        <p data-fr="Toutes vos configurations sont automatiquement sauvegardées localement :" data-en="All your configurations are automatically saved locally:">Toutes vos configurations sont automatiquement sauvegardées localement :</p>
         <ul>
-            <li>Thème sélectionné</li>
-            <li>Langue de l'interface</li>
-            <li>Seuils déclencheurs</li>
-            <li>Touches assignées</li>
-            <li>Configuration des macros</li>
-            <li>Position du panneau</li>
+            <li data-fr="Thème sélectionné" data-en="Selected theme">Thème sélectionné</li>
+            <li data-fr="Langue de l'interface" data-en="Interface language">Langue de l'interface</li>
+            <li data-fr="Seuils déclencheurs" data-en="Trigger thresholds">Seuils déclencheurs</li>
+            <li data-fr="Touches assignées" data-en="Assigned keys">Touches assignées</li>
+            <li data-fr="Configuration des macros" data-en="Macro configuration">Configuration des macros</li>
+            <li data-fr="Position du panneau" data-en="Panel position">Position du panneau</li>
         </ul>
-        <p>Elles persistent entre les sessions, même après fermeture du navigateur.</p>
+        <p data-fr="Elles persistent entre les sessions, même après fermeture du navigateur." data-en="They persist between sessions, even after closing the browser.">Elles persistent entre les sessions, même après fermeture du navigateur.</p>
     </div>
+    <script src="lang.js"></script>
 </body>
 </html>
