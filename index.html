@@ -25,11 +25,18 @@
         .logo-text { font-family: 'Cinzel', serif; font-size: 20px; font-weight: 700; color: var(--gold); letter-spacing: 3px; text-transform: uppercase; }
         .status-badge { background: rgba(212,175,55,0.08); border: 1px solid rgba(212,175,55,0.35); padding: 7px 18px; border-radius: 20px; font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 500; color: var(--gold); text-transform: uppercase; letter-spacing: 2.5px; }
 
-        /* Lang toggle */
-        .lang-toggle { display: inline-flex; background: rgba(212,175,55,0.06); border: 1px solid rgba(212,175,55,0.22); border-radius: 22px; padding: 3px; gap: 2px; backdrop-filter: blur(8px); }
-        .lang-btn { background: transparent; border: none; border-radius: 18px; padding: 5px 13px; font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 600; color: var(--gold); cursor: pointer; transition: all 0.22s ease; letter-spacing: 0.8px; opacity: 0.45; line-height: 1; }
-        .lang-btn.active { background: linear-gradient(135deg, rgba(212,175,55,0.22), rgba(212,175,55,0.12)); opacity: 1; box-shadow: 0 0 12px rgba(212,175,55,0.25), inset 0 1px 0 rgba(212,175,55,0.3); }
-        .lang-btn:hover:not(.active) { opacity: 0.75; background: rgba(212,175,55,0.07); }
+        /* Lang dropdown */
+        .lang-select{position:relative;display:inline-block;user-select:none;}
+        .lang-select-btn{display:flex;align-items:center;gap:7px;background:rgba(212,175,55,0.06);border:1px solid rgba(212,175,55,0.25);border-radius:8px;padding:7px 13px;font-family:'Inter',sans-serif;font-size:12px;font-weight:600;color:var(--gold);cursor:pointer;transition:all 0.2s ease;letter-spacing:0.5px;white-space:nowrap;}
+        .lang-select-btn:hover{background:rgba(212,175,55,0.12);border-color:rgba(212,175,55,0.45);}
+        .lang-chevron{font-size:9px;transition:transform 0.2s ease;opacity:0.6;margin-left:2px;}
+        .lang-select.open .lang-chevron{transform:rotate(180deg);}
+        .lang-select-menu{position:absolute;top:calc(100% + 6px);right:0;min-width:130px;background:rgba(10,10,8,0.97);border:1px solid rgba(212,175,55,0.25);border-radius:8px;overflow:hidden;display:none;flex-direction:column;backdrop-filter:blur(16px);box-shadow:0 12px 40px rgba(0,0,0,0.6),0 0 0 1px rgba(212,175,55,0.08);z-index:999;}
+        .lang-select.open .lang-select-menu{display:flex;}
+        .lang-option{display:flex;align-items:center;gap:9px;width:100%;background:transparent;border:none;border-bottom:1px solid rgba(212,175,55,0.08);padding:10px 14px;font-family:'Inter',sans-serif;font-size:12px;font-weight:500;color:var(--text-dim);cursor:pointer;transition:all 0.15s ease;text-align:left;}
+        .lang-option:last-child{border-bottom:none;}
+        .lang-option:hover{background:rgba(212,175,55,0.09);color:var(--gold);}
+        .lang-option.active{color:var(--gold);background:rgba(212,175,55,0.05);font-weight:600;}
 
         .hero { min-height: 85vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 100px 40px 60px; position: relative; z-index: 1; }
         .hero-inner { max-width: 900px; }
@@ -204,9 +211,16 @@
             <div class="logo-text">Reborn</div>
         </div>
         <div style="display:flex; align-items:center; gap:10px;">
-            <div class="lang-toggle">
-                <button class="lang-btn" data-lang="fr" onclick="setLang('fr')">FR</button>
-                <button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button>
+            <div class="lang-select">
+                <button class="lang-select-btn" onclick="toggleLangMenu()">
+                    <span class="lang-flag">🇫🇷</span>
+                    <span class="lang-code">FR</span>
+                    <span class="lang-chevron">▾</span>
+                </button>
+                <div class="lang-select-menu">
+                    <button class="lang-option" data-lang="fr" onclick="setLang('fr')">🇫🇷 Français</button>
+                    <button class="lang-option" data-lang="en" onclick="setLang('en')">🇬🇧 English</button>
+                </div>
             </div>
             <a href="docs/index.html" style="font-family:'Cinzel',serif;font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;color:var(--gold);padding:6px 12px;border:1px solid rgba(212,175,55,0.4);border-radius:6px;transition:all 0.3s ease;background:rgba(212,175,55,0.05);" onmouseover="this.style.background='rgba(212,175,55,0.12)';this.style.borderColor='var(--gold)'" onmouseout="this.style.background='rgba(212,175,55,0.05)';this.style.borderColor='rgba(212,175,55,0.4)'">📚 Docs</a>
             <div class="status-badge">Premium Edition</div>
@@ -490,23 +504,39 @@
         // ── Language toggle FR / EN ──
         var currentLang = localStorage.getItem('site-lang') || 'fr';
 
+        var FLAGS = { fr: '🇫🇷', en: '🇬🇧' };
+        function toggleLangMenu() {
+            var el = document.querySelector('.lang-select');
+            if (el) el.classList.toggle('open');
+        }
         function setLang(lang) {
             currentLang = lang;
             localStorage.setItem('site-lang', lang);
-            document.querySelectorAll('.lang-btn').forEach(function(btn) {
-                btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+            /* close menu */
+            var sel = document.querySelector('.lang-select');
+            if (sel) sel.classList.remove('open');
+            /* update button */
+            var flagEl = document.querySelector('.lang-flag');
+            var codeEl = document.querySelector('.lang-code');
+            if (flagEl) flagEl.textContent = FLAGS[lang] || '';
+            if (codeEl) codeEl.textContent = lang.toUpperCase();
+            /* active option */
+            document.querySelectorAll('.lang-option').forEach(function(opt) {
+                opt.classList.toggle('active', opt.getAttribute('data-lang') === lang);
             });
+            /* translate */
             document.querySelectorAll('[data-fr][data-en]').forEach(function(el) {
                 var val = el.getAttribute('data-' + lang);
                 if (val !== null) {
-                    if (val.indexOf('<') !== -1) {
-                        el.innerHTML = val;
-                    } else {
-                        el.textContent = val;
-                    }
+                    if (val.indexOf('<') !== -1) { el.innerHTML = val; } else { el.textContent = val; }
                 }
             });
         }
+        /* close dropdown on outside click */
+        document.addEventListener('click', function(e) {
+            var sel = document.querySelector('.lang-select');
+            if (sel && !sel.contains(e.target)) sel.classList.remove('open');
+        });
 
         // Init on load
         setLang(currentLang);
