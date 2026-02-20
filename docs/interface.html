@@ -35,11 +35,9 @@
             <a href="index.html" class="back-link" data-fr="← Retour aux docs" data-en="← Back to docs">← Retour aux docs</a>
             <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
                 <a href="../index.html" style="font-family:'Inter',sans-serif;font-size:11px;font-weight:500;letter-spacing:2px;text-transform:uppercase;text-decoration:none;color:var(--text-dim);padding:7px 16px;border:1px solid var(--border);border-radius:6px;transition:all 0.3s ease;" onmouseover="this.style.color='var(--gold)';this.style.borderColor='rgba(212,175,55,0.5)'" onmouseout="this.style.color='var(--text-dim)';this.style.borderColor='var(--border)'" data-fr="⌂ Site principal" data-en="⌂ Main site">⌂ Site principal</a>
-                <div class="lang-dropdown">
-                    <select id="lang-select" onchange="setLang(this.value)">
-                        <option value="fr">🇫🇷 FR</option>
-                        <option value="en">🇬🇧 EN</option>
-                    </select>
+                <div class="lang-toggle">
+                    <button class="lang-btn" data-lang="fr" onclick="setLang('fr')">FR</button>
+                    <button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button>
                 </div>
             </div>
         </div>

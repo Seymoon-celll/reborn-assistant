@@ -1,20 +1,27 @@
 (function () {
     var style = document.createElement('style');
     style.textContent = [
-        '.lang-dropdown{position:relative;display:inline-flex;align-items:center;}',
-        '.lang-dropdown select{appearance:none;-webkit-appearance:none;background:rgba(212,175,55,0.06);border:1px solid rgba(212,175,55,0.25);border-radius:20px;padding:5px 28px 5px 12px;font-family:\'Inter\',sans-serif;font-size:11px;font-weight:600;color:#d4af37;cursor:pointer;outline:none;transition:all 0.2s ease;letter-spacing:0.5px;}',
-        '.lang-dropdown select:hover{border-color:rgba(212,175,55,0.5);background:rgba(212,175,55,0.1);}',
-        '.lang-dropdown select option{background:#141410;color:#f0ead6;}',
-        '.lang-dropdown::after{content:"▾";position:absolute;right:10px;pointer-events:none;font-size:10px;color:#d4af37;}'
+        '.lang-toggle{display:inline-flex;background:rgba(212,175,55,0.06);border:1px solid rgba(212,175,55,0.22);border-radius:22px;padding:3px;gap:2px;backdrop-filter:blur(8px);}',
+        '.lang-btn{background:transparent;border:none;border-radius:18px;padding:5px 13px;font-family:\'Inter\',sans-serif;font-size:11px;font-weight:600;color:#d4af37;cursor:pointer;transition:all 0.22s ease;letter-spacing:0.8px;opacity:0.45;line-height:1;}',
+        '.lang-btn.active{background:linear-gradient(135deg,rgba(212,175,55,0.22),rgba(212,175,55,0.12));opacity:1;box-shadow:0 0 12px rgba(212,175,55,0.25),inset 0 1px 0 rgba(212,175,55,0.3);}',
+        '.lang-btn:hover:not(.active){opacity:0.75;background:rgba(212,175,55,0.07);}'
     ].join('');
     document.head.appendChild(style);
 
     function setLang(lang) {
         localStorage.setItem('site-lang', lang);
-        var sel = document.getElementById('lang-select');
-        if (sel) sel.value = lang;
+        document.querySelectorAll('.lang-btn').forEach(function (btn) {
+            btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+        });
         document.querySelectorAll('[data-fr][data-en]').forEach(function (el) {
-            el.innerHTML = el.getAttribute('data-' + lang);
+            var val = el.getAttribute('data-' + lang);
+            if (val !== null) {
+                if (val.indexOf('<') !== -1) {
+                    el.innerHTML = val;
+                } else {
+                    el.textContent = val;
+                }
+            }
         });
         document.documentElement.lang = lang;
     }
