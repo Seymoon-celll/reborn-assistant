@@ -43,9 +43,11 @@
             <a href="index.html" class="back-link" data-fr="← Retour aux docs" data-en="← Back to docs">← Retour aux docs</a>
             <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
                 <a href="../index.html" style="font-family:'Inter',sans-serif;font-size:11px;font-weight:500;letter-spacing:2px;text-transform:uppercase;text-decoration:none;color:var(--text-dim);padding:7px 16px;border:1px solid var(--border);border-radius:6px;transition:all 0.3s ease;" onmouseover="this.style.color='var(--gold)';this.style.borderColor='rgba(212,175,55,0.5)'" onmouseout="this.style.color='var(--text-dim)';this.style.borderColor='var(--border)'" data-fr="⌂ Site principal" data-en="⌂ Main site">⌂ Site principal</a>
-                <div class="lang-toggle">
-                    <button class="lang-btn active" onclick="setLang('fr')" id="btn-fr">🇫🇷 FR</button>
-                    <button class="lang-btn" onclick="setLang('en')" id="btn-en">🇬🇧 EN</button>
+                <div class="lang-dropdown">
+                    <select id="lang-select" onchange="setLang(this.value)">
+                        <option value="fr">🇫🇷 FR</option>
+                        <option value="en">🇬🇧 EN</option>
+                    </select>
                 </div>
             </div>
         </div>
@@ -209,7 +211,7 @@
             <h3 data-fr="Version 1.2 (Février 2026) · Actuelle" data-en="Version 1.2 (February 2026) · Current">Version 1.2 (Février 2026) · Actuelle</h3>
             <ul>
                 <li data-fr="Support de 14 langues (ajout Turc 🇹🇷)" data-en="Support for 14 languages (added Turkish 🇹🇷)">Support de 14 langues (ajout Turc 🇹🇷)</li>
-                <li data-fr="Refonte visuelle MMORPG du site web" data-en="MMORPG visual redesign of the website">Refonte visuelle MMORPG du site web</li>
+                <li data-fr="Refonte visuelle du site web" data-en="Visual redesign of the website">Refonte visuelle du site web</li>
                 <li data-fr="Fusion des pages légales en une seule page unifiée" data-en="Merged legal pages into a single unified page">Fusion des pages légales en une seule page unifiée</li>
                 <li data-fr="Traduction complète FR/EN du site" data-en="Full FR/EN translation of the site">Traduction complète FR/EN du site</li>
             </ul>
