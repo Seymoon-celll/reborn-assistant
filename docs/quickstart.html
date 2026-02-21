@@ -38,9 +38,9 @@
 <body>
     <div class="container">
         <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:40px;flex-wrap:wrap;gap:12px;">
-            <a href="index.html" class="back-link" data-fr="← Retour aux docs" data-en="← Back to docs">← Retour aux docs</a>
+            <a href="index.html" class="back-link" data-i18n="docsNav.backToDocs">← Retour aux docs</a>
             <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
-                <a href="../index.html" style="font-family:'Inter',sans-serif;font-size:11px;font-weight:500;letter-spacing:2px;text-transform:uppercase;text-decoration:none;color:var(--text-dim);padding:7px 16px;border:1px solid var(--border);border-radius:6px;transition:all 0.3s ease;" onmouseover="this.style.color='var(--gold)';this.style.borderColor='rgba(212,175,55,0.5)'" onmouseout="this.style.color='var(--text-dim)';this.style.borderColor='var(--border)'" data-fr="⌂ Site principal" data-en="⌂ Main site">⌂ Site principal</a>
+                <a href="../index.html" style="font-family:'Inter',sans-serif;font-size:11px;font-weight:500;letter-spacing:2px;text-transform:uppercase;text-decoration:none;color:var(--text-dim);padding:7px 16px;border:1px solid var(--border);border-radius:6px;transition:all 0.3s ease;" onmouseover="this.style.color='var(--gold)';this.style.borderColor='rgba(212,175,55,0.5)'" onmouseout="this.style.color='var(--text-dim)';this.style.borderColor='var(--border)'" data-i18n="docsNav.mainSite">⌂ Site principal</a>
                 <div class="lang-select">
                     <button class="lang-select-btn" onclick="toggleLangMenu()">
                         <span class="lang-flag">🇫🇷</span>
@@ -56,114 +56,92 @@
             </div>
         </div>
 
-        <h1 data-fr="🚀 Démarrage Rapide" data-en="🚀 Quick Start">🚀 Démarrage Rapide</h1>
-        <p class="subtitle" data-fr="Installez et configurez Reborn Assistant en quelques minutes" data-en="Install and configure Reborn Assistant in a few minutes">Installez et configurez Reborn Assistant en quelques minutes</p>
+        <h1 data-i18n="docQuickstart.h1">🚀 Démarrage Rapide</h1>
+        <p class="subtitle" data-i18n="docQuickstart.subtitle">Installez et configurez Reborn Assistant en quelques minutes</p>
 
-        <h2 data-fr="Prérequis" data-en="Requirements">Prérequis</h2>
+        <h2 data-i18n="docQuickstart.reqH2">Prérequis</h2>
         <div class="requirement">
             <span class="requirement-icon">🌐</span>
-            <div data-fr="<strong>Navigateur compatible :</strong> Google Chrome, Microsoft Edge, Brave ou tout navigateur basé sur Chromium" data-en="<strong>Compatible browser:</strong> Google Chrome, Microsoft Edge, Brave or any Chromium-based browser"><strong>Navigateur compatible :</strong> Google Chrome, Microsoft Edge, Brave ou tout navigateur basé sur Chromium</div>
+            <div data-i18n="docQuickstart.req1"><strong>Navigateur compatible :</strong> Google Chrome, Microsoft Edge, Brave ou tout navigateur basé sur Chromium</div>
         </div>
         <div class="requirement">
             <span class="requirement-icon">🔧</span>
-            <div data-fr="<strong>Compte Google :</strong> Requis uniquement pour l'authentification Premium (optionnel pour version gratuite)" data-en="<strong>Google account:</strong> Required only for Premium authentication (optional for free version)"><strong>Compte Google :</strong> Requis uniquement pour l'authentification Premium (optionnel pour version gratuite)</div>
+            <div data-i18n="docQuickstart.req2"><strong>Compte Google :</strong> Requis uniquement pour l'authentification Premium (optionnel pour version gratuite)</div>
         </div>
         <div class="requirement">
             <span class="requirement-icon">🎮</span>
-            <div data-fr="<strong>Site compatible :</strong> Compatible avec les sites web standards" data-en="<strong>Compatible site:</strong> Works with standard websites"><strong>Site compatible :</strong> Compatible avec les sites web standards</div>
+            <div data-i18n="docQuickstart.req3"><strong>Site compatible :</strong> Compatible avec les sites web standards</div>
         </div>
 
-        <h2 data-fr="Installation" data-en="Installation">Installation</h2>
+        <h2 data-i18n="docQuickstart.installH2">Installation</h2>
 
         <div class="step">
             <div class="step-number">1</div>
-            <div class="step-title" data-fr="Visiter le Chrome Web Store" data-en="Visit the Chrome Web Store">Visiter le Chrome Web Store</div>
-            <p data-fr="Rendez-vous sur la page Reborn Assistant dans le <a href='https://chromewebstore.google.com/detail/ammakeedbimichmpipeaacgajcblnnme/preview' target='_blank' style='color:var(--gold);text-decoration:none;' onmouseover='this.style.textDecoration=&quot;underline&quot;' onmouseout='this.style.textDecoration=&quot;none&quot;'>Chrome Web Store</a> et cliquez sur <strong>« Ajouter à Chrome »</strong>." data-en="Go to the Reborn Assistant page in the <a href='https://chromewebstore.google.com/detail/ammakeedbimichmpipeaacgajcblnnme/preview' target='_blank' style='color:var(--gold);text-decoration:none;' onmouseover='this.style.textDecoration=&quot;underline&quot;' onmouseout='this.style.textDecoration=&quot;none&quot;'>Chrome Web Store</a> and click <strong>«Add to Chrome»</strong>.">Rendez-vous sur la page Reborn Assistant dans le <a href="https://chromewebstore.google.com/detail/ammakeedbimichmpipeaacgajcblnnme/preview" target="_blank" style="color:var(--gold);text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Chrome Web Store</a> et cliquez sur <strong>« Ajouter à Chrome »</strong>.</p>
-            <p style="margin-top:12px;font-size:13px;color:var(--text-dim);" data-fr="💡 Compatible avec Google Chrome, Microsoft Edge, Brave et tout navigateur basé sur Chromium." data-en="💡 Compatible with Google Chrome, Microsoft Edge, Brave and any Chromium-based browser.">💡 Compatible avec Google Chrome, Microsoft Edge, Brave et tout navigateur basé sur Chromium.</p>
+            <div class="step-title" data-i18n="docQuickstart.step1Title">Visiter le Chrome Web Store</div>
+            <p data-i18n="docQuickstart.step1p">Rendez-vous sur la page Reborn Assistant dans le <a href="https://chromewebstore.google.com/detail/ammakeedbimichmpipeaacgajcblnnme/preview" target="_blank" style="color:var(--gold);text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Chrome Web Store</a> et cliquez sur <strong>« Ajouter à Chrome »</strong>.</p>
+            <p style="margin-top:12px;font-size:13px;color:var(--text-dim);" data-i18n="docQuickstart.step1tip">💡 Compatible avec Google Chrome, Microsoft Edge, Brave et tout navigateur basé sur Chromium.</p>
         </div>
 
         <div class="step">
             <div class="step-number">2</div>
-            <div class="step-title" data-fr="Confirmer l'installation" data-en="Confirm installation">Confirmer l'installation</div>
-            <p data-fr="Cliquez sur <strong>« Ajouter l'extension »</strong> dans la fenêtre de confirmation. L'extension s'installe automatiquement." data-en="Click <strong>«Add extension»</strong> in the confirmation window. The extension installs automatically.">Cliquez sur <strong>« Ajouter l'extension »</strong> dans la fenêtre de confirmation. L'extension s'installe automatiquement.</p>
+            <div class="step-title" data-i18n="docQuickstart.step2Title">Confirmer l'installation</div>
+            <p data-i18n="docQuickstart.step2p">Cliquez sur <strong>« Ajouter l'extension »</strong> dans la fenêtre de confirmation. L'extension s'installe automatiquement.</p>
         </div>
 
         <div class="step">
             <div class="step-number">3</div>
-            <div class="step-title" data-fr="Épingler l'extension" data-en="Pin the extension">Épingler l'extension</div>
-            <p data-fr="Cliquez sur l'icône puzzle 🧩 dans la barre d'outils de votre navigateur, puis épinglez Reborn Assistant pour un accès rapide." data-en="Click the puzzle icon 🧩 in your browser toolbar, then pin Reborn Assistant for quick access.">Cliquez sur l'icône puzzle 🧩 dans la barre d'outils de votre navigateur, puis épinglez Reborn Assistant pour un accès rapide.</p>
+            <div class="step-title" data-i18n="docQuickstart.step3Title">Épingler l'extension</div>
+            <p data-i18n="docQuickstart.step3p">Cliquez sur l'icône puzzle 🧩 dans la barre d'outils de votre navigateur, puis épinglez Reborn Assistant pour un accès rapide.</p>
         </div>
 
         <div class="step">
             <div class="step-number">4</div>
-            <div class="step-title" data-fr="Connexion (optionnelle pour Premium)" data-en="Login (optional for Premium)">Connexion (optionnelle pour Premium)</div>
-            <p data-fr="• Cliquez sur l'icône Reborn dans la barre d'outils<br>• Pour Premium : Connectez-vous avec votre compte Google<br>• Pour Gratuit : Utilisez directement sans connexion" data-en="• Click the Reborn icon in the toolbar<br>• For Premium: Log in with your Google account<br>• For Free: Use directly without login">• Cliquez sur l'icône Reborn dans la barre d'outils<br>
-            • Pour Premium : Connectez-vous avec votre compte Google<br>
-            • Pour Gratuit : Utilisez directement sans connexion</p>
+            <div class="step-title" data-i18n="docQuickstart.step4Title">Connexion (optionnelle pour Premium)</div>
+            <p data-i18n="docQuickstart.step4p">• Cliquez sur l'icône Reborn dans la barre d'outils<br>• Pour Premium : Connectez-vous avec votre compte Google<br>• Pour Gratuit : Utilisez directement sans connexion</p>
         </div>
 
         <div class="alert">
-            <strong data-fr="✅ Installation réussie !" data-en="✅ Installation successful!">✅ Installation réussie !</strong>
-            <span data-fr="L'icône Reborn devient verte lorsque l'extension est active. Vous pouvez maintenant configurer vos fonctionnalités." data-en="The Reborn icon turns green when the extension is active. You can now configure your features.">L'icône Reborn devient verte lorsque l'extension est active. Vous pouvez maintenant configurer vos fonctionnalités.</span>
+            <strong data-i18n="docQuickstart.alertTitle">✅ Installation réussie !</strong>
+            <span data-i18n="docQuickstart.alertText">L'icône Reborn devient verte lorsque l'extension est active. Vous pouvez maintenant configurer vos fonctionnalités.</span>
         </div>
 
-        <h2 data-fr="Configuration initiale" data-en="Initial configuration">Configuration initiale</h2>
+        <h2 data-i18n="docQuickstart.configH2">Configuration initiale</h2>
 
-        <h3 data-fr="Version GRATUITE" data-en="FREE Version">Version GRATUITE</h3>
-        <p data-fr="<strong>Fonctionnalités disponibles sans connexion :</strong>" data-en="<strong>Features available without login:</strong>"><strong>Fonctionnalités disponibles sans connexion :</strong></p>
-        <p data-fr="• Action automatique de type 1 (HP uniquement)<br>• 6 thèmes visuels<br>• Support de 14 langues" data-en="• Automatic action type 1 (HP only)<br>• 6 visual themes<br>• Support for 14 languages">• Action automatique de type 1 (HP uniquement)<br>
-        • 6 thèmes visuels<br>
-        • Support de 14 langues</p>
+        <h3 data-i18n="docQuickstart.freeH3">Version GRATUITE</h3>
+        <p data-i18n="docQuickstart.freeTitle"><strong>Fonctionnalités disponibles sans connexion :</strong></p>
+        <p data-i18n="docQuickstart.freeText">• Action automatique de type 1 (HP uniquement)<br>• 6 thèmes visuels<br>• Support de 14 langues</p>
 
         <div class="step">
-            <div class="step-title" data-fr="Configuration de l'action automatique de type 1" data-en="Type 1 automatic action setup">Configuration de l'action automatique de type 1</div>
-            <p data-fr="1. Ouvrez le panneau Reborn (clic sur l'icône)<br>2. Réglez le timer de l'action HP (par défaut : 2s)<br>3. L'action se déclenche automatiquement<br>4. Aucune connexion requise" data-en="1. Open the Reborn panel (click the icon)<br>2. Set the HP action timer (default: 2s)<br>3. The action triggers automatically<br>4. No login required">1. Ouvrez le panneau Reborn (clic sur l'icône)<br>
-            2. Réglez le timer de l'action HP (par défaut : 2s)<br>
-            3. L'action se déclenche automatiquement<br>
-            4. Aucune connexion requise</p>
+            <div class="step-title" data-i18n="docQuickstart.freeStepTitle">Configuration de l'action automatique de type 1</div>
+            <p data-i18n="docQuickstart.freeStepText">1. Ouvrez le panneau Reborn (clic sur l'icône)<br>2. Réglez le timer de l'action HP (par défaut : 2s)<br>3. L'action se déclenche automatiquement<br>4. Aucune connexion requise</p>
         </div>
 
-        <h3 data-fr="Version PREMIUM 💎" data-en="PREMIUM Version 💎">Version PREMIUM 💎</h3>
-        <p data-fr="<strong>Fonctionnalités additionnelles (nécessite connexion Google) :</strong>" data-en="<strong>Additional features (requires Google login):</strong>"><strong>Fonctionnalités additionnelles (nécessite connexion Google) :</strong></p>
-        <p data-fr="• Macro déclencheur 1 automatique (timer configurable + raccourci)<br>• Macro déclencheur 2 automatique (timer configurable + raccourci)<br>• Raccourcis clavier (CTRL+A / CTRL+O)<br>• Rotation automatique de séquences (F2 → 1-9 → 0 → F1)<br>• 3 macros personnalisables avec séquences de touches<br>• Système de familier périodique automatique (appel + stockage toutes les 15s)" data-en="• Automatic trigger macro 1 (configurable timer + shortcut)<br>• Automatic trigger macro 2 (configurable timer + shortcut)<br>• Keyboard shortcuts (CTRL+A / CTRL+O)<br>• Automatic sequence rotation (F2 → 1-9 → 0 → F1)<br>• 3 customizable macros with key sequences<br>• Automatic periodic macro system (call + store every 15s)">• Macro déclencheur 1 automatique (timer configurable + raccourci)<br>
-        • Macro déclencheur 2 automatique (timer configurable + raccourci)<br>
-        • Raccourcis clavier (CTRL+A / CTRL+O)<br>
-        • Rotation automatique de séquences (F2 → 1-9 → 0 → F1)<br>
-        • 3 macros personnalisables avec séquences de touches<br>
-        • Système de familier périodique automatique (appel + stockage toutes les 15s)</p>
+        <h3 data-i18n="docQuickstart.premiumH3">Version PREMIUM 💎</h3>
+        <p data-i18n="docQuickstart.premiumFeatTitle"><strong>Fonctionnalités additionnelles (nécessite connexion Google) :</strong></p>
+        <p data-i18n="docQuickstart.premiumFeatText">• Macro déclencheur 1 automatique (timer configurable + raccourci)<br>• Macro déclencheur 2 automatique (timer configurable + raccourci)<br>• Raccourcis clavier (CTRL+A / CTRL+O)<br>• Rotation automatique de séquences (F2 → 1-9 → 0 → F1)<br>• 3 macros personnalisables avec séquences de touches<br>• Système de familier périodique automatique (appel + stockage toutes les 15s)</p>
 
         <div class="step">
-            <div class="step-title" data-fr="Configuration Premium" data-en="Premium configuration">Configuration Premium</div>
-            <p data-fr="<strong>Séquences automatiques :</strong><br>• Activez « Séquence Rotation » dans le panneau<br>• Configurez l'intervalle entre les cycles (défaut : 5 min)<br>• Ajustez le délai entre chaque touche (défaut : 1s)" data-en="<strong>Automatic sequences:</strong><br>• Enable «Sequence Rotation» in the panel<br>• Configure the interval between cycles (default: 5 min)<br>• Adjust the delay between each key (default: 1s)"><strong>Séquences automatiques :</strong><br>
-            • Activez « Séquence Rotation » dans le panneau<br>
-            • Configurez l'intervalle entre les cycles (défaut : 5 min)<br>
-            • Ajustez le délai entre chaque touche (défaut : 1s)</p>
+            <div class="step-title" data-i18n="docQuickstart.premConfigTitle">Configuration Premium</div>
+            <p data-i18n="docQuickstart.premConfigSeq"><strong>Séquences automatiques :</strong><br>• Activez « Séquence Rotation » dans le panneau<br>• Configurez l'intervalle entre les cycles (défaut : 5 min)<br>• Ajustez le délai entre chaque touche (défaut : 1s)</p>
 
-            <p data-fr="<strong>Macros :</strong><br>• Activez Macro 1, 2 ou 3<br>• Définissez la séquence de touches (ex: <code>1,2,3,4</code>)<br>• Configurez l'intervalle de répétition" data-en="<strong>Macros:</strong><br>• Enable Macro 1, 2 or 3<br>• Define the key sequence (e.g. <code>1,2,3,4</code>)<br>• Configure the repeat interval"><strong>Macros :</strong><br>
-            • Activez Macro 1, 2 ou 3<br>
-            • Définissez la séquence de touches (ex: <code>1,2,3,4</code>)<br>
-            • Configurez l'intervalle de répétition</p>
+            <p data-i18n="docQuickstart.premConfigMacro"><strong>Macros :</strong><br>• Activez Macro 1, 2 ou 3<br>• Définissez la séquence de touches (ex: <code>1,2,3,4</code>)<br>• Configurez l'intervalle de répétition</p>
 
-            <p data-fr="<strong>Macro périodique :</strong><br>• Activez le toggle « Macro périodique »<br>• Le système appelle automatiquement votre macro périodique toutes les 15s<br>• Stockage automatique après l'appel" data-en="<strong>Periodic macro:</strong><br>• Enable the «Periodic macro» toggle<br>• The system automatically calls your periodic macro every 15s<br>• Auto-stored after the call"><strong>Macro périodique :</strong><br>
-            • Activez le toggle « Macro périodique »<br>
-            • Le système appelle automatiquement votre macro périodique toutes les 15s<br>
-            • Stockage automatique après l'appel</p>
+            <p data-i18n="docQuickstart.premConfigPer"><strong>Macro périodique :</strong><br>• Activez le toggle « Macro périodique »<br>• Le système appelle automatiquement votre macro périodique toutes les 15s<br>• Stockage automatique après l'appel</p>
         </div>
 
         <div class="alert alert-warning">
-            <strong data-fr="⚠️ Note importante" data-en="⚠️ Important note">⚠️ Note importante</strong>
-            <span data-fr="Les fonctionnalités Premium (Macros déclencheur 1 et 2, Séquences automatiques, Macro périodique automatique, 3 macros configurables) nécessitent une licence Premium valide et une connexion Google. Sans licence, seule la macro de base est accessible." data-en="Premium features (Trigger macros 1 and 2, Automatic sequences, Automatic periodic macro, 3 configurable macros) require a valid Premium license and a Google login. Without a license, only the basic macro is accessible.">Les fonctionnalités Premium (Macros déclencheur 1 et 2, Séquences automatiques, Macro périodique automatique, 3 macros configurables) nécessitent une licence Premium valide et une connexion Google. Sans licence, seule la macro de base est accessible.</span>
+            <strong data-i18n="docQuickstart.warnTitle">⚠️ Note importante</strong>
+            <span data-i18n="docQuickstart.warnText">Les fonctionnalités Premium (Macros déclencheur 1 et 2, Séquences automatiques, Macro périodique automatique, 3 macros configurables) nécessitent une licence Premium valide et une connexion Google. Sans licence, seule la macro de base est accessible.</span>
         </div>
 
-        <h2 data-fr="Raccourcis clavier" data-en="Keyboard shortcuts">Raccourcis clavier</h2>
-        <p data-fr="<code>CTRL + A</code> : Démarrer le bot<br><code>CTRL + O</code> : Arrêter le bot" data-en="<code>CTRL + A</code>: Start the bot<br><code>CTRL + O</code>: Stop the bot"><code>CTRL + A</code> : Démarrer le bot<br>
-        <code>CTRL + O</code> : Arrêter le bot</p>
+        <h2 data-i18n="docQuickstart.shortcutsH2">Raccourcis clavier</h2>
+        <p data-i18n="docQuickstart.shortcutsText"><code>CTRL + A</code> : Démarrer le bot<br><code>CTRL + O</code> : Arrêter le bot</p>
 
-        <h2 data-fr="Prochaines étapes" data-en="Next steps">Prochaines étapes</h2>
-        <p>• <a href="features.html" style="color:var(--gold);" data-fr="Découvrez toutes les fonctionnalités" data-en="Discover all features">Découvrez toutes les fonctionnalités</a><br>
-        • <a href="premium.html" style="color:var(--gold);" data-fr="Guide complet Premium" data-en="Complete Premium guide">Guide complet Premium</a><br>
-        • <a href="troubleshooting.html" style="color:var(--gold);" data-fr="Solutions aux problèmes courants" data-en="Solutions to common issues">Solutions aux problèmes courants</a></p>
+        <h2 data-i18n="docQuickstart.nextH2">Prochaines étapes</h2>
+        <p>• <a href="features.html" style="color:var(--gold);" data-i18n="docQuickstart.link1">Découvrez toutes les fonctionnalités</a><br>
+        • <a href="premium.html" style="color:var(--gold);" data-i18n="docQuickstart.link2">Guide complet Premium</a><br>
+        • <a href="troubleshooting.html" style="color:var(--gold);" data-i18n="docQuickstart.link3">Solutions aux problèmes courants</a></p>
     </div>
-    <script src="lang.js"></script>
+    <script type="module" src="../langs/index.js"></script>
 </body>
 </html>

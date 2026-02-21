@@ -31,9 +31,9 @@
 <body>
     <div class="container">
         <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:40px;flex-wrap:wrap;gap:12px;">
-            <a href="index.html" class="back-link" data-fr="← Retour aux docs" data-en="← Back to docs">← Retour aux docs</a>
+            <a href="index.html" class="back-link" data-i18n="docsNav.backToDocs">← Retour aux docs</a>
             <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
-                <a href="../index.html" style="font-family:'Inter',sans-serif;font-size:11px;font-weight:500;letter-spacing:2px;text-transform:uppercase;text-decoration:none;color:var(--text-dim);padding:7px 16px;border:1px solid var(--border);border-radius:6px;transition:all 0.3s ease;" onmouseover="this.style.color='var(--gold)';this.style.borderColor='rgba(212,175,55,0.5)'" onmouseout="this.style.color='var(--text-dim)';this.style.borderColor='var(--border)'" data-fr="⌂ Site principal" data-en="⌂ Main site">⌂ Site principal</a>
+                <a href="../index.html" style="font-family:'Inter',sans-serif;font-size:11px;font-weight:500;letter-spacing:2px;text-transform:uppercase;text-decoration:none;color:var(--text-dim);padding:7px 16px;border:1px solid var(--border);border-radius:6px;transition:all 0.3s ease;" onmouseover="this.style.color='var(--gold)';this.style.borderColor='rgba(212,175,55,0.5)'" onmouseout="this.style.color='var(--text-dim)';this.style.borderColor='var(--border)'" data-i18n="docsNav.mainSite">⌂ Site principal</a>
                 <div class="lang-select">
                     <button class="lang-select-btn" onclick="toggleLangMenu()">
                         <span class="lang-flag">🇫🇷</span>
@@ -49,139 +49,97 @@
             </div>
         </div>
 
-        <h1 data-fr="🔧 Dépannage" data-en="🔧 Troubleshooting">🔧 Dépannage</h1>
-        <p class="subtitle" data-fr="Solutions aux problèmes courants et FAQ" data-en="Solutions to common issues and FAQ">Solutions aux problèmes courants et FAQ</p>
+        <h1 data-i18n="docTroubleshooting.h1">🔧 Dépannage</h1>
+        <p class="subtitle" data-i18n="docTroubleshooting.subtitle">Solutions aux problèmes courants et FAQ</p>
 
-        <h2 data-fr="Problèmes d'installation" data-en="Installation issues">Problèmes d'installation</h2>
+        <h2 data-i18n="docTroubleshooting.installH2">Problèmes d'installation</h2>
 
         <div class="faq">
-            <div class="faq-q" data-fr="❌ L'extension n'apparaît pas dans la barre d'outils" data-en="❌ The extension doesn't appear in the toolbar">❌ L'extension n'apparaît pas dans la barre d'outils</div>
-            <div class="faq-a" data-fr="<strong>Solutions :</strong><br>1. Vérifiez que l'extension est bien installée depuis le <strong>Chrome Web Store</strong><br>2. Épinglez l'extension : cliquez sur l'icône puzzle 🧩 dans la barre d'outils et épinglez Reborn Assistant<br>3. Redémarrez votre navigateur<br>4. Si le problème persiste, désinstallez puis réinstallez l'extension depuis le Chrome Web Store" data-en="<strong>Solutions:</strong><br>1. Make sure the extension is installed from the <strong>Chrome Web Store</strong><br>2. Pin the extension: click the puzzle icon 🧩 in the toolbar and pin Reborn Assistant<br>3. Restart your browser<br>4. If the issue persists, uninstall then reinstall the extension from the Chrome Web Store"><strong>Solutions :</strong><br>
-                1. Vérifiez que l'extension est bien installée depuis le <strong>Chrome Web Store</strong><br>
-                2. Épinglez l'extension : cliquez sur l'icône puzzle 🧩 dans la barre d'outils et épinglez Reborn Assistant<br>
-                3. Redémarrez votre navigateur<br>
-                4. Si le problème persiste, désinstallez puis réinstallez l'extension depuis le Chrome Web Store</div>
+            <div class="faq-q" data-i18n="docTroubleshooting.faq1Q">❌ L'extension n'apparaît pas dans la barre d'outils</div>
+            <div class="faq-a" data-i18n="docTroubleshooting.faq1A"><strong>Solutions :</strong><br>1. Vérifiez que l'extension est bien installée depuis le <strong>Chrome Web Store</strong><br>2. Épinglez l'extension : cliquez sur l'icône puzzle 🧩 dans la barre d'outils et épinglez Reborn Assistant<br>3. Redémarrez votre navigateur<br>4. Si le problème persiste, désinstallez puis réinstallez l'extension depuis le Chrome Web Store</div>
         </div>
 
-        <h2 data-fr="Problèmes de connexion" data-en="Connection issues">Problèmes de connexion</h2>
+        <h2 data-i18n="docTroubleshooting.connH2">Problèmes de connexion</h2>
 
         <div class="faq">
-            <div class="faq-q" data-fr='❌ "Connexion échouée" ou "Licence invalide"' data-en='❌ "Connection failed" or "Invalid license"'>❌ "Connexion échouée" ou "Licence invalide"</div>
-            <div class="faq-a" data-fr="<strong>Causes possibles :</strong><br>• Mauvaise connexion internet<br>• Serveurs Google Cloud temporairement indisponibles<br>• Licence expirée ou révoquée<br><br><strong>Solutions :</strong><br>1. Vérifiez votre connexion internet<br>2. Déconnectez-vous et reconnectez-vous avec Google<br>3. Vérifiez votre statut de licence dans votre espace Stripe<br>4. Contactez le support si le problème persiste" data-en="<strong>Possible causes:</strong><br>• Poor internet connection<br>• Google Cloud servers temporarily unavailable<br>• Expired or revoked license<br><br><strong>Solutions:</strong><br>1. Check your internet connection<br>2. Log out and log back in with Google<br>3. Check your license status in your Stripe portal<br>4. Contact support if the issue persists"><strong>Causes possibles :</strong><br>
-                • Mauvaise connexion internet<br>
-                • Serveurs Google Cloud temporairement indisponibles<br>
-                • Licence expirée ou révoquée<br><br>
-                <strong>Solutions :</strong><br>
-                1. Vérifiez votre connexion internet<br>
-                2. Déconnectez-vous et reconnectez-vous avec Google<br>
-                3. Vérifiez votre statut de licence dans votre espace Stripe<br>
-                4. Contactez le support si le problème persiste</div>
+            <div class="faq-q" data-i18n="docTroubleshooting.faq2Q">❌ "Connexion échouée" ou "Licence invalide"</div>
+            <div class="faq-a" data-i18n="docTroubleshooting.faq2A"><strong>Causes possibles :</strong><br>• Mauvaise connexion internet<br>• Serveurs Google Cloud temporairement indisponibles<br>• Licence expirée ou révoquée<br><br><strong>Solutions :</strong><br>1. Vérifiez votre connexion internet<br>2. Déconnectez-vous et reconnectez-vous avec Google<br>3. Vérifiez votre statut de licence dans votre espace Stripe<br>4. Contactez le support si le problème persiste</div>
         </div>
 
         <div class="faq">
-            <div class="faq-q" data-fr='❌ Le panneau indique "FREE" alors que j\'ai Premium' data-en='❌ The panel shows "FREE" but I have Premium'>❌ Le panneau indique "FREE" alors que j'ai Premium</div>
-            <div class="faq-a" data-fr="1. Déconnectez-vous du compte Google<br>2. Fermez complètement le navigateur<br>3. Rouvrez et reconnectez-vous<br>4. Si le problème persiste, vérifiez que vous êtes connecté avec le bon compte Google (celui utilisé pour l'achat)" data-en="1. Log out of your Google account<br>2. Fully close the browser<br>3. Reopen and log back in<br>4. If the issue persists, make sure you're logged in with the correct Google account (the one used for the purchase)">1. Déconnectez-vous du compte Google<br>
-                2. Fermez complètement le navigateur<br>
-                3. Rouvrez et reconnectez-vous<br>
-                4. Si le problème persiste, vérifiez que vous êtes connecté avec le bon compte Google (celui utilisé pour l'achat)</div>
+            <div class="faq-q" data-i18n="docTroubleshooting.faq3Q">❌ Le panneau indique "FREE" alors que j'ai Premium</div>
+            <div class="faq-a" data-i18n="docTroubleshooting.faq3A">1. Déconnectez-vous du compte Google<br>2. Fermez complètement le navigateur<br>3. Rouvrez et reconnectez-vous<br>4. Si le problème persiste, vérifiez que vous êtes connecté avec le bon compte Google (celui utilisé pour l'achat)</div>
         </div>
 
-        <h2 data-fr="Problèmes de fonctionnement" data-en="Functionality issues">Problèmes de fonctionnement</h2>
+        <h2 data-i18n="docTroubleshooting.funcH2">Problèmes de fonctionnement</h2>
 
         <div class="faq">
-            <div class="faq-q" data-fr="❌ Les actions de type 1/2 ne se déclenchent pas" data-en="❌ Type 1/2 actions are not triggering">❌ Les actions de type 1/2 ne se déclenchent pas</div>
+            <div class="faq-q" data-i18n="docTroubleshooting.faq4Q">❌ Les actions de type 1/2 ne se déclenchent pas</div>
             <div class="faq-a">
-                <div class="alert" data-fr="<strong>⚠️ IMPORTANT</strong><br>Les actions de type 1 et 2 sont des fonctionnalités <strong>PREMIUM UNIQUEMENT</strong>. Seule l'action automatique de type 1 (HP) est disponible en version gratuite." data-en="<strong>⚠️ IMPORTANT</strong><br>Type 1 and 2 actions are <strong>PREMIUM ONLY</strong> features. Only the automatic type 1 action (HP) is available in the free version."><strong>⚠️ IMPORTANT</strong><br>
-                    Les actions de type 1 et 2 sont des fonctionnalités <strong>PREMIUM UNIQUEMENT</strong>. Seule l'action automatique de type 1 (HP) est disponible en version gratuite.</div>
-                <span data-fr="<strong>Si vous avez Premium :</strong><br>1. Le bot est-il démarré ? <code>CTRL+A</code><br>2. Les toggles déclencheurs sont-ils activés ? (indicateur vert « ON »)<br>3. Les touches configurées sont-elles correctes ?" data-en="<strong>If you have Premium:</strong><br>1. Is the bot started? <code>CTRL+A</code><br>2. Are the trigger toggles enabled? (green indicator «ON»)<br>3. Are the configured keys correct?"><strong>Si vous avez Premium :</strong><br>
-                1. Le bot est-il démarré ? <code>CTRL+A</code><br>
-                2. Les toggles déclencheurs sont-ils activés ? (indicateur vert « ON »)<br>
-                3. Les touches configurées sont-elles correctes ?</span>
+                <div class="alert" data-i18n="docTroubleshooting.faq4Alert"><strong>⚠️ IMPORTANT</strong><br>Les actions de type 1 et 2 sont des fonctionnalités <strong>PREMIUM UNIQUEMENT</strong>. Seule l'action automatique de type 1 (HP) est disponible en version gratuite.</div>
+                <span data-i18n="docTroubleshooting.faq4Prem"><strong>Si vous avez Premium :</strong><br>1. Le bot est-il démarré ? <code>CTRL+A</code><br>2. Les toggles déclencheurs sont-ils activés ? (indicateur vert « ON »)<br>3. Les touches configurées sont-elles correctes ?</span>
             </div>
         </div>
 
         <div class="faq">
-            <div class="faq-q" data-fr="❌ Les séquences / macros / macro périodique / raccourcis ne fonctionnent pas" data-en="❌ Sequences / macros / periodic macro / shortcuts are not working">❌ Les séquences / macros / macro périodique / raccourcis ne fonctionnent pas</div>
+            <div class="faq-q" data-i18n="docTroubleshooting.faq5Q">❌ Les séquences / macros / macro périodique / raccourcis ne fonctionnent pas</div>
             <div class="faq-a">
-                <div class="alert" data-fr="<strong>⚠️ IMPORTANT</strong><br>Les raccourcis clavier, séquences, macros et macro périodique sont des fonctionnalités <strong>PREMIUM UNIQUEMENT</strong>. En version gratuite, seule l'action automatique de type 1 (HP) est disponible." data-en="<strong>⚠️ IMPORTANT</strong><br>Keyboard shortcuts, sequences, macros and periodic macro are <strong>PREMIUM ONLY</strong> features. In the free version, only the automatic type 1 action (HP) is available."><strong>⚠️ IMPORTANT</strong><br>
-                    Les raccourcis clavier, séquences, macros et macro périodique sont des fonctionnalités <strong>PREMIUM UNIQUEMENT</strong>. En version gratuite, seule l'action automatique de type 1 (HP) est disponible.</div>
-                <span data-fr="<strong>Si vous avez Premium :</strong><br>1. Vérifiez que votre licence Premium est active (icône 💎 dans le panneau)<br>2. Les toggles correspondants sont-ils activés ?<br>3. Vérifiez les intervalles et délais configurés" data-en="<strong>If you have Premium:</strong><br>1. Verify that your Premium license is active (💎 icon in the panel)<br>2. Are the corresponding toggles enabled?<br>3. Check the configured intervals and delays"><strong>Si vous avez Premium :</strong><br>
-                1. Vérifiez que votre licence Premium est active (icône 💎 dans le panneau)<br>
-                2. Les toggles correspondants sont-ils activés ?<br>
-                3. Vérifiez les intervalles et délais configurés</span>
+                <div class="alert" data-i18n="docTroubleshooting.faq5Alert"><strong>⚠️ IMPORTANT</strong><br>Les raccourcis clavier, séquences, macros et macro périodique sont des fonctionnalités <strong>PREMIUM UNIQUEMENT</strong>. En version gratuite, seule l'action automatique de type 1 (HP) est disponible.</div>
+                <span data-i18n="docTroubleshooting.faq5Prem"><strong>Si vous avez Premium :</strong><br>1. Vérifiez que votre licence Premium est active (icône 💎 dans le panneau)<br>2. Les toggles correspondants sont-ils activés ?<br>3. Vérifiez les intervalles et délais configurés</span>
             </div>
         </div>
 
         <div class="faq">
-            <div class="faq-q" data-fr="❌ Le bot s'arrête tout seul" data-en="❌ The bot stops on its own">❌ Le bot s'arrête tout seul</div>
-            <div class="faq-a" data-fr="<strong>Causes possibles :</strong><br>• Perte de connexion à Google Cloud<br>• Détection DevTools<br>• La page a changé d'URL<br><br><strong>Solutions :</strong><br>1. Redémarrez le bot avec <code>CTRL+A</code> (Premium) ou via le panneau<br>2. Rechargez la page concernée<br>3. Vérifiez votre connexion internet<br>4. Ne pas ouvrir les DevTools si vous êtes en Premium" data-en="<strong>Possible causes:</strong><br>• Lost connection to Google Cloud<br>• DevTools detection<br>• The page URL changed<br><br><strong>Solutions:</strong><br>1. Restart the bot with <code>CTRL+A</code> (Premium) or via the panel<br>2. Reload the affected page<br>3. Check your internet connection<br>4. Do not open DevTools if you are on Premium"><strong>Causes possibles :</strong><br>
-                • Perte de connexion à Google Cloud<br>
-                • Détection DevTools<br>
-                • La page a changé d'URL<br><br>
-                <strong>Solutions :</strong><br>
-                1. Redémarrez le bot avec <code>CTRL+A</code> (Premium) ou via le panneau<br>
-                2. Rechargez la page concernée<br>
-                3. Vérifiez votre connexion internet<br>
-                4. Ne pas ouvrir les DevTools si vous êtes en Premium</div>
+            <div class="faq-q" data-i18n="docTroubleshooting.faq6Q">❌ Le bot s'arrête tout seul</div>
+            <div class="faq-a" data-i18n="docTroubleshooting.faq6A"><strong>Causes possibles :</strong><br>• Perte de connexion à Google Cloud<br>• Détection DevTools<br>• La page a changé d'URL<br><br><strong>Solutions :</strong><br>1. Redémarrez le bot avec <code>CTRL+A</code> (Premium) ou via le panneau<br>2. Rechargez la page concernée<br>3. Vérifiez votre connexion internet<br>4. Ne pas ouvrir les DevTools si vous êtes en Premium</div>
         </div>
 
-        <h2 data-fr="Optimisation & Performance" data-en="Optimization & Performance">Optimisation & Performance</h2>
+        <h2 data-i18n="docTroubleshooting.optH2">Optimisation &amp; Performance</h2>
 
         <div class="faq">
-            <div class="faq-q" data-fr="💡 Le bot consomme trop de ressources" data-en="💡 The bot uses too many resources">💡 Le bot consomme trop de ressources</div>
-            <div class="faq-a" data-fr="<strong>Recommandations :</strong><br>• Augmentez les intervalles des macros et séquences (moins d'actions = moins de CPU)<br>• Désactivez les systèmes dont vous n'avez pas besoin<br>• Fermez les autres onglets inutiles<br>• Utilisez un navigateur optimisé (Brave, Edge sont plus légers que Chrome)" data-en="<strong>Recommendations:</strong><br>• Increase macro and sequence intervals (fewer actions = less CPU)<br>• Disable systems you don't need<br>• Close unnecessary tabs<br>• Use an optimized browser (Brave, Edge are lighter than Chrome)"><strong>Recommandations :</strong><br>
-                • Augmentez les intervalles des macros et séquences (moins d'actions = moins de CPU)<br>
-                • Désactivez les systèmes dont vous n'avez pas besoin<br>
-                • Fermez les autres onglets inutiles<br>
-                • Utilisez un navigateur optimisé (Brave, Edge sont plus légers que Chrome)</div>
+            <div class="faq-q" data-i18n="docTroubleshooting.faq7Q">💡 Le bot consomme trop de ressources</div>
+            <div class="faq-a" data-i18n="docTroubleshooting.faq7A"><strong>Recommandations :</strong><br>• Augmentez les intervalles des macros et séquences (moins d'actions = moins de CPU)<br>• Désactivez les systèmes dont vous n'avez pas besoin<br>• Fermez les autres onglets inutiles<br>• Utilisez un navigateur optimisé (Brave, Edge sont plus légers que Chrome)</div>
         </div>
 
         <div class="faq">
-            <div class="faq-q" data-fr="💡 Comment optimiser les paramètres ?" data-en="💡 How do I optimize the settings?">💡 Comment optimiser les paramètres ?</div>
-            <div class="faq-a" data-fr="<strong>Configuration recommandée :</strong><br>• <strong>Intervalle séquences :</strong> 5-25 minutes (selon durée de vos séquences)<br>• <strong>Délai entre touches :</strong> 1-2 secondes (évite les erreurs)<br>• <strong>Macros :</strong> Intervalles de 10-30s selon l'usage" data-en="<strong>Recommended configuration:</strong><br>• <strong>Sequence interval:</strong> 5-25 minutes (depending on sequence duration)<br>• <strong>Delay between keys:</strong> 1-2 seconds (avoids errors)<br>• <strong>Macros:</strong> 10-30s intervals depending on use"><strong>Configuration recommandée :</strong><br>
-                • <strong>Intervalle séquences :</strong> 5-25 minutes (selon durée de vos séquences)<br>
-                • <strong>Délai entre touches :</strong> 1-2 secondes (évite les erreurs)<br>
-                • <strong>Macros :</strong> Intervalles de 10-30s selon l'usage</div>
+            <div class="faq-q" data-i18n="docTroubleshooting.faq8Q">💡 Comment optimiser les paramètres ?</div>
+            <div class="faq-a" data-i18n="docTroubleshooting.faq8A"><strong>Configuration recommandée :</strong><br>• <strong>Intervalle séquences :</strong> 5-25 minutes (selon durée de vos séquences)<br>• <strong>Délai entre touches :</strong> 1-2 secondes (évite les erreurs)<br>• <strong>Macros :</strong> Intervalles de 10-30s selon l'usage</div>
         </div>
 
-        <h2 data-fr="FAQ Générale" data-en="General FAQ">FAQ Générale</h2>
+        <h2 data-i18n="docTroubleshooting.genH2">FAQ Générale</h2>
 
         <div class="faq">
-            <div class="faq-q" data-fr="❓ Puis-je utiliser Reborn sur plusieurs navigateurs ?" data-en="❓ Can I use Reborn on multiple browsers?">❓ Puis-je utiliser Reborn sur plusieurs navigateurs ?</div>
-            <div class="faq-a" data-fr="Oui, mais vous devez installer l'extension sur chaque navigateur. Votre licence Premium fonctionne sur tous vos appareils tant que vous vous connectez avec le même compte Google (1 connexion simultanée max)." data-en="Yes, but you must install the extension on each browser. Your Premium license works on all your devices as long as you log in with the same Google account (max 1 simultaneous connection).">Oui, mais vous devez installer l'extension sur chaque navigateur. Votre licence Premium fonctionne sur tous vos appareils tant que vous vous connectez avec le même compte Google (1 connexion simultanée max).</div>
+            <div class="faq-q" data-i18n="docTroubleshooting.faq9Q">❓ Puis-je utiliser Reborn sur plusieurs navigateurs ?</div>
+            <div class="faq-a" data-i18n="docTroubleshooting.faq9A">Oui, mais vous devez installer l'extension sur chaque navigateur. Votre licence Premium fonctionne sur tous vos appareils tant que vous vous connectez avec le même compte Google (1 connexion simultanée max).</div>
         </div>
 
         <div class="faq">
-            <div class="faq-q" data-fr="❓ Mes données sont-elles sauvegardées ?" data-en="❓ Is my data saved?">❓ Mes données sont-elles sauvegardées ?</div>
-            <div class="faq-a" data-fr="Toutes vos configurations (touches, macros, thème, langue) sont sauvegardées <strong>localement</strong> dans le navigateur. Elles persistent entre les sessions. En revanche, si vous désinstallez l'extension, vous perdez ces données." data-en="All your configurations (keys, macros, theme, language) are saved <strong>locally</strong> in the browser. They persist between sessions. However, if you uninstall the extension, you will lose this data.">Toutes vos configurations (touches, macros, thème, langue) sont sauvegardées <strong>localement</strong> dans le navigateur. Elles persistent entre les sessions. En revanche, si vous désinstallez l'extension, vous perdez ces données.</div>
+            <div class="faq-q" data-i18n="docTroubleshooting.faq10Q">❓ Mes données sont-elles sauvegardées ?</div>
+            <div class="faq-a" data-i18n="docTroubleshooting.faq10A">Toutes vos configurations (touches, macros, thème, langue) sont sauvegardées <strong>localement</strong> dans le navigateur. Elles persistent entre les sessions. En revanche, si vous désinstallez l'extension, vous perdez ces données.</div>
         </div>
 
         <div class="faq">
-            <div class="faq-q" data-fr="❓ Reborn peut-il provoquer un bannissement ?" data-en="❓ Can Reborn cause a ban?">❓ Reborn peut-il provoquer un bannissement ?</div>
-            <div class="faq-a" data-fr="L'utilisation d'outils d'automatisation peut violer les CGU de certains services. <strong>Vous êtes seul responsable</strong> de l'utilisation que vous faites de Reborn. Consultez les conditions d'utilisation du service concerné avant d'utiliser cet outil." data-en="Using automation tools may violate the Terms of Service of some platforms. <strong>You are solely responsible</strong> for how you use Reborn. Check the terms of use of the target service before using this tool.">L'utilisation d'outils d'automatisation peut violer les CGU de certains services. <strong>Vous êtes seul responsable</strong> de l'utilisation que vous faites de Reborn. Consultez les conditions d'utilisation du service concerné avant d'utiliser cet outil.</div>
+            <div class="faq-q" data-i18n="docTroubleshooting.faq11Q">❓ Reborn peut-il provoquer un bannissement ?</div>
+            <div class="faq-a" data-i18n="docTroubleshooting.faq11A">L'utilisation d'outils d'automatisation peut violer les CGU de certains services. <strong>Vous êtes seul responsable</strong> de l'utilisation que vous faites de Reborn. Consultez les conditions d'utilisation du service concerné avant d'utiliser cet outil.</div>
         </div>
 
         <div class="faq">
-            <div class="faq-q" data-fr="❓ Comment annuler mon abonnement Premium ?" data-en="❓ How do I cancel my Premium subscription?">❓ Comment annuler mon abonnement Premium ?</div>
-            <div class="faq-a" data-fr="Vous pouvez annuler à tout moment depuis votre portail de gestion Stripe (lien reçu par email après le paiement). L'annulation prend effet à la fin de votre période en cours. Aucun frais d'annulation." data-en="You can cancel at any time from your Stripe management portal (link received by email after payment). Cancellation takes effect at the end of your current period. No cancellation fees.">Vous pouvez annuler à tout moment depuis votre portail de gestion Stripe (lien reçu par email après le paiement). L'annulation prend effet à la fin de votre période en cours. Aucun frais d'annulation.</div>
+            <div class="faq-q" data-i18n="docTroubleshooting.faq12Q">❓ Comment annuler mon abonnement Premium ?</div>
+            <div class="faq-a" data-i18n="docTroubleshooting.faq12A">Vous pouvez annuler à tout moment depuis votre portail de gestion Stripe (lien reçu par email après le paiement). L'annulation prend effet à la fin de votre période en cours. Aucun frais d'annulation.</div>
         </div>
 
         <div class="faq">
-            <div class="faq-q" data-fr="❓ Quid du plan À Vie si le service ferme ?" data-en="❓ What happens to the Lifetime plan if the service closes?">❓ Quid du plan À Vie si le service ferme ?</div>
-            <div class="faq-a" data-fr="Le plan À Vie garantit l'accès tant que le service est actif. L'extension une fois installée fonctionne localement ; seule la vérification de licence nécessite une connexion internet." data-en="The Lifetime plan guarantees access as long as the service is active. Once installed, the extension works locally; only license verification requires an internet connection.">Le plan À Vie garantit l'accès tant que le service est actif. L'extension une fois installée fonctionne localement ; seule la vérification de licence nécessite une connexion internet.</div>
+            <div class="faq-q" data-i18n="docTroubleshooting.faq13Q">❓ Quid du plan À Vie si le service ferme ?</div>
+            <div class="faq-a" data-i18n="docTroubleshooting.faq13A">Le plan À Vie garantit l'accès tant que le service est actif. L'extension une fois installée fonctionne localement ; seule la vérification de licence nécessite une connexion internet.</div>
         </div>
 
-        <h2 data-fr="Besoin d'aide supplémentaire ?" data-en="Need more help?">Besoin d'aide supplémentaire ?</h2>
+        <h2 data-i18n="docTroubleshooting.supportH2">Besoin d'aide supplémentaire ?</h2>
         <div class="success">
-            <strong data-fr="📧 Support" data-en="📧 Support">📧 Support</strong><br>
-            <span data-fr="Si votre problème persiste, contactez le support directement par email. Incluez dans votre message :<br><br>• Une description détaillée du problème<br>• Les étapes que vous avez déjà tentées<br>• Des captures d'écran si pertinent<br>• Votre navigateur et système d'exploitation" data-en="If your issue persists, contact support directly by email. Include in your message:<br><br>• A detailed description of the problem<br>• The steps you have already tried<br>• Screenshots if relevant<br>• Your browser and operating system">Si votre problème persiste, contactez le support directement par email. Incluez dans votre message :<br><br>
-            • Une description détaillée du problème<br>
-            • Les étapes que vous avez déjà tentées<br>
-            • Des captures d'écran si pertinent<br>
-            • Votre navigateur et système d'exploitation</span>
+            <strong data-i18n="docTroubleshooting.supportTitle">📧 Support</strong><br>
+            <span data-i18n="docTroubleshooting.supportText">Si votre problème persiste, contactez le support directement par email. Incluez dans votre message :<br><br>• Une description détaillée du problème<br>• Les étapes que vous avez déjà tentées<br>• Des captures d'écran si pertinent<br>• Votre navigateur et système d'exploitation</span>
             <br><br><a href="mailto:seymoon.cell@gmail.com" style="color:var(--gold);">seymoon.cell@gmail.com</a>
         </div>
     </div>
-    <script src="lang.js"></script>
+    <script type="module" src="../langs/index.js"></script>
 </body>
 </html>
