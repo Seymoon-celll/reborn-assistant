@@ -76,8 +76,14 @@ async function setLang(lang) {
 
   /* Load & cache strings */
   if (!cachedStrings[lang]) {
-    const mod = await import(`./${lang}.js`);
-    cachedStrings[lang] = mod.default;
+    try {
+      const url = new URL(`./${lang}.js`, import.meta.url).href;
+      const mod = await import(url);
+      cachedStrings[lang] = mod.default;
+    } catch (e) {
+      console.error(`[i18n] Failed to load lang "${lang}":`, e);
+      return;
+    }
   }
   applyTranslations(cachedStrings[lang]);
 }
@@ -93,8 +99,12 @@ document.addEventListener('click', e => {
   if (el && !el.contains(e.target)) el.classList.remove('open');
 });
 
-/* Init */
-document.addEventListener('DOMContentLoaded', () => setLang(currentLang));
+/* Init — handle both cases: module executes before or after DOMContentLoaded */
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', () => setLang(currentLang));
+} else {
+  setLang(currentLang);
+}
 
 /* Expose globals for inline onclick handlers */
 window.setLang = setLang;
