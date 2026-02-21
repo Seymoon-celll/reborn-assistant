@@ -72,8 +72,8 @@ export default {
     badge1: "Pago seguro SSL", badge2: "Acceso instantáneo", badge3: "Datos 100% privados", badge4: "Soporte reactivo",
   },
   store: {
-    status: "En proceso de validación",
-    title:  "🟢 Disponible en vista previa · Google Chrome Web Store",
+    status: "Extensión oficial",
+    title:  "🟢 Disponible en el Chrome Web Store",
   },
   faq: {
     titleBefore: "Preguntas ",
@@ -197,7 +197,7 @@ export default {
     req3:     "<strong>Sitio compatible:</strong> Compatible con sitios web estándar",
     installH2:  "Instalación",
     step1Title: "Visitar el Chrome Web Store",
-    step1p:     "Ve a la página de Reborn Assistant en el <a href='https://chromewebstore.google.com/detail/ammakeedbimichmpipeaacgajcblnnme/preview' target='_blank' style='color:var(--gold);text-decoration:none;' onmouseover='this.style.textDecoration=\"underline\"' onmouseout='this.style.textDecoration=\"none\"'>Chrome Web Store</a> y haz clic en <strong>«Añadir a Chrome»</strong>.",
+    step1p:     "Ve a la página de Reborn Assistant en el <a href='https://chromewebstore.google.com/detail/reborn-assistant-premium/ammakeedbimichmpipeaacgajcblnnme' target='_blank' style='color:var(--gold);text-decoration:none;' onmouseover='this.style.textDecoration=\"underline\"' onmouseout='this.style.textDecoration=\"none\"'>Chrome Web Store</a> y haz clic en <strong>«Añadir a Chrome»</strong>.",
     step1tip:   "💡 Compatible con Google Chrome, Microsoft Edge, Brave y cualquier navegador basado en Chromium.",
     step2Title: "Confirmar la instalación",
     step2p:     "Haz clic en <strong>«Añadir extensión»</strong> en la ventana de confirmación. La extensión se instala automáticamente.",
