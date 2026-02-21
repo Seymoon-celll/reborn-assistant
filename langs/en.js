@@ -72,8 +72,8 @@ export default {
     badge1: "SSL secure payment", badge2: "Instant access", badge3: "100% private data", badge4: "Responsive support",
   },
   store: {
-    status: "Under review",
-    title:  "🟢 Available in preview · Google Chrome Web Store",
+    status: "Official extension",
+    title:  "🟢 Available on the Chrome Web Store",
   },
   faq: {
     titleBefore: "Frequently asked ",
@@ -197,7 +197,7 @@ export default {
     req3:     "<strong>Compatible site:</strong> Works with standard websites",
     installH2:  "Installation",
     step1Title: "Visit the Chrome Web Store",
-    step1p:     "Go to the Reborn Assistant page in the <a href='https://chromewebstore.google.com/detail/ammakeedbimichmpipeaacgajcblnnme/preview' target='_blank' style='color:var(--gold);text-decoration:none;' onmouseover='this.style.textDecoration=\"underline\"' onmouseout='this.style.textDecoration=\"none\"'>Chrome Web Store</a> and click <strong>«Add to Chrome»</strong>.",
+    step1p:     "Go to the Reborn Assistant page in the <a href='https://chromewebstore.google.com/detail/reborn-assistant-premium/ammakeedbimichmpipeaacgajcblnnme' target='_blank' style='color:var(--gold);text-decoration:none;' onmouseover='this.style.textDecoration=\"underline\"' onmouseout='this.style.textDecoration=\"none\"'>Chrome Web Store</a> and click <strong>«Add to Chrome»</strong>.",
     step1tip:   "💡 Compatible with Google Chrome, Microsoft Edge, Brave and any Chromium-based browser.",
     step2Title: "Confirm installation",
     step2p:     "Click <strong>«Add extension»</strong> in the confirmation window. The extension installs automatically.",
