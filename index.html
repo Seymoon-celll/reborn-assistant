@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reborn Assistant - Premium Browser Automation</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Marcellus&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         :root {
             --gold: #d4af37; --gold-light: #f4d03f; --gold-dark: #b8941f;
@@ -14,7 +14,7 @@
         }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; }
-        body { font-family: 'Marcellus', serif; background-color: var(--dark-bg); color: var(--text); overflow-x: hidden; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--dark-bg); color: var(--text); overflow-x: hidden; }
         body::before { content: ''; position: fixed; inset: 0; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E"); pointer-events: none; z-index: 0; opacity: 0.4; }
         body::after { content: ''; position: fixed; top: -20%; left: 50%; transform: translateX(-50%); width: 900px; height: 600px; background: radial-gradient(ellipse, rgba(212,175,55,0.06) 0%, transparent 70%); pointer-events: none; z-index: 0; }
 
@@ -39,7 +39,7 @@
         .lang-option.active{color:var(--gold);background:rgba(212,175,55,0.05);font-weight:600;}
 
         .hero { min-height: 85vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 100px 40px 60px; position: relative; z-index: 1; }
-        .hero-inner { max-width: 900px; }
+        .hero-inner { max-width: 900px; position: relative; }
         .hero-eyebrow { display: inline-flex; align-items: center; gap: 12px; font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 4px; color: var(--gold); text-transform: uppercase; margin-bottom: 36px; padding: 8px 20px; border: 1px solid var(--border); border-radius: 20px; animation: fadeUp 1s ease-out 0.2s both; }
         .hero-eyebrow span { width: 5px; height: 5px; background: var(--gold); border-radius: 50%; display: inline-block; }
         h1 { font-family: 'Cinzel', serif; font-size: clamp(52px, 9vw, 100px); font-weight: 900; line-height: 1.05; margin-bottom: 12px; background: linear-gradient(135deg, var(--gold-dark) 0%, var(--gold-light) 50%, var(--gold-dark) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; letter-spacing: -1px; animation: fadeUp 1s ease-out 0.35s both; }
@@ -66,7 +66,7 @@
         section { position: relative; z-index: 1; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 60px; }
         .section-header { text-align: center; margin-bottom: 80px; }
-        .section-tag { display: inline-block; font-family: 'Inter', sans-serif; font-size: 10px; font-weight: 500; letter-spacing: 4px; color: var(--gold); text-transform: uppercase; margin-bottom: 20px; padding: 5px 16px; border: 1px solid var(--border); border-radius: 20px; }
+        .section-tag { display: inline-block; font-family: 'Inter', sans-serif; font-size: 10px; font-weight: 500; letter-spacing: 4px; color: var(--gold); text-transform: uppercase; margin-bottom: 20px; padding: 5px 16px; border: 1px solid var(--border); border-radius: 20px; position: relative; }
         .section-title { font-family: 'Cinzel', serif; font-size: clamp(32px, 5vw, 52px); font-weight: 700; color: var(--text); margin-bottom: 20px; letter-spacing: -0.5px; }
         .section-title em { font-style: normal; background: linear-gradient(135deg, var(--gold-dark), var(--gold-light)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
         .section-subtitle { font-family: 'Inter', sans-serif; font-size: 16px; font-weight: 300; color: var(--text-dim); max-width: 560px; margin: 0 auto; line-height: 1.8; }
@@ -77,7 +77,7 @@
         .feature-card::after { content: ''; position: absolute; bottom: 0; left: 40px; right: 40px; height: 1px; background: linear-gradient(90deg, transparent, var(--gold), transparent); opacity: 0; transition: opacity 0.3s ease; }
         .feature-card:hover { background: var(--dark-header); }
         .feature-card:hover::after { opacity: 0.6; }
-        .feature-icon { font-size: 36px; margin-bottom: 24px; display: block; filter: drop-shadow(0 0 8px rgba(212,175,55,0.3)); }
+        .feature-icon { font-size: 36px; margin-bottom: 24px; display: block; filter: drop-shadow(0 0 8px rgba(212,175,55,0.3)); transition: all 0.3s ease; }
         .feature-title { font-family: 'Cinzel', serif; font-size: 17px; font-weight: 600; margin-bottom: 14px; color: var(--gold); letter-spacing: 0.5px; }
         .feature-description { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 300; color: var(--text-dim); line-height: 1.8; }
 
@@ -164,10 +164,10 @@
             .price-card { padding: 40px 24px; }
             .hero-trust { flex-direction: column; gap: 12px; }
             .price-grid { grid-template-columns: 1fr; }
+            .hero-bracket { display: none; }
         }
 
         /* ═══ MMORPG Visual Enhancements ═══ */
-        .hero-inner { position: relative; }
         .hero-bracket { position: absolute; width: 48px; height: 48px; opacity: 0.2; pointer-events: none; }
         .hero-bracket.tl { top: -8px; left: -8px; border-top: 2px solid var(--gold); border-left: 2px solid var(--gold); }
         .hero-bracket.tr { top: -8px; right: -8px; border-top: 2px solid var(--gold); border-right: 2px solid var(--gold); }
@@ -178,8 +178,6 @@
         .skill-active { background: rgba(76,175,80,0.12); border: 1px solid rgba(76,175,80,0.35); color: var(--green); }
         .skill-passive { background: rgba(212,175,55,0.08); border: 1px solid rgba(212,175,55,0.3); color: var(--gold); }
 
-        .feature-card { counter-increment: skill-count; }
-        .features-grid { counter-reset: skill-count; }
         .feature-card::before { content: attr(data-skill); position: absolute; bottom: 20px; right: 20px; font-family: 'Cinzel', serif; font-size: 28px; font-weight: 900; color: rgba(212,175,55,0.06); line-height: 1; pointer-events: none; }
 
         .price-rank { font-family: 'Inter', sans-serif; font-size: 9px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: var(--text-dim); margin-bottom: 20px; opacity: 0.7; display: flex; align-items: center; gap: 8px; }
@@ -197,10 +195,14 @@
         .price-card.featured { animation: featuredPulse 3s ease-in-out infinite; }
         @keyframes featuredPulse { 0%, 100% { box-shadow: 0 0 60px rgba(212,175,55,0.12), inset 0 1px 0 rgba(212,175,55,0.3); } 50% { box-shadow: 0 0 80px rgba(212,175,55,0.2), inset 0 1px 0 rgba(212,175,55,0.4); } }
         .stat-number { text-shadow: 0 0 30px rgba(212,175,55,0.3); }
-        .feature-card:hover .feature-icon { filter: drop-shadow(0 0 14px rgba(212,175,55,0.6)); transform: scale(1.05); transition: all 0.3s ease; }
-        .feature-icon { transition: all 0.3s ease; }
-        .section-tag { position: relative; }
-        @media (max-width: 640px) { .hero-bracket { display: none; } }
+        .feature-card:hover .feature-icon { filter: drop-shadow(0 0 14px rgba(212,175,55,0.6)); transform: scale(1.05); }
+
+        /* Security section cards */
+        .sec-card { padding: 28px 24px; background: var(--dark-card); border: 1px solid var(--border); border-radius: 12px; transition: background 0.3s ease; }
+        .sec-card:hover { background: var(--dark-header); }
+        .sec-card-icon { font-size: 32px; margin-bottom: 12px; }
+        .sec-card-title { font-family: 'Cinzel', serif; font-size: 14px; font-weight: 600; color: var(--gold); margin-bottom: 8px; }
+        .sec-card-text { font-family: 'Inter', sans-serif; font-size: 13px; color: var(--text-dim); line-height: 1.6; }
     </style>
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="apple-touch-icon" href="favicon.svg">
@@ -222,6 +224,7 @@
                 <div class="lang-select-menu">
                     <button class="lang-option" data-lang="fr" onclick="setLang('fr')">🇫🇷 Français</button>
                     <button class="lang-option" data-lang="en" onclick="setLang('en')">🇬🇧 English</button>
+                    <button class="lang-option" data-lang="es" onclick="setLang('es')">🇪🇸 Español</button>
                 </div>
             </div>
             <a href="docs/index.html" style="font-family:'Cinzel',serif;font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;color:var(--gold);padding:6px 12px;border:1px solid rgba(212,175,55,0.4);border-radius:6px;transition:all 0.3s ease;background:rgba(212,175,55,0.05);" onmouseover="this.style.background='rgba(212,175,55,0.12)';this.style.borderColor='var(--gold)'" onmouseout="this.style.background='rgba(212,175,55,0.05)';this.style.borderColor='rgba(212,175,55,0.4)'">📚 Docs</a>
@@ -239,16 +242,16 @@
             <h1>REBORN<br>ASSISTANT</h1>
             <div class="hero-subtitle">Premium Automation</div>
             <div class="hero-divider"></div>
-            <p class="hero-description" data-fr="Extension d'automatisation pour navigateur avec macros avancées. Automatisez vos actions répétitives, raccourcis et séquences pour optimiser votre productivité." data-en="Browser automation extension with advanced macros. Automate your repetitive actions, shortcuts and sequences to optimize your productivity.">Extension d'automatisation pour navigateur avec macros avancées. Automatisez vos actions répétitives, raccourcis et séquences pour optimiser votre productivité.</p>
+            <p class="hero-description" data-i18n="hero.description">Extension d'automatisation pour navigateur avec macros avancées. Automatisez vos actions répétitives, raccourcis et séquences pour optimiser votre productivité.</p>
             <div class="cta-group">
-                <a href="#pricing" class="btn btn-primary" data-fr="Commencer maintenant" data-en="Get Started">Commencer maintenant</a>
-                <a href="#features" class="btn btn-secondary" data-fr="En savoir plus" data-en="Learn More">En savoir plus</a>
+                <a href="#pricing" class="btn btn-primary" data-i18n="hero.ctaPrimary">Commencer maintenant</a>
+                <a href="#features" class="btn btn-secondary" data-i18n="hero.ctaSecondary">En savoir plus</a>
             </div>
             <div class="hero-trust">
-                <div class="hero-trust-item"><span class="dot-green"></span> <span data-fr="Version gratuite disponible" data-en="Free version available">Version gratuite disponible</span></div>
-                <div class="hero-trust-item"><span class="dot-green"></span> <span data-fr="Sans engagement" data-en="No commitment">Sans engagement</span></div>
-                <div class="hero-trust-item"><span class="dot-green"></span> <span data-fr="Paiement 100% sécurisé" data-en="100% secure payment">Paiement 100% sécurisé</span></div>
-                <div class="hero-trust-item"><span class="dot-green"></span> <span data-fr="Mises à jour automatiques" data-en="Automatic updates">Mises à jour automatiques</span></div>
+                <div class="hero-trust-item"><span class="dot-green"></span> <span data-i18n="hero.trust1">Version gratuite disponible</span></div>
+                <div class="hero-trust-item"><span class="dot-green"></span> <span data-i18n="hero.trust2">Sans engagement</span></div>
+                <div class="hero-trust-item"><span class="dot-green"></span> <span data-i18n="hero.trust3">Paiement 100% sécurisé</span></div>
+                <div class="hero-trust-item"><span class="dot-green"></span> <span data-i18n="hero.trust4">Mises à jour automatiques</span></div>
             </div>
         </div>
     </section>
@@ -256,47 +259,47 @@
     <section class="features" id="features">
         <div class="container">
             <div class="section-header reveal">
-                <div class="section-tag" data-fr="Compétences & Aptitudes" data-en="Skills & Abilities">Compétences & Aptitudes</div>
-                <h2 class="section-title"><span data-fr="Tout ce dont vous " data-en="Everything you ">Tout ce dont vous </span><em data-fr="avez besoin" data-en="need">avez besoin</em></h2>
+                <div class="section-tag" data-i18n="features.tag">Compétences & Aptitudes</div>
+                <h2 class="section-title"><span data-i18n="features.titleBefore">Tout ce dont vous </span><em data-i18n="features.titleEm">avez besoin</em></h2>
                 <div class="section-ornament"><span>◆ ◆ ◆</span></div>
-                <p class="section-subtitle" data-fr="Découvrez les capacités exceptionnelles de Reborn Assistant." data-en="Discover the exceptional capabilities of Reborn Assistant.">Découvrez les capacités exceptionnelles de Reborn Assistant.</p>
+                <p class="section-subtitle" data-i18n="features.subtitle">Découvrez les capacités exceptionnelles de Reborn Assistant.</p>
             </div>
             <div class="features-grid reveal">
                 <div class="feature-card" data-skill="I">
-                    <div class="skill-badge skill-active" data-fr="Actif" data-en="Active">Actif</div>
+                    <div class="skill-badge skill-active" data-i18n="features.card1.badge">Actif</div>
                     <span class="feature-icon">⚡</span>
-                    <h3 class="feature-title" data-fr="Automatisation Complète" data-en="Complete Automation">Automatisation Complète</h3>
-                    <p class="feature-description" data-fr="Macros de touches, séquences automatiques et actions configurables pour une automatisation complète." data-en="Key macros, automatic sequences and configurable actions for complete automation.">Macros de touches, séquences automatiques et actions configurables pour une automatisation complète.</p>
+                    <h3 class="feature-title" data-i18n="features.card1.title">Automatisation Complète</h3>
+                    <p class="feature-description" data-i18n="features.card1.description">Macros de touches, séquences automatiques et actions configurables pour une automatisation complète.</p>
                 </div>
                 <div class="feature-card" data-skill="II">
-                    <div class="skill-badge skill-passive" data-fr="Passif" data-en="Passive">Passif</div>
+                    <div class="skill-badge skill-passive" data-i18n="features.card2.badge">Passif</div>
                     <span class="feature-icon">🛡️</span>
-                    <h3 class="feature-title" data-fr="Sécurité Maximale" data-en="Maximum Security">Sécurité Maximale</h3>
-                    <p class="feature-description" data-fr="Vos données restent locales. Aucun tracking, aucune télémétrie." data-en="Your data stays local. No tracking, no telemetry.">Vos données restent locales. Aucun tracking, aucune télémétrie.</p>
+                    <h3 class="feature-title" data-i18n="features.card2.title">Sécurité Maximale</h3>
+                    <p class="feature-description" data-i18n="features.card2.description">Vos données restent locales. Aucun tracking, aucune télémétrie.</p>
                 </div>
                 <div class="feature-card" data-skill="III">
-                    <div class="skill-badge skill-active" data-fr="Actif" data-en="Active">Actif</div>
+                    <div class="skill-badge skill-active" data-i18n="features.card3.badge">Actif</div>
                     <span class="feature-icon">🎯</span>
-                    <h3 class="feature-title" data-fr="Macros Personnalisables" data-en="Customizable Macros">Macros Personnalisables</h3>
-                    <p class="feature-description" data-fr="3 macros configurables avec déclencheurs automatiques et raccourcis clavier." data-en="3 configurable macros with automatic triggers and keyboard shortcuts.">3 macros configurables avec déclencheurs automatiques et raccourcis clavier.</p>
+                    <h3 class="feature-title" data-i18n="features.card3.title">Macros Personnalisables</h3>
+                    <p class="feature-description" data-i18n="features.card3.description">3 macros configurables avec déclencheurs automatiques et raccourcis clavier.</p>
                 </div>
                 <div class="feature-card" data-skill="IV">
-                    <div class="skill-badge skill-passive" data-fr="Passif" data-en="Passive">Passif</div>
+                    <div class="skill-badge skill-passive" data-i18n="features.card4.badge">Passif</div>
                     <span class="feature-icon">🎨</span>
-                    <h3 class="feature-title" data-fr="Interface Personnalisable" data-en="Customizable Interface">Interface Personnalisable</h3>
-                    <p class="feature-description" data-fr="Choisissez parmi 6 thèmes et adaptez l'interface à vos besoins." data-en="Choose from 6 themes and adapt the interface to your needs.">Choisissez parmi 6 thèmes et adaptez l'interface à vos besoins.</p>
+                    <h3 class="feature-title" data-i18n="features.card4.title">Interface Personnalisable</h3>
+                    <p class="feature-description" data-i18n="features.card4.description">Choisissez parmi 6 thèmes et adaptez l'interface à vos besoins.</p>
                 </div>
                 <div class="feature-card" data-skill="V">
-                    <div class="skill-badge skill-passive" data-fr="Passif" data-en="Passive">Passif</div>
+                    <div class="skill-badge skill-passive" data-i18n="features.card5.badge">Passif</div>
                     <span class="feature-icon">🌐</span>
-                    <h3 class="feature-title" data-fr="Multi-Langues" data-en="Multi-Language">Multi-Langues</h3>
-                    <p class="feature-description" data-fr="Disponible en 14 langues. Support mondial avec interfaces localisées." data-en="Available in 14 languages. Worldwide support with localized interfaces.">Disponible en 14 langues. Support mondial avec interfaces localisées.</p>
+                    <h3 class="feature-title" data-i18n="features.card5.title">Multi-Langues</h3>
+                    <p class="feature-description" data-i18n="features.card5.description">Disponible en 14 langues. Support mondial avec interfaces localisées.</p>
                 </div>
                 <div class="feature-card" data-skill="VI">
-                    <div class="skill-badge skill-passive" data-fr="Gratuit" data-en="Free">Gratuit</div>
+                    <div class="skill-badge skill-passive" data-i18n="features.card6.badge">Gratuit</div>
                     <span class="feature-icon">🔄</span>
-                    <h3 class="feature-title" data-fr="Version Gratuite" data-en="Free Version">Version Gratuite</h3>
-                    <p class="feature-description" data-fr="Testez gratuitement avec les fonctionnalités de base incluses." data-en="Try it free with basic features included.">Testez gratuitement avec les fonctionnalités de base incluses.</p>
+                    <h3 class="feature-title" data-i18n="features.card6.title">Version Gratuite</h3>
+                    <p class="feature-description" data-i18n="features.card6.description">Testez gratuitement avec les fonctionnalités de base incluses.</p>
                 </div>
             </div>
         </div>
@@ -308,37 +311,37 @@
             <div class="reveal" style="max-width:900px;margin:0 auto;text-align:center;">
                 <div style="display:inline-flex;align-items:center;gap:12px;margin-bottom:32px;padding:10px 24px;border:1px solid rgba(76,175,80,0.3);border-radius:30px;background:rgba(76,175,80,0.05);">
                     <div style="width:8px;height:8px;background:#4CAF50;border-radius:50%;box-shadow:0 0 10px rgba(76,175,80,0.8);animation:pulse 2s infinite;"></div>
-                    <span style="font-family:'Inter',sans-serif;font-size:11px;font-weight:600;color:#4CAF50;text-transform:uppercase;letter-spacing:3px;" data-fr="Sécurité" data-en="Security">Sécurité</span>
+                    <span style="font-family:'Inter',sans-serif;font-size:11px;font-weight:600;color:#4CAF50;text-transform:uppercase;letter-spacing:3px;" data-i18n="security.tag">Sécurité</span>
                 </div>
 
                 <h2 style="font-family:'Cinzel',serif;font-size:clamp(28px,4vw,42px);font-weight:700;color:var(--text);margin-bottom:24px;line-height:1.2;">
-                    <span data-fr="Niveau de sécurité " data-en="">Niveau de sécurité </span><span style="background:linear-gradient(135deg,var(--gold-dark),var(--gold-light));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;" data-fr="professionnel" data-en="Professional-grade">professionnel</span><span data-fr="" data-en=" security"></span>
+                    <span data-i18n="security.titleBefore">Niveau de sécurité </span><span style="background:linear-gradient(135deg,var(--gold-dark),var(--gold-light));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;" data-i18n="security.titleEm">professionnel</span><span data-i18n="security.titleAfter"></span>
                 </h2>
 
-                <p style="font-family:'Inter',sans-serif;font-size:17px;font-weight:300;color:var(--text-dim);line-height:1.9;margin-bottom:48px;" data-fr="Reborn Assistant utilise les mêmes standards de sécurité que les plateformes de streaming mondiales. Vos identifiants sont protégés par <strong style='color:var(--gold);'>chiffrement JWT</strong>, vos paiements sécurisés via <strong style='color:var(--gold);'>Stripe</strong>, et vos données restent <strong style='color:var(--gold);'>100% locales</strong>. Aucun tracking, aucune revente de données." data-en="Reborn Assistant uses the same security standards as major streaming platforms. Your credentials are protected by <strong style='color:var(--gold);'>JWT encryption</strong>, your payments secured via <strong style='color:var(--gold);'>Stripe</strong>, and your data stays <strong style='color:var(--gold);'>100% local</strong>. No tracking, no data resale.">
+                <p style="font-family:'Inter',sans-serif;font-size:17px;font-weight:300;color:var(--text-dim);line-height:1.9;margin-bottom:48px;" data-i18n="security.description">
                     Reborn Assistant utilise les mêmes standards de sécurité que les plateformes de streaming mondiales. Vos identifiants sont protégés par <strong style="color:var(--gold);">chiffrement JWT</strong>, vos paiements sécurisés via <strong style="color:var(--gold);">Stripe</strong>, et vos données restent <strong style="color:var(--gold);">100% locales</strong>. Aucun tracking, aucune revente de données.
                 </p>
 
                 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px;margin-top:48px;">
-                    <div style="padding:28px 24px;background:var(--dark-card);border:1px solid var(--border);border-radius:12px;">
-                        <div style="font-size:32px;margin-bottom:12px;">🔐</div>
-                        <div style="font-family:'Cinzel',serif;font-size:14px;font-weight:600;color:var(--gold);margin-bottom:8px;" data-fr="Chiffrement JWT" data-en="JWT Encryption">Chiffrement JWT</div>
-                        <div style="font-family:'Inter',sans-serif;font-size:13px;color:var(--text-dim);line-height:1.6;" data-fr="Authentification sécurisée de niveau bancaire" data-en="Bank-grade secure authentication">Authentification sécurisée de niveau bancaire</div>
+                    <div class="sec-card">
+                        <div class="sec-card-icon">🔐</div>
+                        <div class="sec-card-title" data-i18n="security.card1Title">Chiffrement JWT</div>
+                        <div class="sec-card-text" data-i18n="security.card1Text">Authentification sécurisée de niveau bancaire</div>
                     </div>
-                    <div style="padding:28px 24px;background:var(--dark-card);border:1px solid var(--border);border-radius:12px;">
-                        <div style="font-size:32px;margin-bottom:12px;">💳</div>
-                        <div style="font-family:'Cinzel',serif;font-size:14px;font-weight:600;color:var(--gold);margin-bottom:8px;" data-fr="Paiement Stripe" data-en="Stripe Payment">Paiement Stripe</div>
-                        <div style="font-family:'Inter',sans-serif;font-size:13px;color:var(--text-dim);line-height:1.6;" data-fr="Processeur utilisé par Amazon & Google" data-en="Processor used by Amazon & Google">Processeur utilisé par Amazon & Google</div>
+                    <div class="sec-card">
+                        <div class="sec-card-icon">💳</div>
+                        <div class="sec-card-title" data-i18n="security.card2Title">Paiement Stripe</div>
+                        <div class="sec-card-text" data-i18n="security.card2Text">Processeur utilisé par Amazon & Google</div>
                     </div>
-                    <div style="padding:28px 24px;background:var(--dark-card);border:1px solid var(--border);border-radius:12px;">
-                        <div style="font-size:32px;margin-bottom:12px;">🛡️</div>
-                        <div style="font-family:'Cinzel',serif;font-size:14px;font-weight:600;color:var(--gold);margin-bottom:8px;" data-fr="Zéro Tracking" data-en="Zero Tracking">Zéro Tracking</div>
-                        <div style="font-family:'Inter',sans-serif;font-size:13px;color:var(--text-dim);line-height:1.6;" data-fr="Vos données ne quittent jamais votre appareil" data-en="Your data never leaves your device">Vos données ne quittent jamais votre appareil</div>
+                    <div class="sec-card">
+                        <div class="sec-card-icon">🛡️</div>
+                        <div class="sec-card-title" data-i18n="security.card3Title">Zéro Tracking</div>
+                        <div class="sec-card-text" data-i18n="security.card3Text">Vos données ne quittent jamais votre appareil</div>
                     </div>
-                    <div style="padding:28px 24px;background:var(--dark-card);border:1px solid var(--border);border-radius:12px;">
-                        <div style="font-size:32px;margin-bottom:12px;">🔒</div>
-                        <div style="font-family:'Cinzel',serif;font-size:14px;font-weight:600;color:var(--gold);margin-bottom:8px;">Google Cloud</div>
-                        <div style="font-family:'Inter',sans-serif;font-size:13px;color:var(--text-dim);line-height:1.6;" data-fr="Infrastructure Google Cloud sécurisée" data-en="Secure Google Cloud infrastructure">Infrastructure Google Cloud sécurisée</div>
+                    <div class="sec-card">
+                        <div class="sec-card-icon">🔒</div>
+                        <div class="sec-card-title">Google Cloud</div>
+                        <div class="sec-card-text" data-i18n="security.card4Text">Infrastructure Google Cloud sécurisée</div>
                     </div>
                 </div>
             </div>
@@ -348,79 +351,79 @@
     <section class="pricing" id="pricing">
         <div class="container">
             <div class="section-header reveal">
-                <div class="section-tag" data-fr="Choisissez votre Classe" data-en="Choose your Class">Choisissez votre Classe</div>
-                <h2 class="section-title"><span data-fr="Choisissez votre " data-en="Choose your ">Choisissez votre </span><em data-fr="rang" data-en="rank">rang</em></h2>
+                <div class="section-tag" data-i18n="pricing.tag">Choisissez votre Classe</div>
+                <h2 class="section-title"><span data-i18n="pricing.titleBefore">Choisissez votre </span><em data-i18n="pricing.titleEm">rang</em></h2>
                 <div class="section-ornament"><span>◆ ◆ ◆</span></div>
-                <p class="section-subtitle" data-fr="Choisissez la formule qui vous convient. Sans engagement." data-en="Choose the plan that suits you. No commitment.">Choisissez la formule qui vous convient. Sans engagement.</p>
+                <p class="section-subtitle" data-i18n="pricing.subtitle">Choisissez la formule qui vous convient. Sans engagement.</p>
             </div>
 
             <div class="reveal">
                 <div class="price-grid">
                     <div class="price-card">
-                        <div class="price-rank" data-fr="Rang I · Voyageur" data-en="Rank I · Traveler">Rang I · Voyageur</div>
-                        <div class="price-plan" data-fr="Gratuit" data-en="Free">Gratuit</div>
+                        <div class="price-rank" data-i18n="pricing.voyageur.rank">Rang I · Voyageur</div>
+                        <div class="price-plan" data-i18n="pricing.voyageur.plan">Gratuit</div>
                         <div class="price-amount">0€</div>
-                        <div class="price-period" data-fr="à jamais" data-en="forever">à jamais</div>
+                        <div class="price-period" data-i18n="pricing.voyageur.period">à jamais</div>
                         <div class="price-divider"></div>
                         <ul class="price-features">
-                            <li data-fr="Macro soin" data-en="Heal macro">Macro soin</li>
-                            <li data-fr="6 thèmes visuels" data-en="6 visual themes">6 thèmes visuels</li>
-                            <li data-fr="14 langues disponibles" data-en="14 languages available">14 langues disponibles</li>
-                            <li data-fr="Interface flottante" data-en="Floating interface">Interface flottante</li>
+                            <li data-i18n="pricing.voyageur.feat1">Macro soin</li>
+                            <li data-i18n="pricing.voyageur.feat2">6 thèmes visuels</li>
+                            <li data-i18n="pricing.voyageur.feat3">14 langues disponibles</li>
+                            <li data-i18n="pricing.voyageur.feat4">Interface flottante</li>
                         </ul>
-                        <a href="https://chromewebstore.google.com/detail/ammakeedbimichmpipeaacgajcblnnme/preview" target="_blank" class="btn btn-secondary btn-full" data-fr="Commencer" data-en="Get Started">Commencer</a>
-                        <div class="price-guarantee" data-fr="🔒 Gratuit pour toujours" data-en="🔒 Free forever">🔒 Gratuit pour toujours</div>
+                        <a href="https://chromewebstore.google.com/detail/ammakeedbimichmpipeaacgajcblnnme/preview" target="_blank" class="btn btn-secondary btn-full" data-i18n="pricing.voyageur.btn">Commencer</a>
+                        <div class="price-guarantee" data-i18n="pricing.voyageur.guarantee">🔒 Gratuit pour toujours</div>
                     </div>
 
                     <div class="price-card">
-                        <div class="price-rank" data-fr="Rang II · Aventurier" data-en="Rank II · Adventurer">Rang II · Aventurier</div>
-                        <div class="price-plan" data-fr="Mensuel" data-en="Monthly">Mensuel</div>
+                        <div class="price-rank" data-i18n="pricing.aventurier.rank">Rang II · Aventurier</div>
+                        <div class="price-plan" data-i18n="pricing.aventurier.plan">Mensuel</div>
                         <div class="price-amount">2,99€</div>
-                        <div class="price-period" data-fr="par mois" data-en="per month">par mois</div>
+                        <div class="price-period" data-i18n="pricing.aventurier.period">par mois</div>
                         <div class="price-divider"></div>
                         <ul class="price-features">
-                            <li data-fr="Toutes les fonctionnalités Premium" data-en="All Premium features">Toutes les fonctionnalités Premium</li>
-                            <li data-fr="Support prioritaire" data-en="Priority support">Support prioritaire</li>
-                            <li data-fr="Mises à jour gratuites" data-en="Free updates">Mises à jour gratuites</li>
+                            <li data-i18n="pricing.aventurier.feat1">Toutes les fonctionnalités Premium</li>
+                            <li data-i18n="pricing.aventurier.feat2">Support prioritaire</li>
+                            <li data-i18n="pricing.aventurier.feat3">Mises à jour gratuites</li>
                         </ul>
-                        <a href="https://buy.stripe.com/bJe3cufUWbhUcuCeTVe3e02" target="_blank" class="btn btn-primary btn-full" data-fr="Essayer Gratuitement" data-en="Try Free">Essayer Gratuitement</a>
-                        <div class="price-guarantee" data-fr="🎁 7 jours gratuits · Sans carte bancaire" data-en="🎁 7 days free · No credit card required">🎁 7 jours gratuits · Sans carte bancaire</div>
-                        <a href="https://chromewebstore.google.com/detail/ammakeedbimichmpipeaacgajcblnnme/preview" target="_blank" class="btn-download" data-fr="⬇ Télécharger l'extension" data-en="⬇ Download extension">⬇ Télécharger l'extension</a>
+                        <a href="https://buy.stripe.com/bJe3cufUWbhUcuCeTVe3e02" target="_blank" class="btn btn-primary btn-full" data-i18n="pricing.aventurier.btn">Essayer Gratuitement</a>
+                        <div class="price-guarantee" data-i18n="pricing.aventurier.guarantee">🎁 7 jours gratuits · Sans carte bancaire</div>
+                        <a href="https://chromewebstore.google.com/detail/ammakeedbimichmpipeaacgajcblnnme/preview" target="_blank" class="btn-download" data-i18n="pricing.aventurier.download">⬇ Télécharger l'extension</a>
                     </div>
 
                     <div class="price-card featured">
-                        <div class="price-badge" data-fr="⭐ Populaire -17%" data-en="⭐ Popular -17%">⭐ Populaire -17%</div>
-                        <div class="price-rank" data-fr="Rang III · Champion" data-en="Rank III · Champion">Rang III · Champion</div>
-                        <div class="price-plan" data-fr="Annuel" data-en="Yearly">Annuel</div>
+                        <div class="price-badge" data-i18n="pricing.champion.badge">⭐ Populaire -17%</div>
+                        <div class="price-rank" data-i18n="pricing.champion.rank">Rang III · Champion</div>
+                        <div class="price-plan" data-i18n="pricing.champion.plan">Annuel</div>
                         <div class="price-amount">29,99€</div>
-                        <div class="price-period" data-fr="par an · soit 2,50€/mois" data-en="per year · only 2.50€/month">par an · soit 2,50€/mois</div>
+                        <div class="price-period" data-i18n="pricing.champion.period">par an · soit 2,50€/mois</div>
                         <div class="price-divider"></div>
                         <ul class="price-features">
-                            <li data-fr="Toutes les fonctionnalités Premium" data-en="All Premium features">Toutes les fonctionnalités Premium</li>
-                            <li data-fr="Support prioritaire" data-en="Priority support">Support prioritaire</li>
-                            <li data-fr="Mises à jour gratuites" data-en="Free updates">Mises à jour gratuites</li>
+                            <li data-i18n="pricing.champion.feat1">Toutes les fonctionnalités Premium</li>
+                            <li data-i18n="pricing.champion.feat2">Support prioritaire</li>
+                            <li data-i18n="pricing.champion.feat3">Mises à jour gratuites</li>
                         </ul>
-                        <a href="https://buy.stripe.com/5kQ9AS38a85IbqyeTVe3e01" target="_blank" class="btn btn-primary btn-full" data-fr="Essayer Gratuitement" data-en="Try Free">Essayer Gratuitement</a>
-                        <div class="price-guarantee" data-fr="🎁 7 jours gratuits · Sans carte bancaire" data-en="🎁 7 days free · No credit card required">🎁 7 jours gratuits · Sans carte bancaire</div>
-                        <a href="https://chromewebstore.google.com/detail/ammakeedbimichmpipeaacgajcblnnme/preview" target="_blank" class="btn-download" data-fr="⬇ Télécharger l'extension" data-en="⬇ Download extension">⬇ Télécharger l'extension</a>
+                        <a href="https://buy.stripe.com/5kQ9AS38a85IbqyeTVe3e01" target="_blank" class="btn btn-primary btn-full" data-i18n="pricing.champion.btn">Essayer Gratuitement</a>
+                        <div class="price-guarantee" data-i18n="pricing.champion.guarantee">🎁 7 jours gratuits · Sans carte bancaire</div>
+                        <a href="https://chromewebstore.google.com/detail/ammakeedbimichmpipeaacgajcblnnme/preview" target="_blank" class="btn-download" data-i18n="pricing.champion.download">⬇ Télécharger l'extension</a>
                     </div>
 
                     <div class="price-card exclusive">
-                        <div class="price-badge" style="background:linear-gradient(135deg,#1a5c28,#2ea84a);color:#fff;border:none;" data-fr="⚡ Offre Limitée" data-en="⚡ Limited Offer">⚡ Offre Limitée</div>
-                        <div class="price-rank" data-fr="Rang IV · Légende" data-en="Rank IV · Legend">Rang IV · Légende</div>
-                        <div class="price-plan" data-fr="À Vie" data-en="Lifetime">À Vie</div>
+                        <div class="price-badge" style="background:linear-gradient(135deg,#1a5c28,#2ea84a);color:#fff;border:none;" data-i18n="pricing.legende.badge">⚡ Offre Limitée</div>
+                        <div class="price-rank" data-i18n="pricing.legende.rank">Rang IV · Légende</div>
+                        <div class="price-plan" data-i18n="pricing.legende.plan">À Vie</div>
                         <div class="price-amount">99,99€</div>
-                        <div class="price-period" data-fr="paiement unique · plus jamais rien" data-en="one-time payment · nothing ever again">paiement unique · plus jamais rien</div>
+                        <div class="price-period" data-i18n="pricing.legende.period">paiement unique · plus jamais rien</div>
                         <div class="price-divider"></div>
                         <ul class="price-features">
-                            <li data-fr="Accès à vie" data-en="Lifetime access">Accès à vie</li>
-                            <li data-fr="Toutes les mises à jour futures" data-en="All future updates">Toutes les mises à jour futures</li>
-                            <li data-fr="Support premium dédié" data-en="Dedicated premium support">Support premium dédié</li>
-                            <li data-fr="Meilleur rapport qualité-prix" data-en="Best value for money">Meilleur rapport qualité-prix</li>
+                            <li data-i18n="pricing.legende.feat1">Accès à vie</li>
+                            <li data-i18n="pricing.legende.feat2">Toutes les mises à jour futures</li>
+                            <li data-i18n="pricing.legende.feat3">Support premium dédié</li>
+                            <li data-i18n="pricing.legende.feat4">Meilleur rapport qualité-prix</li>
                         </ul>
-                        <a href="https://buy.stripe.com/6oU14m2464TwcuC3bde3e00" target="_blank" class="btn btn-secondary btn-full" data-fr="Acheter" data-en="Buy Now">Acheter</a>
-                        <div class="price-guarantee" data-fr="🔒 Paiement unique · Accès garanti à vie" data-en="🔒 One-time payment · Lifetime access guaranteed">🔒 Paiement unique · Accès garanti à vie</div>
-                        <a href="https://chromewebstore.google.com/detail/ammakeedbimichmpipeaacgajcblnnme/preview" target="_blank" class="btn-download" data-fr="⬇ Télécharger l'extension" data-en="⬇ Download extension">⬇ Télécharger l'extension</a>
+                        <a href="https://buy.stripe.com/6oU14m2464TwcuC3bde3e00" target="_blank" class="btn btn-secondary btn-full" data-i18n="pricing.legende.btn">Acheter</a>
+                        <div class="price-guarantee" data-i18n="pricing.legende.guarantee">🔒 Paiement unique · Accès garanti à vie</div>
+                        <a href="https://chromewebstore.google.com/detail/ammakeedbimichmpipeaacgajcblnnme/preview" target="_blank" class="btn-download" data-i18n="pricing.legende.download">⬇ Télécharger l'extension</a>
                     </div>
                 </div>
             </div>
@@ -428,27 +431,27 @@
             <!-- Stats sous le pricing -->
             <div class="stats reveal" style="margin-top:60px;border-radius:12px;">
                 <div class="stats-grid">
-                    <div class="stat-item"><div class="stat-number">14</div><div class="stat-label" data-fr="Langues disponibles" data-en="Languages available">Langues disponibles</div></div>
-                    <div class="stat-item"><div class="stat-number">6</div><div class="stat-label" data-fr="Thèmes visuels" data-en="Visual themes">Thèmes visuels</div></div>
-                    <div class="stat-item"><div class="stat-number">100%</div><div class="stat-label" data-fr="Données locales" data-en="Local data">Données locales</div></div>
-                    <div class="stat-item"><div class="stat-number">24/7</div><div class="stat-label" data-fr="Extension active" data-en="Extension active">Extension active</div></div>
+                    <div class="stat-item"><div class="stat-number">14</div><div class="stat-label" data-i18n="stats.label1">Langues disponibles</div></div>
+                    <div class="stat-item"><div class="stat-number">6</div><div class="stat-label" data-i18n="stats.label2">Thèmes visuels</div></div>
+                    <div class="stat-item"><div class="stat-number">100%</div><div class="stat-label" data-i18n="stats.label3">Données locales</div></div>
+                    <div class="stat-item"><div class="stat-number">24/7</div><div class="stat-label" data-i18n="stats.label4">Extension active</div></div>
                 </div>
             </div>
 
             <!-- Trust badges -->
             <div class="trust-bar reveal" style="border-top:none;margin-top:0;">
                 <div class="trust-badges">
-                    <div class="trust-badge"><div class="trust-badge-icon">🔒</div> <span data-fr="Paiement sécurisé SSL" data-en="SSL secure payment">Paiement sécurisé SSL</span></div>
-                    <div class="trust-badge"><div class="trust-badge-icon">⚡</div> <span data-fr="Accès instantané" data-en="Instant access">Accès instantané</span></div>
-                    <div class="trust-badge"><div class="trust-badge-icon">🛡️</div> <span data-fr="Données 100% privées" data-en="100% private data">Données 100% privées</span></div>
-                    <div class="trust-badge"><div class="trust-badge-icon">💬</div> <span data-fr="Support réactif" data-en="Responsive support">Support réactif</span></div>
+                    <div class="trust-badge"><div class="trust-badge-icon">🔒</div> <span data-i18n="trust.badge1">Paiement sécurisé SSL</span></div>
+                    <div class="trust-badge"><div class="trust-badge-icon">⚡</div> <span data-i18n="trust.badge2">Accès instantané</span></div>
+                    <div class="trust-badge"><div class="trust-badge-icon">🛡️</div> <span data-i18n="trust.badge3">Données 100% privées</span></div>
+                    <div class="trust-badge"><div class="trust-badge-icon">💬</div> <span data-i18n="trust.badge4">Support réactif</span></div>
                 </div>
             </div>
 
             <!-- Chrome Web Store -->
             <a href="https://chromewebstore.google.com/detail/ammakeedbimichmpipeaacgajcblnnme/preview" target="_blank" class="reveal" style="display:block;text-align:center;margin-top:40px;padding:24px;border:1px dashed rgba(212,175,55,0.25);border-radius:12px;background:rgba(212,175,55,0.03);text-decoration:none;transition:all 0.3s ease;" onmouseover="this.style.borderColor='rgba(212,175,55,0.5)';this.style.background='rgba(212,175,55,0.06)'" onmouseout="this.style.borderColor='rgba(212,175,55,0.25)';this.style.background='rgba(212,175,55,0.03)'">
-                <div style="font-family:'Inter',sans-serif;font-size:11px;letter-spacing:3px;color:var(--text-dim);text-transform:uppercase;margin-bottom:10px;" data-fr="En cours de validation" data-en="Under review">En cours de validation</div>
-                <div style="font-family:'Cinzel',serif;font-size:16px;color:var(--gold);" data-fr="🟢 Bientôt disponible · Google Chrome Web Store" data-en="🟢 Available soon · Google Chrome Web Store">🟢 Bientôt disponible · Google Chrome Web Store</div>
+                <div style="font-family:'Inter',sans-serif;font-size:11px;letter-spacing:3px;color:var(--text-dim);text-transform:uppercase;margin-bottom:10px;" data-i18n="store.status">En cours de validation</div>
+                <div style="font-family:'Cinzel',serif;font-size:16px;color:var(--gold);" data-i18n="store.title">🟢 Disponible en prévisualisation · Google Chrome Web Store</div>
             </a>
         </div>
     </section>
@@ -457,30 +460,30 @@
         <div class="container">
             <div class="section-header reveal">
                 <div class="section-tag">FAQ</div>
-                <h2 class="section-title"><span data-fr="Questions " data-en="Frequently Asked ">Questions </span><em data-fr="fréquentes" data-en="Questions">fréquentes</em></h2>
+                <h2 class="section-title"><span data-i18n="faq.titleBefore">Questions </span><em data-i18n="faq.titleEm">fréquentes</em></h2>
                 <div class="section-ornament"><span>◆ ◆ ◆</span></div>
-                <p class="section-subtitle" data-fr="Tout ce que vous devez savoir avant de commencer." data-en="Everything you need to know before getting started.">Tout ce que vous devez savoir avant de commencer.</p>
+                <p class="section-subtitle" data-i18n="faq.subtitle">Tout ce que vous devez savoir avant de commencer.</p>
             </div>
             <div class="faq-list reveal">
                 <div class="faq-item">
-                    <button class="faq-question"><span data-fr="L'essai gratuit nécessite-t-il une carte bancaire ?" data-en="Does the free trial require a credit card?">L'essai gratuit nécessite-t-il une carte bancaire ?</span> <span class="faq-icon">+</span></button>
-                    <div class="faq-answer"><p data-fr="Non, aucune carte bancaire n'est requise. Les 7 premiers jours sont entièrement gratuits, sans engagement. Vous n'avez qu'à créer votre compte pour commencer immédiatement." data-en="No credit card required. The first 7 days are completely free, with no commitment. Simply create your account to get started immediately.">Non, aucune carte bancaire n'est requise. Les 7 premiers jours sont entièrement gratuits, sans engagement. Vous n'avez qu'à créer votre compte pour commencer immédiatement.</p></div>
+                    <button class="faq-question"><span data-i18n="faq.q1">L'essai gratuit nécessite-t-il une carte bancaire ?</span> <span class="faq-icon">+</span></button>
+                    <div class="faq-answer"><p data-i18n="faq.a1">Non, aucune carte bancaire n'est requise. Les 7 premiers jours sont entièrement gratuits, sans engagement. Vous n'avez qu'à créer votre compte pour commencer immédiatement.</p></div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-question"><span data-fr="Puis-je changer de plan à tout moment ?" data-en="Can I change plans at any time?">Puis-je changer de plan à tout moment ?</span> <span class="faq-icon">+</span></button>
-                    <div class="faq-answer"><p data-fr="Oui, vous pouvez passer à un plan supérieur ou inférieur à tout moment depuis votre espace client. Aucun frais de changement." data-en="Yes, you can upgrade or downgrade at any time from your customer portal. No change fees.">Oui, vous pouvez passer à un plan supérieur ou inférieur à tout moment depuis votre espace client. Aucun frais de changement.</p></div>
+                    <button class="faq-question"><span data-i18n="faq.q2">Puis-je changer de plan à tout moment ?</span> <span class="faq-icon">+</span></button>
+                    <div class="faq-answer"><p data-i18n="faq.a2">Oui, vous pouvez passer à un plan supérieur ou inférieur à tout moment depuis votre espace client. Aucun frais de changement.</p></div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-question"><span data-fr="Le plan À Vie inclut-il vraiment toutes les futures mises à jour ?" data-en="Does the Lifetime plan really include all future updates?">Le plan À Vie inclut-il vraiment toutes les futures mises à jour ?</span> <span class="faq-icon">+</span></button>
-                    <div class="faq-answer"><p data-fr="Absolument. Le plan À Vie vous garantit l'accès à toutes les mises à jour et nouvelles fonctionnalités futures, sans jamais débourser quoi que ce soit de plus." data-en="Absolutely. The Lifetime plan guarantees access to all future updates and new features, without ever paying anything more.">Absolument. Le plan À Vie vous garantit l'accès à toutes les mises à jour et nouvelles fonctionnalités futures, sans jamais débourser quoi que ce soit de plus.</p></div>
+                    <button class="faq-question"><span data-i18n="faq.q3">Le plan À Vie inclut-il vraiment toutes les futures mises à jour ?</span> <span class="faq-icon">+</span></button>
+                    <div class="faq-answer"><p data-i18n="faq.a3">Absolument. Le plan À Vie vous garantit l'accès à toutes les mises à jour et nouvelles fonctionnalités futures, sans jamais débourser quoi que ce soit de plus.</p></div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-question"><span data-fr="Mes données sont-elles en sécurité ?" data-en="Is my data safe?">Mes données sont-elles en sécurité ?</span> <span class="faq-icon">+</span></button>
-                    <div class="faq-answer"><p data-fr="Toutes vos données restent stockées localement sur votre appareil. Nous ne collectons aucune donnée personnelle et n'utilisons aucun tracking ou télémétrie." data-en="All your data is stored locally on your device. We collect no personal data and use no tracking or telemetry.">Toutes vos données restent stockées localement sur votre appareil. Nous ne collectons aucune donnée personnelle et n'utilisons aucun tracking ou télémétrie.</p></div>
+                    <button class="faq-question"><span data-i18n="faq.q4">Mes données sont-elles en sécurité ?</span> <span class="faq-icon">+</span></button>
+                    <div class="faq-answer"><p data-i18n="faq.a4">Toutes vos données restent stockées localement sur votre appareil. Nous ne collectons aucune donnée personnelle et n'utilisons aucun tracking ou télémétrie.</p></div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-question"><span data-fr="Comment contacter le support ?" data-en="How do I contact support?">Comment contacter le support ?</span> <span class="faq-icon">+</span></button>
-                    <div class="faq-answer"><p data-fr="Contactez-nous directement par email à seymoon.cell@gmail.com. Les abonnés premium bénéficient d'une réponse prioritaire." data-en="Contact us directly by email at seymoon.cell@gmail.com. Premium subscribers receive priority responses.">Contactez-nous directement par email à seymoon.cell@gmail.com. Les abonnés premium bénéficient d'une réponse prioritaire.</p></div>
+                    <button class="faq-question"><span data-i18n="faq.q5">Comment contacter le support ?</span> <span class="faq-icon">+</span></button>
+                    <div class="faq-answer"><p data-i18n="faq.a5">Contactez-nous directement par email à seymoon.cell@gmail.com. Les abonnés premium bénéficient d'une réponse prioritaire.</p></div>
                 </div>
             </div>
         </div>
@@ -492,57 +495,19 @@
                 <div class="footer-logo">REBORN ASSISTANT</div>
                 <div class="footer-links">
                     <a href="docs/index.html">Documentation</a>
-                    <a href="docs/privacy.html#confidentialite" data-fr="Confidentialité" data-en="Privacy">Confidentialité</a>
-                    <a href="docs/privacy.html" data-fr="Conditions d'Utilisation" data-en="Terms of Use">Conditions d'Utilisation</a>
+                    <a href="docs/privacy.html#confidentialite" data-i18n="footer.privacy">Confidentialité</a>
+                    <a href="docs/privacy.html" data-i18n="footer.terms">Conditions d'Utilisation</a>
                     <a href="docs/troubleshooting.html">Support</a>
                     <a href="/cdn-cgi/l/email-protection#f88b9d8195979796d69b9d9494b89f95999194d69b9795">Contact</a>
                 </div>
-                <div class="copyright" data-fr="© 2026 Reborn Assistant. Tous droits réservés.<br>Développé par Seymoon" data-en="© 2026 Reborn Assistant. All rights reserved.<br>Developed by Seymoon">© 2026 Reborn Assistant. Tous droits réservés.<br>Développé par Seymoon</div>
+                <div class="copyright" data-i18n="footer.copyright">© 2026 Reborn Assistant. Tous droits réservés.<br>Développé par Seymoon</div>
             </div>
         </div>
     </footer>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-        // ── Language toggle FR / EN ──
-        var currentLang = localStorage.getItem('site-lang') || 'fr';
-
-        var FLAGS = { fr: '🇫🇷', en: '🇬🇧' };
-        function toggleLangMenu() {
-            var el = document.querySelector('.lang-select');
-            if (el) el.classList.toggle('open');
-        }
-        function setLang(lang) {
-            currentLang = lang;
-            localStorage.setItem('site-lang', lang);
-            /* close menu */
-            var sel = document.querySelector('.lang-select');
-            if (sel) sel.classList.remove('open');
-            /* update button */
-            var flagEl = document.querySelector('.lang-flag');
-            var codeEl = document.querySelector('.lang-code');
-            if (flagEl) flagEl.textContent = FLAGS[lang] || '';
-            if (codeEl) codeEl.textContent = lang.toUpperCase();
-            /* active option */
-            document.querySelectorAll('.lang-option').forEach(function(opt) {
-                opt.classList.toggle('active', opt.getAttribute('data-lang') === lang);
-            });
-            /* translate */
-            document.querySelectorAll('[data-fr][data-en]').forEach(function(el) {
-                var val = el.getAttribute('data-' + lang);
-                if (val !== null) {
-                    if (val.indexOf('<') !== -1) { el.innerHTML = val; } else { el.textContent = val; }
-                }
-            });
-        }
-        /* close dropdown on outside click */
-        document.addEventListener('click', function(e) {
-            var sel = document.querySelector('.lang-select');
-            if (sel && !sel.contains(e.target)) sel.classList.remove('open');
-        });
-
-        // Init on load
-        setLang(currentLang);
-
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script type="module" src="langs/index.js"></script>
+    <script>
         // ── Particles ──
         for (let i = 0; i < 25; i++) {
             const p = document.createElement('div');
