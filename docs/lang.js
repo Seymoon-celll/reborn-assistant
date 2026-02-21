@@ -16,8 +16,8 @@
     ].join('');
     document.head.appendChild(style);
 
-    var FLAGS = { fr: '🇫🇷', en: '🇬🇧' };
-    var LABELS = { fr: 'Français', en: 'English' };
+    var FLAGS  = { fr: '🇫🇷', en: '🇬🇧', es: '🇪🇸' };
+    var LABELS = { fr: 'Français', en: 'English', es: 'Español' };
 
     function toggleLangMenu() {
         var el = document.querySelector('.lang-select');
