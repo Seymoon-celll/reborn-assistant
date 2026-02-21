@@ -37,9 +37,9 @@
 <body>
     <div class="container">
         <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:40px;flex-wrap:wrap;gap:12px;">
-            <a href="index.html" class="back-link" data-fr="← Retour aux docs" data-en="← Back to docs">← Retour aux docs</a>
+            <a href="index.html" class="back-link" data-i18n="docsNav.backToDocs">← Retour aux docs</a>
             <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
-                <a href="../index.html" style="font-family:'Inter',sans-serif;font-size:11px;font-weight:500;letter-spacing:2px;text-transform:uppercase;text-decoration:none;color:var(--text-dim);padding:7px 16px;border:1px solid var(--border);border-radius:6px;transition:all 0.3s ease;" onmouseover="this.style.color='var(--gold)';this.style.borderColor='rgba(212,175,55,0.5)'" onmouseout="this.style.color='var(--text-dim)';this.style.borderColor='var(--border)'" data-fr="⌂ Site principal" data-en="⌂ Main site">⌂ Site principal</a>
+                <a href="../index.html" style="font-family:'Inter',sans-serif;font-size:11px;font-weight:500;letter-spacing:2px;text-transform:uppercase;text-decoration:none;color:var(--text-dim);padding:7px 16px;border:1px solid var(--border);border-radius:6px;transition:all 0.3s ease;" onmouseover="this.style.color='var(--gold)';this.style.borderColor='rgba(212,175,55,0.5)'" onmouseout="this.style.color='var(--text-dim)';this.style.borderColor='var(--border)'" data-i18n="docsNav.mainSite">⌂ Site principal</a>
                 <div class="lang-select">
                     <button class="lang-select-btn" onclick="toggleLangMenu()">
                         <span class="lang-flag">🇫🇷</span>
@@ -55,159 +55,159 @@
             </div>
         </div>
 
-        <h1 data-fr="💎 Guide Premium" data-en="💎 Premium Guide">💎 Guide Premium</h1>
-        <p class="subtitle" data-fr="Maîtrisez toutes les fonctionnalités avancées de Reborn Assistant" data-en="Master all the advanced features of Reborn Assistant">Maîtrisez toutes les fonctionnalités avancées de Reborn Assistant</p>
+        <h1 data-i18n="docPremium.h1">💎 Guide Premium</h1>
+        <p class="subtitle" data-i18n="docPremium.subtitle">Maîtrisez toutes les fonctionnalités avancées de Reborn Assistant</p>
 
         <!-- ROTATION -->
         <div class="section">
-            <h2 data-fr="🛡️ Rotation de séquences automatique" data-en="🛡️ Automatic sequence rotation">🛡️ Rotation de séquences automatique <span class="premium-badge">PREMIUM</span></h2>
+            <h2 data-i18n="docPremium.rotH2">🛡️ Rotation de séquences automatique <span class="premium-badge">PREMIUM</span></h2>
 
-            <p data-fr="Le système de rotation maintient automatiquement toutes vos séquences actives en appuyant sur une séquence prédéfinie de touches à intervalles réguliers." data-en="The rotation system automatically keeps all your sequences active by pressing a predefined key sequence at regular intervals.">Le système de rotation maintient automatiquement toutes vos séquences actives en appuyant sur une séquence prédéfinie de touches à intervalles réguliers.</p>
+            <p data-i18n="docPremium.rotDesc">Le système de rotation maintient automatiquement toutes vos séquences actives en appuyant sur une séquence prédéfinie de touches à intervalles réguliers.</p>
 
-            <h3 data-fr="Séquence de touches" data-en="Key sequence">Séquence de touches</h3>
-            <p data-fr="La rotation suit toujours cet ordre fixe :" data-en="The rotation always follows this fixed order:">La rotation suit toujours cet ordre fixe :</p>
+            <h3 data-i18n="docPremium.rotSeqH3">Séquence de touches</h3>
+            <p data-i18n="docPremium.rotSeqText">La rotation suit toujours cet ordre fixe :</p>
             <code>F2 → 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8 → 9 → 0 → F1</code>
 
-            <h3 data-fr="Configuration" data-en="Configuration">Configuration</h3>
+            <h3 data-i18n="docPremium.rotConfigH3">Configuration</h3>
 
             <div class="param">
-                <div class="param-name" data-fr="Intervalle entre cycles" data-en="Interval between cycles">Intervalle entre cycles</div>
-                <div class="param-desc" data-fr="Temps d'attente avant de recommencer toute la séquence. Par défaut : 5 minutes. Réglez selon la durée de vos séquences les plus courtes." data-en="Wait time before restarting the full sequence. Default: 5 minutes. Adjust based on the duration of your shortest sequences.">Temps d'attente avant de recommencer toute la séquence. Par défaut : 5 minutes. Réglez selon la durée de vos séquences les plus courtes.</div>
+                <div class="param-name" data-i18n="docPremium.rotIntName">Intervalle entre cycles</div>
+                <div class="param-desc" data-i18n="docPremium.rotIntDesc">Temps d'attente avant de recommencer toute la séquence. Par défaut : 5 minutes. Réglez selon la durée de vos séquences les plus courtes.</div>
             </div>
 
             <div class="param">
-                <div class="param-name" data-fr="Délai entre touches" data-en="Delay between keys">Délai entre touches</div>
-                <div class="param-desc" data-fr="Temps d'attente entre chaque touche de la séquence. Par défaut : 1 seconde. Ajustez selon la vitesse du service concerné (animations, cooldowns...)." data-en="Wait time between each key in the sequence. Default: 1 second. Adjust based on the speed of the target service (animations, cooldowns...).">Temps d'attente entre chaque touche de la séquence. Par défaut : 1 seconde. Ajustez selon la vitesse du service concerné (animations, cooldowns...).</div>
+                <div class="param-name" data-i18n="docPremium.rotDelName">Délai entre touches</div>
+                <div class="param-desc" data-i18n="docPremium.rotDelDesc">Temps d'attente entre chaque touche de la séquence. Par défaut : 1 seconde. Ajustez selon la vitesse du service concerné (animations, cooldowns...).</div>
             </div>
 
             <div class="example">
-                <div class="example-title" data-fr="💡 Exemple d'utilisation" data-en="💡 Example usage">💡 Exemple d'utilisation</div>
-                <p data-fr="<strong>Scénario :</strong> Vos séquences durent 5 minutes et vous avez 8 séquences sur les touches 1-8." data-en="<strong>Scenario:</strong> Your sequences last 5 minutes and you have 8 sequences on keys 1-8."><strong>Scénario :</strong> Vos séquences durent 5 minutes et vous avez 8 séquences sur les touches 1-8.</p>
-                <p data-fr="<strong>Configuration :</strong>" data-en="<strong>Configuration:</strong>"><strong>Configuration :</strong></p>
+                <div class="example-title" data-i18n="docPremium.rotExTitle">💡 Exemple d'utilisation</div>
+                <p data-i18n="docPremium.rotExScenario"><strong>Scénario :</strong> Vos séquences durent 5 minutes et vous avez 8 séquences sur les touches 1-8.</p>
+                <p data-i18n="docPremium.rotExConfig"><strong>Configuration :</strong></p>
                 <ul>
-                    <li data-fr="Intervalle : 5 minutes" data-en="Interval: 5 minutes">Intervalle : 5 minutes</li>
-                    <li data-fr="Délai : 1 seconde" data-en="Delay: 1 second">Délai : 1 seconde</li>
-                    <li data-fr="Le bot appuiera sur F2, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0, F1 toutes les 5 minutes" data-en="The bot will press F2, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0, F1 every 5 minutes">Le bot appuiera sur F2, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0, F1 toutes les 5 minutes</li>
-                    <li data-fr="Total de 13 touches avec 1 seconde entre chaque = ~13 secondes par cycle" data-en="13 keys total with 1 second between each = ~13 seconds per cycle">Total de 13 touches avec 1 seconde entre chaque = ~13 secondes par cycle</li>
+                    <li data-i18n="docPremium.rotExLi1">Intervalle : 5 minutes</li>
+                    <li data-i18n="docPremium.rotExLi2">Délai : 1 seconde</li>
+                    <li data-i18n="docPremium.rotExLi3">Le bot appuiera sur F2, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0, F1 toutes les 5 minutes</li>
+                    <li data-i18n="docPremium.rotExLi4">Total de 13 touches avec 1 seconde entre chaque = ~13 secondes par cycle</li>
                 </ul>
             </div>
         </div>
 
         <!-- MACROS PERSONNALISABLES -->
         <div class="section">
-            <h2 data-fr="⚙️ Macros Personnalisables" data-en="⚙️ Customizable Macros">⚙️ Macros Personnalisables <span class="premium-badge">PREMIUM</span></h2>
+            <h2 data-i18n="docPremium.macH2">⚙️ Macros Personnalisables <span class="premium-badge">PREMIUM</span></h2>
 
-            <p data-fr="Créez jusqu'à 3 macros indépendantes avec vos propres séquences de touches. Parfait pour l'automatisation des tâches répétitives, combos récurrents ou rotations de compétences." data-en="Create up to 3 independent macros with your own key sequences. Perfect for automating repetitive tasks, recurring combos or skill rotations.">Créez jusqu'à 3 macros indépendantes avec vos propres séquences de touches. Parfait pour l'automatisation des tâches répétitives, combos récurrents ou rotations de compétences.</p>
+            <p data-i18n="docPremium.macDesc">Créez jusqu'à 3 macros indépendantes avec vos propres séquences de touches. Parfait pour l'automatisation des tâches répétitives, combos récurrents ou rotations de compétences.</p>
 
-            <h3 data-fr="Fonctionnement" data-en="How it works">Fonctionnement</h3>
-            <p data-fr="Chaque macro exécute une séquence de touches à intervalle régulier, indépendamment des autres systèmes." data-en="Each macro executes a key sequence at a regular interval, independently of other systems.">Chaque macro exécute une séquence de touches à intervalle régulier, indépendamment des autres systèmes.</p>
+            <h3 data-i18n="docPremium.macHowH3">Fonctionnement</h3>
+            <p data-i18n="docPremium.macHowText">Chaque macro exécute une séquence de touches à intervalle régulier, indépendamment des autres systèmes.</p>
 
-            <h3 data-fr="Configuration" data-en="Configuration">Configuration</h3>
+            <h3 data-i18n="docPremium.macConfigH3">Configuration</h3>
 
             <div class="param">
-                <div class="param-name" data-fr="Séquence de touches" data-en="Key sequence">Séquence de touches</div>
-                <div class="param-desc" data-fr="Définissez les touches à appuyer dans l'ordre, séparées par des virgules. Exemple : 1,2,3,4 ou q,w,e,r,f" data-en="Define the keys to press in order, separated by commas. Example: 1,2,3,4 or q,w,e,r,f">Définissez les touches à appuyer dans l'ordre, séparées par des virgules. Exemple : <code>1,2,3,4</code> ou <code>q,w,e,r,f</code></div>
+                <div class="param-name" data-i18n="docPremium.macSeqName">Séquence de touches</div>
+                <div class="param-desc" data-i18n="docPremium.macSeqDesc">Définissez les touches à appuyer dans l'ordre, séparées par des virgules. Exemple : 1,2,3,4 ou q,w,e,r,f</div>
             </div>
 
             <div class="param">
-                <div class="param-name" data-fr="Intervalle de répétition" data-en="Repeat interval">Intervalle de répétition</div>
-                <div class="param-desc" data-fr="Temps d'attente avant de recommencer la séquence. Configurez selon vos besoins (secondes ou minutes)." data-en="Wait time before repeating the sequence. Configure based on your needs (seconds or minutes).">Temps d'attente avant de recommencer la séquence. Configurez selon vos besoins (secondes ou minutes).</div>
+                <div class="param-name" data-i18n="docPremium.macRepName">Intervalle de répétition</div>
+                <div class="param-desc" data-i18n="docPremium.macRepDesc">Temps d'attente avant de recommencer la séquence. Configurez selon vos besoins (secondes ou minutes).</div>
             </div>
 
             <div class="param">
-                <div class="param-name" data-fr="Délai entre touches" data-en="Delay between keys">Délai entre touches</div>
-                <div class="param-desc" data-fr="Temps d'attente entre chaque touche de la séquence (généralement 0.5 à 2 secondes)." data-en="Wait time between each key in the sequence (usually 0.5 to 2 seconds).">Temps d'attente entre chaque touche de la séquence (généralement 0.5 à 2 secondes).</div>
+                <div class="param-name" data-i18n="docPremium.macDelName">Délai entre touches</div>
+                <div class="param-desc" data-i18n="docPremium.macDelDesc">Temps d'attente entre chaque touche de la séquence (généralement 0.5 à 2 secondes).</div>
             </div>
 
             <div class="example">
-                <div class="example-title" data-fr="💡 Exemples d'utilisation" data-en="💡 Usage examples">💡 Exemples d'utilisation</div>
+                <div class="example-title" data-i18n="docPremium.macExTitle">💡 Exemples d'utilisation</div>
 
-                <p data-fr="<strong>Macro 1 – Automatisation répétitive :</strong>" data-en="<strong>Macro 1 – Repetitive automation:</strong>"><strong>Macro 1 – Automatisation répétitive :</strong></p>
+                <p data-i18n="docPremium.mac1Title"><strong>Macro 1 – Automatisation répétitive :</strong></p>
                 <ul>
-                    <li data-fr="Séquence : 1,2,3,space" data-en="Sequence: 1,2,3,space">Séquence : <code>1,2,3,space</code></li>
-                    <li data-fr="Intervalle : 10 secondes" data-en="Interval: 10 seconds">Intervalle : 10 secondes</li>
-                    <li data-fr="Utilisation : Rotation d'attaques de base en boucle" data-en="Use: Looping basic attack rotation">Utilisation : Rotation d'attaques de base en boucle</li>
+                    <li data-i18n="docPremium.mac1Li1">Séquence : 1,2,3,space</li>
+                    <li data-i18n="docPremium.mac1Li2">Intervalle : 10 secondes</li>
+                    <li data-i18n="docPremium.mac1Li3">Utilisation : Rotation d'attaques de base en boucle</li>
                 </ul>
 
-                <p data-fr="<strong>Macro 2 – Combo de compétences :</strong>" data-en="<strong>Macro 2 – Skill combo:</strong>"><strong>Macro 2 – Combo de compétences :</strong></p>
+                <p data-i18n="docPremium.mac2Title"><strong>Macro 2 – Combo de compétences :</strong></p>
                 <ul>
-                    <li data-fr="Séquence : q,w,e,r" data-en="Sequence: q,w,e,r">Séquence : <code>q,w,e,r</code></li>
-                    <li data-fr="Intervalle : 30 secondes" data-en="Interval: 30 seconds">Intervalle : 30 secondes</li>
-                    <li data-fr="Utilisation : Rotation DPS optimale" data-en="Use: Optimal DPS rotation">Utilisation : Rotation DPS optimale</li>
+                    <li data-i18n="docPremium.mac2Li1">Séquence : q,w,e,r</li>
+                    <li data-i18n="docPremium.mac2Li2">Intervalle : 30 secondes</li>
+                    <li data-i18n="docPremium.mac2Li3">Utilisation : Rotation DPS optimale</li>
                 </ul>
 
-                <p data-fr="<strong>Macro 3 – Support automatique :</strong>" data-en="<strong>Macro 3 – Automatic support:</strong>"><strong>Macro 3 – Support automatique :</strong></p>
+                <p data-i18n="docPremium.mac3Title"><strong>Macro 3 – Support automatique :</strong></p>
                 <ul>
-                    <li data-fr="Séquence : f,g,h" data-en="Sequence: f,g,h">Séquence : <code>f,g,h</code></li>
-                    <li data-fr="Intervalle : 15 secondes" data-en="Interval: 15 seconds">Intervalle : 15 secondes</li>
-                    <li data-fr="Utilisation : Séquences de groupe ou actions périodiques" data-en="Use: Group sequences or periodic actions">Utilisation : Séquences de groupe ou actions périodiques</li>
+                    <li data-i18n="docPremium.mac3Li1">Séquence : f,g,h</li>
+                    <li data-i18n="docPremium.mac3Li2">Intervalle : 15 secondes</li>
+                    <li data-i18n="docPremium.mac3Li3">Utilisation : Séquences de groupe ou actions périodiques</li>
                 </ul>
             </div>
         </div>
 
         <!-- MACRO PERIODIQUE -->
         <div class="section">
-            <h2 data-fr="🐉 Macro périodique" data-en="🐉 Periodic macro">🐉 Macro périodique <span class="premium-badge">PREMIUM</span></h2>
+            <h2 data-i18n="docPremium.perH2">🐉 Macro périodique <span class="premium-badge">PREMIUM</span></h2>
 
-            <p data-fr="Ce système exécute automatiquement une action périodique toutes les 15 secondes. Idéal pour les tâches répétitives qui doivent être relancées régulièrement." data-en="This system automatically executes a periodic action every 15 seconds. Ideal for repetitive tasks that need to be triggered regularly.">Ce système exécute automatiquement une action périodique toutes les 15 secondes. Idéal pour les tâches répétitives qui doivent être relancées régulièrement.</p>
+            <p data-i18n="docPremium.perDesc">Ce système exécute automatiquement une action périodique toutes les 15 secondes. Idéal pour les tâches répétitives qui doivent être relancées régulièrement.</p>
 
-            <h3 data-fr="Fonctionnement" data-en="How it works">Fonctionnement</h3>
-            <p data-fr="Le système exécute automatiquement cette séquence toutes les 15 secondes :" data-en="The system automatically executes this sequence every 15 seconds:">Le système exécute automatiquement cette séquence toutes les 15 secondes :</p>
+            <h3 data-i18n="docPremium.perHowH3">Fonctionnement</h3>
+            <p data-i18n="docPremium.perHowText">Le système exécute automatiquement cette séquence toutes les 15 secondes :</p>
             <ol>
-                <li data-fr="Appelle la macro périodique (touche configurable, par défaut §)" data-en="Calls the periodic macro (configurable key, default §)">Appelle la macro périodique (touche configurable, par défaut <code>§</code>)</li>
-                <li data-fr="Attend 500ms" data-en="Waits 500ms">Attend 500ms</li>
-                <li data-fr="Stocke la macro périodique automatiquement" data-en="Automatically stores the periodic macro">Stocke la macro périodique automatiquement</li>
+                <li data-i18n="docPremium.perLi1">Appelle la macro périodique (touche configurable, par défaut §)</li>
+                <li data-i18n="docPremium.perLi2">Attend 500ms</li>
+                <li data-i18n="docPremium.perLi3">Stocke la macro périodique automatiquement</li>
             </ol>
 
-            <h3 data-fr="Configuration" data-en="Configuration">Configuration</h3>
+            <h3 data-i18n="docPremium.perConfigH3">Configuration</h3>
 
             <div class="param">
-                <div class="param-name" data-fr="Touche d'appel" data-en="Call key">Touche d'appel</div>
-                <div class="param-desc" data-fr="La touche qui déclenche votre macro périodique. Par défaut : §. Modifiez selon votre configuration." data-en="The key that triggers your periodic macro. Default: §. Change it to match your configuration.">La touche qui déclenche votre macro périodique. Par défaut : <code>§</code>. Modifiez selon votre configuration.</div>
+                <div class="param-name" data-i18n="docPremium.perCallName">Touche d'appel</div>
+                <div class="param-desc" data-i18n="docPremium.perCallDesc">La touche qui déclenche votre macro périodique. Par défaut : §. Modifiez selon votre configuration.</div>
             </div>
 
             <div class="param">
-                <div class="param-name" data-fr="Intervalle (fixe)" data-en="Interval (fixed)">Intervalle (fixe)</div>
-                <div class="param-desc" data-fr="Le système fonctionne toujours avec un intervalle fixe de 15 secondes. Non configurable." data-en="The system always uses a fixed interval of 15 seconds. Not configurable.">Le système fonctionne toujours avec un intervalle fixe de <strong>15 secondes</strong>. Non configurable.</div>
+                <div class="param-name" data-i18n="docPremium.perIntName">Intervalle (fixe)</div>
+                <div class="param-desc" data-i18n="docPremium.perIntDesc">Le système fonctionne toujours avec un intervalle fixe de 15 secondes. Non configurable.</div>
             </div>
 
             <div class="example">
-                <div class="example-title" data-fr="💡 Cas d'usage" data-en="💡 Use case">💡 Cas d'usage</div>
-                <p data-fr="Dans certains services, la macro périodique doit être appelée régulièrement pour collecter des objets, fournir des séquences temporaires ou gagner de l'expérience. Ce système automatise complètement ce processus." data-en="In some services, the periodic macro needs to be called regularly to collect items, provide temporary sequences or gain experience. This system fully automates this process.">Dans certains services, la macro périodique doit être appelée régulièrement pour collecter des objets, fournir des séquences temporaires ou gagner de l'expérience. Ce système automatise complètement ce processus.</p>
+                <div class="example-title" data-i18n="docPremium.perExTitle">💡 Cas d'usage</div>
+                <p data-i18n="docPremium.perExText">Dans certains services, la macro périodique doit être appelée régulièrement pour collecter des objets, fournir des séquences temporaires ou gagner de l'expérience. Ce système automatise complètement ce processus.</p>
             </div>
 
-            <h3 data-fr="⚠️ Important" data-en="⚠️ Important">⚠️ Important</h3>
+            <h3 data-i18n="docPremium.perImpH3">⚠️ Important</h3>
             <ul>
-                <li data-fr="Vérifiez que la touche configurée correspond bien à votre touche d'invocation" data-en="Make sure the configured key matches your invocation key">Vérifiez que la touche configurée correspond bien à votre touche d'invocation</li>
-                <li data-fr="La macro périodique est automatiquement stockée après chaque appel" data-en="The periodic macro is automatically stored after each call">La macro périodique est automatiquement stockée après chaque appel</li>
-                <li data-fr="Fonctionne en parallèle des autres systèmes (séquences, macros, actions)" data-en="Works in parallel with other systems (sequences, macros, actions)">Fonctionne en parallèle des autres systèmes (séquences, macros, actions)</li>
+                <li data-i18n="docPremium.perImpLi1">Vérifiez que la touche configurée correspond bien à votre touche d'invocation</li>
+                <li data-i18n="docPremium.perImpLi2">La macro périodique est automatiquement stockée après chaque appel</li>
+                <li data-i18n="docPremium.perImpLi3">Fonctionne en parallèle des autres systèmes (séquences, macros, actions)</li>
             </ul>
         </div>
 
-        <h2 data-fr="Conseils d'optimisation" data-en="Optimization tips">Conseils d'optimisation</h2>
+        <h2 data-i18n="docPremium.optH2">Conseils d'optimisation</h2>
 
-        <h3 data-fr="🎯 Combinaison des systèmes" data-en="🎯 Combining systems">🎯 Combinaison des systèmes</h3>
-        <p data-fr="Toutes les fonctionnalités Premium fonctionnent simultanément. Vous pouvez :" data-en="All Premium features work simultaneously. You can:">Toutes les fonctionnalités Premium fonctionnent simultanément. Vous pouvez :</p>
+        <h3 data-i18n="docPremium.combH3">🎯 Combinaison des systèmes</h3>
+        <p data-i18n="docPremium.combDesc">Toutes les fonctionnalités Premium fonctionnent simultanément. Vous pouvez :</p>
         <ul>
-            <li data-fr="Activer les séquences automatiques + 3 macros + macro périodique en même temps" data-en="Enable automatic sequences + 3 macros + periodic macro at the same time">Activer les séquences automatiques + 3 macros + macro périodique en même temps</li>
-            <li data-fr="Les actions déclencheur 1 &amp; 2 fonctionnent toujours en parallèle" data-en="Trigger actions 1 &amp; 2 always work in parallel">Les actions déclencheur 1 &amp; 2 fonctionnent toujours en parallèle</li>
-            <li data-fr="Chaque système a son propre timer indépendant" data-en="Each system has its own independent timer">Chaque système a son propre timer indépendant</li>
+            <li data-i18n="docPremium.combLi1">Activer les séquences automatiques + 3 macros + macro périodique en même temps</li>
+            <li data-i18n="docPremium.combLi2">Les actions déclencheur 1 &amp; 2 fonctionnent toujours en parallèle</li>
+            <li data-i18n="docPremium.combLi3">Chaque système a son propre timer indépendant</li>
         </ul>
 
-        <h3 data-fr="⚡ Performance" data-en="⚡ Performance">⚡ Performance</h3>
+        <h3 data-i18n="docPremium.perfH3">⚡ Performance</h3>
         <ul>
-            <li data-fr="Plus vous activez de systèmes, plus l'extension consomme de ressources" data-en="The more systems you enable, the more resources the extension uses">Plus vous activez de systèmes, plus l'extension consomme de ressources</li>
-            <li data-fr="Ajustez les intervalles pour éviter des actions trop fréquentes" data-en="Adjust intervals to avoid too-frequent actions">Ajustez les intervalles pour éviter des actions trop fréquentes</li>
-            <li data-fr="Surveillez le log d'activité pour vérifier le bon fonctionnement" data-en="Monitor the activity log to verify everything is working correctly">Surveillez le log d'activité pour vérifier le bon fonctionnement</li>
+            <li data-i18n="docPremium.perfLi1">Plus vous activez de systèmes, plus l'extension consomme de ressources</li>
+            <li data-i18n="docPremium.perfLi2">Ajustez les intervalles pour éviter des actions trop fréquentes</li>
+            <li data-i18n="docPremium.perfLi3">Surveillez le log d'activité pour vérifier le bon fonctionnement</li>
         </ul>
 
-        <h3 data-fr="🔑 Sécurité" data-en="🔑 Security">🔑 Sécurité</h3>
+        <h3 data-i18n="docPremium.secH3">🔑 Sécurité</h3>
         <ul>
-            <li data-fr="Votre licence Premium est vérifiée en temps réel" data-en="Your Premium license is verified in real time">Votre licence Premium est vérifiée en temps réel</li>
-            <li data-fr="Si la connexion est perdue, les fonctionnalités Premium se désactivent" data-en="If the connection is lost, Premium features are disabled">Si la connexion est perdue, les fonctionnalités Premium se désactivent</li>
-            <li data-fr="Reconnectez-vous pour réactiver toutes les fonctionnalités" data-en="Log back in to re-enable all features">Reconnectez-vous pour réactiver toutes les fonctionnalités</li>
+            <li data-i18n="docPremium.secLi1">Votre licence Premium est vérifiée en temps réel</li>
+            <li data-i18n="docPremium.secLi2">Si la connexion est perdue, les fonctionnalités Premium se désactivent</li>
+            <li data-i18n="docPremium.secLi3">Reconnectez-vous pour réactiver toutes les fonctionnalités</li>
         </ul>
     </div>
-    <script src="lang.js"></script>
+    <script type="module" src="../langs/index.js"></script>
 </body>
 </html>
