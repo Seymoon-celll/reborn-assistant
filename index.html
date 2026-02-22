@@ -54,10 +54,12 @@
 
         .btn { padding: 16px 40px; font-family: 'Cinzel', serif; font-size: 13px; font-weight: 600; text-decoration: none; border-radius: 6px; border: 1px solid; cursor: pointer; position: relative; overflow: hidden; transition: all 0.35s ease; text-transform: uppercase; letter-spacing: 2px; display: inline-block; }
         .btn::before { content: ''; position: absolute; inset: 0; opacity: 0; transition: opacity 0.35s ease; }
-        .btn-primary { background: linear-gradient(135deg, var(--green-dark), var(--green)); border-color: var(--green); color: #fff; box-shadow: 0 4px 24px var(--green-glow); }
-        .btn-primary::before { background: rgba(255,255,255,0.1); }
-        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 10px 36px var(--green-glow); }
+        .btn-primary { background: linear-gradient(135deg, var(--green-dark) 0%, var(--green) 60%, #5dd87a 100%); border-color: var(--green); color: #fff; box-shadow: 0 4px 24px var(--green-glow); }
+        .btn-primary::before { background: rgba(255,255,255,0.12); }
+        .btn-primary::after { content: ''; position: absolute; top: 0; left: -100%; width: 55%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.18), transparent); transition: left 0.55s ease; }
+        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 12px 40px var(--green-glow); }
         .btn-primary:hover::before { opacity: 1; }
+        .btn-primary:hover::after { left: 160%; }
         .btn-secondary { background: transparent; border-color: rgba(212,175,55,0.5); color: var(--gold); }
         .btn-secondary::before { background: rgba(212,175,55,0.07); }
         .btn-secondary:hover { border-color: var(--gold); transform: translateY(-3px); box-shadow: 0 8px 30px rgba(212,175,55,0.15); }
@@ -114,8 +116,8 @@
         .price-features li::before { content: ''; width: 6px; height: 6px; background: var(--gold); border-radius: 50%; flex-shrink: 0; opacity: 0.7; }
         .btn-full { width: 100%; text-align: center; }
         .price-guarantee { text-align: center; margin-top: 14px; font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 400; color: var(--text-dim); opacity: 0.6; display: flex; align-items: center; justify-content: center; gap: 5px; }
-        .btn-download { display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; margin-top: 10px; padding: 12px; border-radius: 6px; font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 500; color: var(--text-dim); text-decoration: none; border: 1px dashed rgba(212,175,55,0.2); background: transparent; letter-spacing: 1px; text-transform: uppercase; transition: all 0.3s ease; }
-        .btn-download:hover { color: var(--gold); border-color: rgba(212,175,55,0.5); background: rgba(212,175,55,0.05); }
+        .btn-download { display: flex; align-items: center; justify-content: center; gap: 9px; width: 100%; margin-top: 12px; padding: 11px 16px; border-radius: 8px; font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 600; color: rgba(255,255,255,0.4); text-decoration: none; border: 1px solid rgba(255,255,255,0.07); background: rgba(255,255,255,0.02); letter-spacing: 0.4px; transition: all 0.25s ease; }
+        .btn-download:hover { color: rgba(255,255,255,0.8); border-color: rgba(66,133,244,0.35); background: rgba(66,133,244,0.07); }
 
         .faq { padding: 120px 0; }
         .faq-list { max-width: 720px; margin: 0 auto; }
@@ -225,6 +227,7 @@
                     <button class="lang-option" data-lang="fr" onclick="setLang('fr')">🇫🇷 Français</button>
                     <button class="lang-option" data-lang="en" onclick="setLang('en')">🇬🇧 English</button>
                     <button class="lang-option" data-lang="es" onclick="setLang('es')">🇪🇸 Español</button>
+                    <button class="lang-option" data-lang="de" onclick="setLang('de')">🇩🇪 Deutsch</button>
                 </div>
             </div>
             <a href="docs/index.html" style="font-family:'Cinzel',serif;font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;color:var(--gold);padding:6px 12px;border:1px solid rgba(212,175,55,0.4);border-radius:6px;transition:all 0.3s ease;background:rgba(212,175,55,0.05);" onmouseover="this.style.background='rgba(212,175,55,0.12)';this.style.borderColor='var(--gold)'" onmouseout="this.style.background='rgba(212,175,55,0.05)';this.style.borderColor='rgba(212,175,55,0.4)'">📚 Docs</a>
@@ -388,7 +391,7 @@
                         </ul>
                         <a href="https://buy.stripe.com/bJe3cufUWbhUcuCeTVe3e02" target="_blank" class="btn btn-primary btn-full" data-i18n="pricing.aventurier.btn">Essayer Gratuitement</a>
                         <div class="price-guarantee" data-i18n="pricing.aventurier.guarantee">🎁 7 jours gratuits · Sans carte bancaire</div>
-                        <a href="https://chromewebstore.google.com/detail/reborn-assistant-premium/ammakeedbimichmpipeaacgajcblnnme" target="_blank" class="btn-download" data-i18n="pricing.aventurier.download">⬇ Télécharger l'extension</a>
+                        <a href="https://chromewebstore.google.com/detail/reborn-assistant-premium/ammakeedbimichmpipeaacgajcblnnme" target="_blank" class="btn-download"><svg width="13" height="13" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.31-8.16 2.31-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>Installer · Chrome Web Store</a>
                     </div>
 
                     <div class="price-card featured">
@@ -405,7 +408,7 @@
                         </ul>
                         <a href="https://buy.stripe.com/5kQ9AS38a85IbqyeTVe3e01" target="_blank" class="btn btn-primary btn-full" data-i18n="pricing.champion.btn">Essayer Gratuitement</a>
                         <div class="price-guarantee" data-i18n="pricing.champion.guarantee">🎁 7 jours gratuits · Sans carte bancaire</div>
-                        <a href="https://chromewebstore.google.com/detail/reborn-assistant-premium/ammakeedbimichmpipeaacgajcblnnme" target="_blank" class="btn-download" data-i18n="pricing.champion.download">⬇ Télécharger l'extension</a>
+                        <a href="https://chromewebstore.google.com/detail/reborn-assistant-premium/ammakeedbimichmpipeaacgajcblnnme" target="_blank" class="btn-download"><svg width="13" height="13" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.31-8.16 2.31-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>Installer · Chrome Web Store</a>
                     </div>
 
                     <div class="price-card exclusive">
@@ -423,7 +426,7 @@
                         </ul>
                         <a href="https://buy.stripe.com/6oU14m2464TwcuC3bde3e00" target="_blank" class="btn btn-secondary btn-full" data-i18n="pricing.legende.btn">Acheter</a>
                         <div class="price-guarantee" data-i18n="pricing.legende.guarantee">🔒 Paiement unique · Accès garanti à vie</div>
-                        <a href="https://chromewebstore.google.com/detail/reborn-assistant-premium/ammakeedbimichmpipeaacgajcblnnme" target="_blank" class="btn-download" data-i18n="pricing.legende.download">⬇ Télécharger l'extension</a>
+                        <a href="https://chromewebstore.google.com/detail/reborn-assistant-premium/ammakeedbimichmpipeaacgajcblnnme" target="_blank" class="btn-download"><svg width="13" height="13" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.31-8.16 2.31-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>Installer · Chrome Web Store</a>
                     </div>
                 </div>
             </div>
