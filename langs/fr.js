@@ -73,7 +73,7 @@ export default {
   },
   store: {
     status: "Extension officielle",
-    title:  "🟢 Disponible sur le Chrome Web Store",
+    title:  "Disponible sur le Chrome Web Store",
   },
   faq: {
     titleBefore: "Questions ",
