@@ -72,8 +72,8 @@ export default {
     badge1: "Paiement sécurisé SSL", badge2: "Accès instantané", badge3: "Données 100% privées", badge4: "Support réactif",
   },
   store: {
-    status: "Extension officielle",
-    title:  "🟢 Disponible sur le Chrome Web Store",
+    status: "   Extension officielle",
+    title:  "Disponible sur le Chrome Web Store",
   },
   faq: {
     titleBefore: "Questions ",
