@@ -79,7 +79,7 @@ async function setLang(lang) {
   if (!cachedStrings[lang]) {
     try {
       const base = new URL(`./${lang}.js`, import.meta.url).href;
-      const url = `${base}?v=1.3`;
+      const url = `${base}?v=${Date.now()}`;
       const mod = await import(url);
       cachedStrings[lang] = mod.default;
     } catch (e) {
