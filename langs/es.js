@@ -42,7 +42,7 @@ export default {
     voyageur: {
       rank: "Rango I · Viajero", plan: "Gratuito", period: "para siempre",
       feat1: "Macro de curación", feat2: "6 temas visuales", feat3: "14 idiomas disponibles", feat4: "Interfaz flotante",
-      btn: "Comenzar", guarantee: "🔒 Gratis para siempre",
+      btn: "Comenzar", download: "Añadir a Chrome", guarantee: "🔒 Gratis para siempre",
     },
     aventurier: {
       rank: "Rango II · Aventurero", plan: "Mensual", period: "por mes",
