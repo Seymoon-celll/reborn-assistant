@@ -48,21 +48,21 @@ export default {
       rank: "Rango II · Aventurero", plan: "Mensual", period: "por mes",
       feat1: "Todas las funciones Premium", feat2: "Soporte prioritario", feat3: "Actualizaciones gratuitas",
       btn: "Probar Gratis", guarantee: "🎁 7 días gratis · Sin tarjeta bancaria",
-      download: "⬇ Descargar la extensión",
+      download: "Añadir a Chrome",
     },
     champion: {
       badge: "⭐ Popular -17%",
       rank: "Rango III · Campeón", plan: "Anual", period: "por año · 2,50€/mes",
       feat1: "Todas las funciones Premium", feat2: "Soporte prioritario", feat3: "Actualizaciones gratuitas",
       btn: "Probar Gratis", guarantee: "🎁 7 días gratis · Sin tarjeta bancaria",
-      download: "⬇ Descargar la extensión",
+      download: "Añadir a Chrome",
     },
     legende: {
       badge: "⚡ Oferta Limitada",
       rank: "Rango IV · Leyenda", plan: "De por Vida", period: "pago único · nunca más",
       feat1: "Acceso de por vida", feat2: "Todas las actualizaciones futuras", feat3: "Soporte premium dedicado", feat4: "Mejor relación calidad-precio",
       btn: "Comprar", guarantee: "🔒 Pago único · Acceso garantizado de por vida",
-      download: "⬇ Descargar la extensión",
+      download: "Añadir a Chrome",
     },
   },
   stats: {
@@ -74,6 +74,8 @@ export default {
   store: {
     status: "Extensión oficial",
     title:  "Disponible en el Chrome Web Store",
+    install: "Instalar",
+    available: "Disponible gratis · Extensión oficial verificada por Google",
   },
   faq: {
     titleBefore: "Preguntas ",
