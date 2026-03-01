@@ -74,7 +74,7 @@
         .section-subtitle { font-family: 'Inter', sans-serif; font-size: 16px; font-weight: 300; color: var(--text-dim); max-width: 560px; margin: 0 auto; line-height: 1.8; }
 
         .features { padding: 120px 0; }
-        .features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+        .features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; -webkit-transform: translateZ(0); transform: translateZ(0); }
         .feature-card { background: var(--dark-card); padding: 48px 40px; position: relative; transition: background 0.3s ease; }
         .feature-card::after { content: ''; position: absolute; bottom: 0; left: 40px; right: 40px; height: 1px; background: linear-gradient(90deg, transparent, var(--gold), transparent); opacity: 0; transition: opacity 0.3s ease; }
         .feature-card:hover { background: var(--dark-header); }
