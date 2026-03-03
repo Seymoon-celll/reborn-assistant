@@ -205,6 +205,31 @@
         .sec-card-icon { font-size: 32px; margin-bottom: 12px; }
         .sec-card-title { font-family: 'Cinzel', serif; font-size: 14px; font-weight: 600; color: var(--gold); margin-bottom: 8px; }
         .sec-card-text { font-family: 'Inter', sans-serif; font-size: 13px; color: var(--text-dim); line-height: 1.6; }
+
+        /* Bouton gérer abonnement */
+        .btn-manage {
+            display: inline-flex; align-items: center; gap: 7px;
+            font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 600;
+            letter-spacing: 0.8px; text-transform: uppercase; text-decoration: none;
+            color: #ffaa33;
+            padding: 7px 16px; border-radius: 8px;
+            background: rgba(0,0,0,0.5);
+            border: 1px solid rgba(255,170,51,0.45);
+            box-shadow: inset 0 1px 0 rgba(255,170,51,0.08);
+            transition: background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+            white-space: nowrap;
+        }
+        .btn-manage svg { flex-shrink: 0; opacity: 0.85; transition: opacity 0.25s; }
+        .btn-manage:hover {
+            background: rgba(255,170,51,0.1);
+            border-color: #ffaa33;
+            box-shadow: 0 0 14px rgba(255,170,51,0.18), inset 0 1px 0 rgba(255,170,51,0.15);
+        }
+        .btn-manage:hover svg { opacity: 1; }
+        @media (max-width: 640px) {
+            .btn-manage-label { display: none; }
+            .btn-manage { padding: 7px 11px; }
+        }
     </style>
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="apple-touch-icon" href="favicon.svg">
@@ -231,6 +256,10 @@
                 </div>
             </div>
             <a href="docs/index.html" style="font-family:'Cinzel',serif;font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;color:var(--gold);padding:6px 12px;border:1px solid rgba(212,175,55,0.4);border-radius:6px;transition:all 0.3s ease;background:rgba(212,175,55,0.05);" onmouseover="this.style.background='rgba(212,175,55,0.12)';this.style.borderColor='var(--gold)'" onmouseout="this.style.background='rgba(212,175,55,0.05)';this.style.borderColor='rgba(212,175,55,0.4)'">📚 Docs</a>
+            <a href="https://billing.stripe.com/p/login/5kQ9AS38a85IbqyeTVe3e01" target="_blank" rel="noopener" class="btn-manage">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#ffaa33" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+                <span class="btn-manage-label">Gérer mon abonnement</span>
+            </a>
             <div class="status-badge">Premium Edition</div>
         </div>
     </header>
