@@ -205,6 +205,16 @@
         .sec-card-icon { font-size: 32px; margin-bottom: 12px; }
         .sec-card-title { font-family: 'Cinzel', serif; font-size: 14px; font-weight: 600; color: var(--gold); margin-bottom: 8px; }
         .sec-card-text { font-family: 'Inter', sans-serif; font-size: 13px; color: var(--text-dim); line-height: 1.6; }
+
+        /* Bouton gérer abonnement */
+        .btn-manage {
+            font-family: 'Cinzel', serif; font-size: 10px; font-weight: 600;
+            letter-spacing: 1.5px; text-transform: uppercase; text-decoration: none;
+            color: var(--gold); padding: 6px 12px; border-radius: 6px;
+            background: rgba(212,175,55,0.05); border: 1px solid rgba(212,175,55,0.4);
+            transition: all 0.3s ease; white-space: nowrap;
+        }
+        .btn-manage:hover { background: rgba(212,175,55,0.12); border-color: var(--gold); }
     </style>
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="apple-touch-icon" href="favicon.svg">
@@ -231,7 +241,8 @@
                 </div>
             </div>
             <a href="docs/index.html" style="font-family:'Cinzel',serif;font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;color:var(--gold);padding:6px 12px;border:1px solid rgba(212,175,55,0.4);border-radius:6px;transition:all 0.3s ease;background:rgba(212,175,55,0.05);" onmouseover="this.style.background='rgba(212,175,55,0.12)';this.style.borderColor='var(--gold)'" onmouseout="this.style.background='rgba(212,175,55,0.05)';this.style.borderColor='rgba(212,175,55,0.4)'">📚 Docs</a>
-            <a href="https://billing.stripe.com/p/login/5kQ9AS38a85IbqyeTVe3e01" target="_blank" style="background:rgba(30,30,30,0.85);color:#ffaa33;padding:8px 18px;border-radius:6px;text-decoration:none;font-weight:600;font-size:14px;border:1px solid rgba(255,170,51,0.35);margin-left:18px;transition:all 0.25s ease;letter-spacing:0.4px;" onmouseover="this.style.background='rgba(255,170,51,0.18)';this.style.borderColor='#ffaa33';this.style.color='#ffd280';" onmouseout="this.style.background='rgba(30,30,30,0.85)';this.style.borderColor='rgba(255,170,51,0.35)';this.style.color='#ffaa33';">Gérer mon abonnement</a>            <div class="status-badge">Premium Edition</div>
+            <a href="https://billing.stripe.com/p/login/5kQ9AS38a85IbqyeTVe3e01" target="_blank" rel="noopener" class="btn-manage">Gérer mon abonnement</a>
+            <div class="status-badge">Premium Edition</div>
         </div>
     </header>
 
