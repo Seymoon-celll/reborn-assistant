@@ -519,7 +519,7 @@ export default {
     v12Li2:  "Refonte visuelle du site web",
     v12Li3:  "Fusion des pages légales en une seule page unifiée",
     v12Li4:  "Traduction complète FR/EN du site",
-    v11H3:   "Version 1.1 (Février 2026)",
+    v11H3:   "Version 1.1.1 (Février 2026)",
     v11Li1:  "Ajout de la macro périodique automatique (15s + auto-stockage)",
     v11Li2:  "Raccourcis clavier CTRL+A / CTRL+O",
     v11Li3:  "Support de 14 langues (ajout Filipino + Turc)",

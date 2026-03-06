@@ -519,7 +519,7 @@ export default {
     v12Li2:  "Visuelles Website-Redesign",
     v12Li3:  "Zusammenführung der rechtlichen Seiten zu einer einheitlichen Seite",
     v12Li4:  "Vollständige FR/EN-Übersetzung der Website",
-    v11H3:   "Version 1.1 (Februar 2026)",
+    v11H3:   "Version 1.1.1 (Februar 2026)",
     v11Li1:  "Automatisches periodisches Makro hinzugefügt (15s + Auto-Speicherung)",
     v11Li2:  "Tastenkombinationen STRG+A / STRG+O",
     v11Li3:  "Unterstützung für 14 Sprachen (Filipino + Türkisch hinzugefügt)",
