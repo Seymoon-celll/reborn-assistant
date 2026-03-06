@@ -155,12 +155,27 @@
         <h1 id="confidentialite" style="font-size:36px;margin-bottom:12px;" data-i18n="docPrivacy.privacyH1">🔒 Politique de Confidentialité</h1>
         <p class="subtitle" data-i18n="docPrivacy.privacySubtitle">Comment nous protégeons vos données personnelles</p>
 
-        <div class="success-box" data-i18n="docPrivacy.privacyBox"><strong>✅ Confidentialité totale garantie</strong><br>Reborn Assistant ne collecte, ne transmet ni ne stocke aucune donnée personnelle sur des serveurs externes. Votre vie privée est notre priorité absolue.</div>
+        <div class="success-box" data-i18n="docPrivacy.privacyBox"><strong>✅ Votre vie privée est notre priorité</strong><br>Version gratuite : aucune donnée personnelle collectée. Version Premium : seules les données strictement nécessaires à la vérification de votre licence sont traitées.</div>
 
         <h2 data-i18n="docPrivacy.collectH2">Collecte de données</h2>
         <div class="legal-block">
-            <p data-i18n="docPrivacy.collectText"><strong>Reborn Assistant ne collecte AUCUNE donnée personnelle.</strong></p>
-            <p data-i18n="docPrivacy.collectText2">Toutes les préférences et configurations sont stockées <strong>localement sur votre appareil</strong> via l'API de stockage local du navigateur (<code>chrome.storage.local</code>). Aucune transmission vers des serveurs externes.</p>
+            <h3 data-i18n="docPrivacy.collectFreeH3">Version Gratuite</h3>
+            <p data-i18n="docPrivacy.collectFreeText">Aucune donnée personnelle n'est collectée ni transmise. Toutes vos préférences sont stockées uniquement sur votre appareil.</p>
+            <h3 data-i18n="docPrivacy.collectPremH3">Version Premium</h3>
+            <p data-i18n="docPrivacy.collectPremIntro">Pour vérifier votre licence et sécuriser votre compte, les données suivantes sont traitées :</p>
+            <ul>
+                <li data-i18n="docPrivacy.collectPremLi1">Votre adresse email Google (via authentification Google)</li>
+                <li data-i18n="docPrivacy.collectPremLi2">Un identifiant d'appareil unique (généré localement)</li>
+                <li data-i18n="docPrivacy.collectPremLi3">Votre statut d'abonnement et horodatages de session</li>
+                <li data-i18n="docPrivacy.collectPremLi4">Maximum 2 appareils enregistrés par compte</li>
+            </ul>
+            <p data-i18n="docPrivacy.collectPremBasis"><strong>Base légale :</strong> exécution du contrat (art. 6.1.b RGPD).</p>
+            <h3 data-i18n="docPrivacy.collectNotH3">Données jamais collectées</h3>
+            <ul>
+                <li data-i18n="docPrivacy.collectNotLi1">❌ Aucune donnée de gameplay ou d'activité</li>
+                <li data-i18n="docPrivacy.collectNotLi2">❌ Aucun historique de navigation</li>
+                <li data-i18n="docPrivacy.collectNotLi3">❌ Aucun cookie publicitaire ou de tracking</li>
+            </ul>
         </div>
 
         <h2 data-i18n="docPrivacy.localH2">Données stockées localement</h2>
@@ -172,31 +187,60 @@
                 <li data-i18n="docPrivacy.localLi3"><strong>Raccourcis clavier configurés</strong> : Les touches assignées pour vos actions</li>
                 <li data-i18n="docPrivacy.localLi4"><strong>Intervalles de timer personnalisés</strong> : Les timers configurés pour vos macros</li>
                 <li data-i18n="docPrivacy.localLi5"><strong>Position de l'interface</strong> : L'emplacement du panneau Reborn sur votre écran</li>
+                <li data-i18n="docPrivacy.localLi6"><strong>Cache de licence (Premium)</strong> : identifiant d'appareil et statut d'abonnement, pour éviter une vérification à chaque démarrage</li>
             </ul>
         </div>
 
         <h2 data-i18n="docPrivacy.thirdH2">Services tiers</h2>
         <div class="legal-block">
-            <h3 data-i18n="docPrivacy.thirdH3">Aucun service de tracking utilisé</h3>
-            <p data-i18n="docPrivacy.thirdDesc">Reborn Assistant <strong>n'utilise aucun</strong> service externe tel que :</p>
+            <h3 data-i18n="docPrivacy.thirdH3">Services utilisés (version Premium)</h3>
+            <p data-i18n="docPrivacy.thirdDesc">Pour l'authentification et les paiements, Reborn Assistant utilise :</p>
             <ul>
-                <li data-i18n="docPrivacy.thirdLi1">❌ Services d'analyse (Google Analytics, Mixpanel...)</li>
-                <li data-i18n="docPrivacy.thirdLi2">❌ Services de suivi (tracking pixels, cookies tiers)</li>
-                <li data-i18n="docPrivacy.thirdLi3">❌ Services de publicité</li>
-                <li data-i18n="docPrivacy.thirdLi4">❌ Services de télémétrie</li>
+                <li data-i18n="docPrivacy.thirdLi1">🔐 <strong>Google</strong> — Authentification et stockage sécurisé des données de licence</li>
+                <li data-i18n="docPrivacy.thirdLi2">💳 <strong>Stripe</strong> — Traitement des paiements Premium (vos données bancaires ne transitent jamais par nos serveurs)</li>
+            </ul>
+            <p data-i18n="docPrivacy.thirdTransfer">Ces prestataires sont conformes au RGPD et disposent des garanties appropriées pour les transferts internationaux de données.</p>
+            <h3 data-i18n="docPrivacy.thirdNoH3">Aucun tracking, aucune publicité</h3>
+            <ul>
+                <li data-i18n="docPrivacy.thirdLi3">❌ Aucun service d'analyse ou de statistiques</li>
+                <li data-i18n="docPrivacy.thirdLi4">❌ Aucune publicité ni marketing ciblé</li>
+                <li data-i18n="docPrivacy.thirdLi5">❌ Aucun cookie tiers ou suivi comportemental</li>
             </ul>
         </div>
 
-        <h2 data-i18n="docPrivacy.authH2">Authentification et licence</h2>
+        <h2 data-i18n="docPrivacy.authH2">Authentification et gestion des appareils</h2>
         <div class="legal-block">
-            <h3 data-i18n="docPrivacy.authH3">Firebase Authentication (version Premium)</h3>
-            <p data-i18n="docPrivacy.authText">Pour les utilisateurs Premium, Reborn utilise <strong>Firebase Authentication</strong> (Google Cloud) uniquement pour vérifier votre licence et authentifier votre compte Google.</p>
-            <p data-i18n="docPrivacy.authText2"><strong>Données concernées :</strong> votre adresse email Google et votre identifiant Google Cloud (UID). Ces données ne sont utilisées que pour la vérification de licence.</p>
+            <h3 data-i18n="docPrivacy.authH3">Connexion Google (version Premium)</h3>
+            <p data-i18n="docPrivacy.authText">Votre compte Google est utilisé uniquement pour authentifier votre identité et vérifier votre licence. Votre appareil est enregistré dans notre système sécurisé (maximum 2 appareils par compte).</p>
+            <p data-i18n="docPrivacy.authText2">Vous recevez une notification si votre compte est utilisé sur un appareil non reconnu. Vous pouvez gérer vos appareils enregistrés directement depuis l'extension.</p>
         </div>
 
         <h2 data-i18n="docPrivacy.payH2">Paiements Sécurisés</h2>
         <div class="legal-block">
             <p data-i18n="docPrivacy.payText">Les paiements Premium sont traités par <strong>Stripe</strong>. Vos informations bancaires ne transitent <strong>jamais</strong> par nos serveurs. Nous ne stockons <strong>aucune donnée</strong> de carte bancaire.</p>
+        </div>
+
+        <h2 data-i18n="docPrivacy.retentionH2">Durée de conservation</h2>
+        <div class="legal-block">
+            <p data-i18n="docPrivacy.retentionText">Vos données sont conservées uniquement le temps nécessaire :</p>
+            <ul>
+                <li data-i18n="docPrivacy.retentionLi1"><strong>Compte actif :</strong> données conservées pour toute la durée de l'abonnement</li>
+                <li data-i18n="docPrivacy.retentionLi2"><strong>Après résiliation :</strong> suppression sous 30 jours</li>
+                <li data-i18n="docPrivacy.retentionLi3"><strong>Données locales :</strong> supprimées immédiatement à la désinstallation de l'extension</li>
+            </ul>
+        </div>
+
+        <h2 data-i18n="docPrivacy.rightsH2">Vos droits (RGPD)</h2>
+        <div class="legal-block">
+            <p data-i18n="docPrivacy.rightsText">Conformément au RGPD, vous disposez des droits suivants sur vos données :</p>
+            <ul>
+                <li data-i18n="docPrivacy.rightsLi1">✅ <strong>Accès</strong> — Obtenir une copie de vos données personnelles</li>
+                <li data-i18n="docPrivacy.rightsLi2">✅ <strong>Rectification</strong> — Corriger des données inexactes</li>
+                <li data-i18n="docPrivacy.rightsLi3">✅ <strong>Effacement</strong> — Demander la suppression de votre compte et de vos données</li>
+                <li data-i18n="docPrivacy.rightsLi4">✅ <strong>Portabilité</strong> — Recevoir vos données dans un format lisible</li>
+                <li data-i18n="docPrivacy.rightsLi5">✅ <strong>Réclamation</strong> — Déposer une plainte auprès de la CNIL (<a href="https://www.cnil.fr" target="_blank" rel="noopener">cnil.fr</a>)</li>
+            </ul>
+            <p style="margin-top:16px;" data-i18n="docPrivacy.rightsExercise">Pour exercer ces droits, contactez-nous à : <a href="mailto:seymoon.cell@gmail.com">seymoon.cell@gmail.com</a></p>
         </div>
 
         <h2 data-i18n="docPrivacy.deleteH2">Suppression de vos données</h2>
