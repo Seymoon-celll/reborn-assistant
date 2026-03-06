@@ -90,7 +90,7 @@ export default {
     q4: "¿Mis datos están seguros?",
     a4: "Todos tus datos se almacenan localmente en tu dispositivo. No recopilamos datos personales ni usamos seguimiento o telemetría.",
     q5: "¿Cómo contactar con el soporte?",
-    a5: "Contáctanos directamente por correo electrónico en seymoon.cell@gmail.com. Los suscriptores premium reciben respuesta prioritaria.",
+    a5: "Contáctanos por correo electrónico en seymoon.cell@gmail.com o en Discord (Seymoon). Los suscriptores premium reciben respuesta prioritaria.",
   },
   footer: {
     privacy:   "Privacidad",
@@ -501,7 +501,7 @@ export default {
     rightsLi3:     "✅ <strong>Supresión</strong> — Solicitar la eliminación de tu cuenta y datos",
     rightsLi4:     "✅ <strong>Portabilidad</strong> — Recibir tus datos en un formato legible",
     rightsLi5:     "✅ <strong>Reclamación</strong> — Presentar una queja ante la autoridad de protección de datos de tu país",
-    rightsExercise:"Para ejercer estos derechos, contáctanos en: seymoon.cell@gmail.com",
+    rightsExercise:"Para ejercer estos derechos, contáctanos en: seymoon.cell@gmail.com o en Discord (Seymoon)",
     deleteH2:    "Eliminación de tus datos",
     deleteText1: "<strong>1. Desinstalar la extensión</strong><br>Al desinstalar Reborn Assistant, todos los datos locales se eliminan automáticamente.",
     deleteText2: "<strong>2. Restablecimiento manual</strong><br>Puedes restablecer la configuración desde la interfaz de Reborn en cualquier momento.",
