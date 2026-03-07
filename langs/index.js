@@ -29,6 +29,12 @@ const LANGS = {
   nl: { flag: '🇳🇱', label: 'Nederlands'  },
   pl: { flag: '🇵🇱', label: 'Polski'      },
   ru: { flag: '🇷🇺', label: 'Русский'     },
+  tr: { flag: '🇹🇷', label: 'Türkçe'      },
+  ja: { flag: '🇯🇵', label: '日本語'       },
+  ko: { flag: '🇰🇷', label: '한국어'       },
+  tl: { flag: '🇵🇭', label: 'Filipino'     },
+  zh: { flag: '🇨🇳', label: '中文'          },
+  ar: { flag: '🇸🇦', label: 'العربية'      },
 };
 
 const SUPPORTED = Object.keys(LANGS);
