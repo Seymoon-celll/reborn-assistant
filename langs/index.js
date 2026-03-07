@@ -29,6 +29,7 @@ const LANGS = {
   nl: { flag: '🇳🇱', label: 'Nederlands'  },
   pl: { flag: '🇵🇱', label: 'Polski'      },
   ru: { flag: '🇷🇺', label: 'Русский'     },
+  tr: { flag: '🇹🇷', label: 'Türkçe'      },
 };
 
 const SUPPORTED = Object.keys(LANGS);
