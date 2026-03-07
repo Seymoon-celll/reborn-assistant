@@ -526,4 +526,9 @@ export default {
     v10Li6:  "Firebase를 통한 프리미엄 라이선스 시스템",
     pageFooter:"© 2026 Reborn Assistant — Seymoon 개발 · 모든 권리 보유",
   },
+  nav: {
+    docs:        "📚 Docs",
+    manageFull:  "구독 관리",
+    manageShort: "관리",
+  },
 };

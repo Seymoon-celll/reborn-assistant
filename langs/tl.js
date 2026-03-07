@@ -526,4 +526,9 @@ export default {
     v10Li6:  "Sistema ng premium license sa pamamagitan ng Firebase",
     pageFooter:"© 2026 Reborn Assistant — Ginawa ng Seymoon · Lahat ng karapatan ay nakalaan",
   },
+  nav: {
+    docs:        "📚 Docs",
+    manageFull:  "Pamahalaan ang subscription",
+    manageShort: "Pamahalaan",
+  },
 };

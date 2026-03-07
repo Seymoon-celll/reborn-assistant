@@ -526,4 +526,9 @@ export default {
     v10Li6:  "Firebase aracılığıyla Premium lisans sistemi",
     pageFooter:"© 2026 Reborn Assistant — Seymoon tarafından geliştirildi · Tüm hakları saklıdır",
   },
+  nav: {
+    docs:        "📚 Docs",
+    manageFull:  "Aboneliği yönet",
+    manageShort: "Yönet",
+  },
 };
