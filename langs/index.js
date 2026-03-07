@@ -32,6 +32,7 @@ const LANGS = {
   tr: { flag: '🇹🇷', label: 'Türkçe'      },
   ja: { flag: '🇯🇵', label: '日本語'       },
   ko: { flag: '🇰🇷', label: '한국어'       },
+  tl: { flag: '🇵🇭', label: 'Filipino'     },
 };
 
 const SUPPORTED = Object.keys(LANGS);
