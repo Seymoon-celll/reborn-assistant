@@ -20,10 +20,11 @@
 })();
 
 const LANGS = {
-  fr: { flag: '🇫🇷', label: 'Français' },
-  en: { flag: '🇬🇧', label: 'English'  },
-  es: { flag: '🇪🇸', label: 'Español'  },
-  de: { flag: '🇩🇪', label: 'Deutsch'  },
+  fr: { flag: '🇫🇷', label: 'Français'    },
+  en: { flag: '🇬🇧', label: 'English'     },
+  es: { flag: '🇪🇸', label: 'Español'     },
+  de: { flag: '🇩🇪', label: 'Deutsch'     },
+  pt: { flag: '🇧🇷', label: 'Português'   },
 };
 
 const SUPPORTED = Object.keys(LANGS);
