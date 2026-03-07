@@ -527,7 +527,8 @@ export default {
     pageFooter:"© 2026 Reborn Assistant — Seymoon 개발 · 모든 권리 보유",
   },
   nav: {
-    docs:        "📚 Docs",
+    docsFull:    "📚 문서",
+    docsShort:   "📚 Docs",
     manageFull:  "구독 관리",
     manageShort: "관리",
   },
