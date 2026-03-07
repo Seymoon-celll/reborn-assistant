@@ -25,6 +25,7 @@ const LANGS = {
   es: { flag: '🇪🇸', label: 'Español'     },
   de: { flag: '🇩🇪', label: 'Deutsch'     },
   pt: { flag: '🇧🇷', label: 'Português'   },
+  it: { flag: '🇮🇹', label: 'Italiano'    },
 };
 
 const SUPPORTED = Object.keys(LANGS);
