@@ -534,4 +534,9 @@ export default {
     v10Li6:  "Premium-Lizenzsystem über Firebase",
     pageFooter:"© 2026 Reborn Assistant — Entwickelt von Seymoon · Alle Rechte vorbehalten",
   },
+  nav: {
+    docs:        "📚 Docs",
+    manageFull:  "Abonnement verwalten",
+    manageShort: "Verwalten",
+  },
 };

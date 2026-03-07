@@ -526,4 +526,9 @@ export default {
     v10Li6:  "通过 Firebase 的高级许可证系统",
     pageFooter:"© 2026 Reborn Assistant — 由 Seymoon 开发 · 保留所有权利",
   },
+  nav: {
+    docs:        "📚 Docs",
+    manageFull:  "管理订阅",
+    manageShort: "管理",
+  },
 };
