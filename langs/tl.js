@@ -527,7 +527,7 @@ export default {
     pageFooter:"© 2026 Reborn Assistant — Ginawa ng Seymoon · Lahat ng karapatan ay nakalaan",
   },
   nav: {
-    docs:        "📚 Docs",
+    docs:        "📚 Dokumentasyon",
     manageFull:  "Pamahalaan ang subscription",
     manageShort: "Pamahalaan",
   },

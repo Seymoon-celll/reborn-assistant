@@ -527,7 +527,7 @@ export default {
     pageFooter:"© 2026 Reborn Assistant — Ontwikkeld door Seymoon · Alle rechten voorbehouden",
   },
   nav: {
-    docs:        "📚 Docs",
+    docs:        "📚 Documentatie",
     manageFull:  "Abonnement beheren",
     manageShort: "Beheren",
   },

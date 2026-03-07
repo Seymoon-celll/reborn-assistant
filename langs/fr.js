@@ -535,7 +535,7 @@ export default {
     pageFooter:"© 2026 Reborn Assistant — Développé par Seymoon · Tous droits réservés",
   },
   nav: {
-    docs:        "📚 Docs",
+    docs:        "📚 Documentation",
     manageFull:  "Gérer mon abonnement",
     manageShort: "Gérer",
   },

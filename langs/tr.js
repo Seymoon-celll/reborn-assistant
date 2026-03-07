@@ -527,7 +527,7 @@ export default {
     pageFooter:"© 2026 Reborn Assistant — Seymoon tarafından geliştirildi · Tüm hakları saklıdır",
   },
   nav: {
-    docs:        "📚 Docs",
+    docs:        "📚 Belgeler",
     manageFull:  "Aboneliği yönet",
     manageShort: "Yönet",
   },
