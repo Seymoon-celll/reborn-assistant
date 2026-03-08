@@ -106,7 +106,7 @@ export default {
   },
 
   docsHome: {
-    version:              "WERSJA 1.2 · PEŁNA DOKUMENTACJA",
+    version:              "WERSJA 1.3 · PEŁNA DOKUMENTACJA",
     userGuide:            "Przewodnik użytkownika",
     support:              "Wsparcie",
     legal:                "Informacje prawne",
@@ -501,7 +501,11 @@ export default {
     contactH2:   "Kontakt",
     contactText: "W przypadku pytań dotyczących informacji prawnych lub polityki prywatności:",
     changelogH2: "📋 Dziennik zmian",
-    v120H3:  "Wersja 1.2.0 (Marzec 2026) · Aktualna",
+    v130H3:          "Wersja 1.3.0 (Marzec 2026) · Aktualna",
+    v130newLabel:    "✨ Nowości",
+    v130improvLabel: "🔧 Ulepszenia",
+    v130fixLabel:    "🐛 Poprawki",
+    v120H3:  "Wersja 1.2.0 (Marzec 2026)",
     v120Li1: "✨ 6 skórek zostało przeprojektowanych z subtelnym efektem przezroczystości.",
     v120Li2: "🔐 Przeglądaj i zarządzaj zarejestrowanym urządzeniem bezpośrednio z rozszerzenia.",
     v120Li3: "💳 Dostęp do subskrypcji jednym kliknięciem z rozszerzenia.",
