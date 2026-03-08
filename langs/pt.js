@@ -108,7 +108,7 @@ export default {
 
   // ── docs/index.html ───────────────────────────────────────────────
   docsHome: {
-    version:              "VERSÃO 1.2 · DOCUMENTAÇÃO COMPLETA",
+    version:              "VERSÃO 1.3 · DOCUMENTAÇÃO COMPLETA",
     userGuide:            "Guia do usuário",
     support:              "Suporte",
     legal:                "Informações legais",
@@ -509,7 +509,11 @@ export default {
     contactH2:   "Contato",
     contactText: "Para qualquer dúvida sobre informações legais ou política de privacidade:",
     changelogH2: "📋 Registro de alterações",
-    v120H3:  "Versão 1.2.0 (Março 2026) · Atual",
+    v130H3:          "Versão 1.3.0 (Março 2026) · Atual",
+    v130newLabel:    "✨ Novidades",
+    v130improvLabel: "🔧 Melhorias",
+    v130fixLabel:    "🐛 Correções",
+    v120H3:  "Versão 1.2.0 (Março 2026)",
     v120Li1: "✨ Os 6 skins foram redesenhados com um sutil efeito de transparência.",
     v120Li2: "🔐 Visualize e gerencie seu dispositivo registrado diretamente pela extensão.",
     v120Li3: "💳 Acesse sua assinatura com um clique pela extensão.",

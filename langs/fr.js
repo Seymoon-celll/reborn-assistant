@@ -108,7 +108,7 @@ export default {
 
   // ── docs/index.html ───────────────────────────────────────────────
   docsHome: {
-    version:              "VERSION 1.2 · DOCUMENTATION COMPLÈTE",
+    version:              "VERSION 1.3 · DOCUMENTATION COMPLÈTE",
     userGuide:            "Guide d'utilisation",
     support:              "Support",
     legal:                "Informations légales",
@@ -509,7 +509,11 @@ export default {
     contactH2:   "Contact",
     contactText: "Pour toute question concernant les informations légales ou la politique de confidentialité :",
     changelogH2: "📋 Changelog",
-    v120H3:  "Version 1.2.0 (Mars 2026) · Actuelle",
+    v130H3:          "Version 1.3.0 (Mars 2026) · Actuelle",
+    v130newLabel:    "✨ Nouveautés",
+    v130improvLabel: "🔧 Améliorations",
+    v130fixLabel:    "🐛 Corrections",
+    v120H3:  "Version 1.2.0 (Mars 2026)",
     v120Li1: "✨ Les 6 skins ont été retravaillés avec un effet de transparence subtil.",
     v120Li2: "🔐 Visualisez et gérez votre appareil enregistré directement depuis l'extension.",
     v120Li3: "💳 Accédez à votre abonnement en un clic depuis l'extension.",

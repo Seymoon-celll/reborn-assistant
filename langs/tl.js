@@ -106,7 +106,7 @@ export default {
   },
 
   docsHome: {
-    version:              "Bersyon 1.2 · Kumpletong Dokumentasyon",
+    version:              "Bersyon 1.3 · Kumpletong Dokumentasyon",
     userGuide:            "Gabay ng Gumagamit",
     support:              "Suporta",
     legal:                "Legal na Impormasyon",
@@ -501,7 +501,11 @@ export default {
     contactH2:   "Makipag-ugnayan",
     contactText: "Para sa mga tanong tungkol sa legal na impormasyon o patakaran sa privacy:",
     changelogH2: "📋 Changelog",
-    v120H3:  "Bersyon 1.2.0 (Marso 2026) · Kasalukuyan",
+    v130H3:          "Bersyon 1.3.0 (Marso 2026) · Kasalukuyan",
+    v130newLabel:    "✨ Mga Bago",
+    v130improvLabel: "🔧 Mga Pagpapabuti",
+    v130fixLabel:    "🐛 Mga Ayos",
+    v120H3:  "Bersyon 1.2.0 (Marso 2026)",
     v120Li1: "✨ 6 na skin ang nire-redesign na may banayad na transparent na epekto.",
     v120Li2: "🔐 Tingnan at pamahalaan ang mga registered na device nang direkta mula sa extension.",
     v120Li3: "💳 Mag-access ng subscription sa isang click mula sa extension.",

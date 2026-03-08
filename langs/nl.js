@@ -106,7 +106,7 @@ export default {
   },
 
   docsHome: {
-    version:              "VERSIE 1.2 · VOLLEDIGE DOCUMENTATIE",
+    version:              "VERSIE 1.3 · VOLLEDIGE DOCUMENTATIE",
     userGuide:            "Gebruikershandleiding",
     support:              "Ondersteuning",
     legal:                "Juridische informatie",
@@ -501,7 +501,11 @@ export default {
     contactH2:   "Contact",
     contactText: "Voor vragen over juridische informatie of privacybeleid:",
     changelogH2: "📋 Wijzigingslogboek",
-    v120H3:  "Versie 1.2.0 (Maart 2026) · Huidig",
+    v130H3:          "Versie 1.3.0 (Maart 2026) · Huidig",
+    v130newLabel:    "✨ Nieuw",
+    v130improvLabel: "🔧 Verbeteringen",
+    v130fixLabel:    "🐛 Bugfixes",
+    v120H3:  "Versie 1.2.0 (Maart 2026)",
     v120Li1: "✨ De 6 skins zijn opnieuw ontworpen met een subtiel transparantie-effect.",
     v120Li2: "🔐 Bekijk en beheer uw geregistreerde apparaat rechtstreeks via de extensie.",
     v120Li3: "💳 Toegang tot uw abonnement met één klik via de extensie.",

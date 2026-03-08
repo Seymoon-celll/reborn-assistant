@@ -106,7 +106,7 @@ export default {
   },
 
   docsHome: {
-    version:              "版本 1.2 · 完整文档",
+    version:              "版本 1.3 · 完整文档",
     userGuide:            "用户指南",
     support:              "支持",
     legal:                "法律信息",
@@ -501,6 +501,10 @@ export default {
     contactH2:   "联系方式",
     contactText: "关于法律信息或隐私政策的问题：",
     changelogH2: "📋 更新日志",
+    v130H3:          "版本 1.3.0（2026 年 3 月）· 当前",
+    v130newLabel:    "✨ 新功能",
+    v130improvLabel: "🔧 改进",
+    v130fixLabel:    "🐛 错误修复",
     v120H3:  "版本 1.2.0（2026 年 3 月）· 当前",
     v120Li1: "✨ 6 个皮肤以微妙的透明效果重新设计。",
     v120Li2: "🔐 直接从扩展程序查看和管理注册设备。",

@@ -106,7 +106,7 @@ export default {
   },
 
   docsHome: {
-    version:              "SÜRÜM 1.2 · TAM BELGELER",
+    version:              "SÜRÜM 1.3 · TAM BELGELER",
     userGuide:            "Kullanıcı kılavuzu",
     support:              "Destek",
     legal:                "Hukuki bilgiler",
@@ -501,7 +501,11 @@ export default {
     contactH2:   "İletişim",
     contactText: "Hukuki bilgiler veya gizlilik politikası hakkında herhangi bir soru için:",
     changelogH2: "📋 Değişiklik günlüğü",
-    v120H3:  "Sürüm 1.2.0 (Mart 2026) · Güncel",
+    v130H3:          "Sürüm 1.3.0 (Mart 2026) · Güncel",
+    v130newLabel:    "✨ Yenilikler",
+    v130improvLabel: "🔧 İyileştirmeler",
+    v130fixLabel:    "🐛 Hata Düzeltmeleri",
+    v120H3:  "Sürüm 1.2.0 (Mart 2026)",
     v120Li1: "✨ 6 skin, ince bir şeffaflık efektiyle yeniden tasarlandı.",
     v120Li2: "🔐 Kayıtlı cihazınızı doğrudan uzantıdan görüntüleyin ve yönetin.",
     v120Li3: "💳 Uzantıdan tek tıklamayla aboneliğinize erişin.",
