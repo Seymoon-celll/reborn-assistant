@@ -513,7 +513,7 @@ export default {
     v130newLabel:    "✨ Novità",
     v130improvLabel: "🔧 Miglioramenti",
     v130fixLabel:    "🐛 Correzioni",
-    v130Li1:  "⏱ Mini-timer flottante trascinabile — si riduce a pillola invece di scomparire, si riapre automaticamente al prossimo avvio e segue lo skin attivo.",
+    v130Li1:  "⏱ Mini-timer flottante trascinabile — piccola finestra flottante che mostra i timer buff e quelli superiori a 1 minuto, si riapre automaticamente al prossimo avvio e segue lo skin attivo.",
     v130Li2:  "⚡ Macro prioritarie — le macro vengono eseguite prima di guarigioni/PV/mana, con un blocco cura di 0,5s prima e dopo ogni esecuzione per evitare conflitti.",
     v130Li3:  "🧠 Gestione intelligente del buff — il buff viene eseguito per primo, le macro silenziose vengono messe in coda e riavviate automaticamente dopo la fine (ritardo ridotto a 2s).",
     v130Li4:  "💾 Memoria delle posizioni — le finestre flottanti mantengono la loro posizione tra le sessioni.",

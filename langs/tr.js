@@ -505,7 +505,7 @@ export default {
     v130newLabel:    "✨ Yenilikler",
     v130improvLabel: "🔧 İyileştirmeler",
     v130fixLabel:    "🐛 Hata Düzeltmeleri",
-    v130Li1:  "⏱ Sürüklenebilir kayan mini-zamanlayıcı — kaybolmak yerine hap şekline küçülür, sonraki başlatmada otomatik olarak yeniden açılır ve aktif skin'i takip eder.",
+    v130Li1:  "⏱ Sürüklenebilir kayan mini-zamanlayıcı — buff zamanlayıcılarını ve 1 dakikadan uzun süreleri gösteren küçük kayan pencere, sonraki başlatmada otomatik olarak yeniden açılır ve aktif skin'i takip eder.",
     v130Li2:  "⚡ Öncelikli macrolar — macrolar iyileştirmelerden/HP/mana'dan önce çalışır, çakışmaları önlemek için her çalıştırmadan önce ve sonra 0,5s iyileştirme dondurulur.",
     v130Li3:  "🧠 Akıllı buff yönetimi — buff önce çalışır, susturulmuş macrolar sıraya alınır ve bittikten sonra otomatik olarak yeniden başlatılır (gecikme 2s'ye düşürüldü).",
     v130Li4:  "💾 Konum belleği — kayan pencereler pozisyonlarını oturumlar arasında hatırlar.",

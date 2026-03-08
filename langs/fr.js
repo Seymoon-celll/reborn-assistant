@@ -513,7 +513,7 @@ export default {
     v130newLabel:    "✨ Nouveautés",
     v130improvLabel: "🔧 Améliorations",
     v130fixLabel:    "🐛 Corrections",
-    v130Li1:  "⏱ Mini-timer flottant déplaçable — se minimise en pastille au lieu de disparaître, se rouvre automatiquement au prochain lancement et suit le skin actif.",
+    v130Li1:  "⏱ Mini-timer flottant déplaçable — petite fenêtre flottante affichant les timers de buff et ceux de plus d'1 minute, se rouvre automatiquement au prochain lancement et suit le skin actif.",
     v130Li2:  "⚡ Macros prioritaires — les macros passent avant les soins/PV/mana, avec un gel du soin de 0,5s avant et après chaque exécution pour éviter les conflits.",
     v130Li3:  "🧠 Gestion intelligente du buff — le buff s'exécute en priorité, les macros silencées sont mises en file et relancées automatiquement après sa fin (délai réduit à 2s).",
     v130Li4:  "💾 Mémorisation des positions — les fenêtres flottantes retiennent leur position entre les sessions.",

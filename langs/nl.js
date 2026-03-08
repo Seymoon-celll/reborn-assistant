@@ -505,7 +505,7 @@ export default {
     v130newLabel:    "✨ Nieuw",
     v130improvLabel: "🔧 Verbeteringen",
     v130fixLabel:    "🐛 Bugfixes",
-    v130Li1:  "⏱ Versleepbare zwevende mini-timer — minimaliseert naar een pil in plaats van te verdwijnen, opent automatisch opnieuw bij de volgende start en volgt de actieve skin.",
+    v130Li1:  "⏱ Versleepbare zwevende mini-timer — klein zwevend venster dat buff-timers en timers boven 1 minuut weergeeft, opent automatisch opnieuw bij de volgende start en volgt de actieve skin.",
     v130Li2:  "⚡ Prioriteitsmacro's — macro's worden uitgevoerd vóór heals/HP/mana, met een 0,5s heal-blokkering voor en na elke uitvoering om conflicten te vermijden.",
     v130Li3:  "🧠 Slim buff-beheer — buff wordt eerst uitgevoerd, gedemute macro's worden in de wachtrij gezet en automatisch herstart na afloop (vertraging verlaagd naar 2s).",
     v130Li4:  "💾 Positieopslag — zwevende vensters onthouden hun positie tussen sessies.",

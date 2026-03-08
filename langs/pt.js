@@ -513,7 +513,7 @@ export default {
     v130newLabel:    "✨ Novidades",
     v130improvLabel: "🔧 Melhorias",
     v130fixLabel:    "🐛 Correções",
-    v130Li1:  "⏱ Mini-temporizador flutuante arrastável — minimiza para uma pastilha em vez de desaparecer, reabre automaticamente no próximo início e segue o skin ativo.",
+    v130Li1:  "⏱ Mini-temporizador flutuante arrastável — pequena janela flutuante que exibe os temporizadores de buff e os de mais de 1 minuto, reabre automaticamente no próximo início e segue o skin ativo.",
     v130Li2:  "⚡ Macros prioritários — as macros são executadas antes de curas/PV/mana, com um bloqueio de cura de 0,5s antes e depois de cada execução para evitar conflitos.",
     v130Li3:  "🧠 Gestão inteligente de buff — o buff executa primeiro, as macros silenciadas são enfileiradas e reiniciadas automaticamente após o fim (atraso reduzido para 2s).",
     v130Li4:  "💾 Memória de posição — as janelas flutuantes mantêm a sua posição entre sessões.",

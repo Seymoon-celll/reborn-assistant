@@ -513,7 +513,7 @@ export default {
     v130newLabel:    "✨ Neuigkeiten",
     v130improvLabel: "🔧 Verbesserungen",
     v130fixLabel:    "🐛 Fehlerbehebungen",
-    v130Li1:  "⏱ Verschiebbarer schwebender Mini-Timer — minimiert sich zu einer Pille statt zu verschwinden, öffnet sich beim nächsten Start automatisch und folgt dem aktiven Skin.",
+    v130Li1:  "⏱ Verschiebbarer schwebender Mini-Timer — kleines schwebendes Fenster, das Buff-Timer und Timer über 1 Minute anzeigt, öffnet sich beim nächsten Start automatisch und folgt dem aktiven Skin.",
     v130Li2:  "⚡ Prioritäts-Makros — Makros werden vor Heals/HP/Mana ausgeführt, mit einer 0,5s Heal-Pause vor und nach jeder Ausführung um Konflikte zu vermeiden.",
     v130Li3:  "🧠 Intelligentes Buff-Management — Buff wird zuerst ausgeführt, stummgeschaltete Makros werden in die Warteschlange gestellt und nach dem Ende automatisch neugestartet (Verzögerung auf 2s reduziert).",
     v130Li4:  "💾 Positions-Speicherung — schwebende Fenster behalten ihre Position zwischen Sitzungen.",
