@@ -505,7 +505,7 @@ export default {
     v130newLabel:    "✨ Mga Bago",
     v130improvLabel: "🔧 Mga Pagpapabuti",
     v130fixLabel:    "🐛 Mga Ayos",
-    v130Li1:  "⏱ Draggable na floating mini-timer — nagmi-minimize sa pill sa halip na mawala, awtomatikong muli itong bubukas sa susunod na paglulunsad at sumusunod sa aktibong skin.",
+    v130Li1:  "⏱ Draggable na floating mini-timer — maliit na floating window na nagpapakita ng mga buff timer at mga timer na higit sa 1 minuto, awtomatikong muli itong bubukas sa susunod na paglulunsad at sumusunod sa aktibong skin.",
     v130Li2:  "⚡ Priority na mga macro — nag-eexecute ang mga macro bago ang mga heal/HP/mana, na may 0.5s na heal freeze bago at pagkatapos ng bawat execution para maiwasan ang mga salungatan.",
     v130Li3:  "🧠 Matalinong pamamahala ng buff — ang buff ay nag-eexecute muna, ang mga naka-mute na macro ay naka-queue at awtomatikong nire-restart pagkatapos nito (bawas na delay sa 2s).",
     v130Li4:  "💾 Pagtatandaan ng posisyon — ang mga floating na window ay nagtatandaan ng kanilang posisyon sa pagitan ng mga session.",

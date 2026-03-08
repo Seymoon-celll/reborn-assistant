@@ -505,7 +505,7 @@ export default {
     v130newLabel:    "✨ Nowości",
     v130improvLabel: "🔧 Ulepszenia",
     v130fixLabel:    "🐛 Poprawki",
-    v130Li1:  "⏱ Przeciągalny pływający mini-timer — minimalizuje się do pastylki zamiast znikać, automatycznie otwiera się przy następnym uruchomieniu i śledzi aktywny skin.",
+    v130Li1:  "⏱ Przeciągalny pływający mini-timer — małe pływające okno wyświetlające timery buffów i te powyżej 1 minuty, automatycznie otwiera się przy następnym uruchomieniu i śledzi aktywny skin.",
     v130Li2:  "⚡ Makra priorytetowe — makra wykonują się przed leczeniem/HP/maną, z zamrożeniem leczenia 0,5s przed i po każdym wykonaniu dla uniknięcia konfliktów.",
     v130Li3:  "🧠 Inteligentne zarządzanie buffem — buff wykonuje się jako pierwszy, wyciszone makra są kolejkowane i automatycznie restartowane po jego zakończeniu (opóźnienie zmniejszone do 2s).",
     v130Li4:  "💾 Zapamiętywanie pozycji — pływające okna zachowują swoją pozycję między sesjami.",

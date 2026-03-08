@@ -513,7 +513,7 @@ export default {
     v130newLabel:    "✨ What's New",
     v130improvLabel: "🔧 Improvements",
     v130fixLabel:    "🐛 Bug Fixes",
-    v130Li1:  "⏱ Draggable floating mini-timer — minimizes to a pill instead of disappearing, automatically reopens on next launch and follows the active skin.",
+    v130Li1:  "⏱ Draggable floating mini-timer — small floating window displaying buff timers and timers over 1 minute, automatically reopens on next launch and follows the active skin.",
     v130Li2:  "⚡ Priority macros — macros execute before heals/HP/mana, with a 0.5s heal freeze before and after each execution to avoid conflicts.",
     v130Li3:  "🧠 Smart buff management — buff executes first, silenced macros are queued and automatically restarted after it ends (delay reduced to 2s).",
     v130Li4:  "💾 Position memory — floating windows retain their position between sessions.",
